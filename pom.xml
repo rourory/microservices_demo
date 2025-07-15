@@ -15,6 +15,12 @@
     <description>microsorvices-demo</description>
     <packaging>pom</packaging>
 
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
 
     <url/>
 
@@ -36,7 +42,11 @@
     <properties>
         <java.version>17</java.version>
         <spring-boot.version>3.5.3</spring-boot.version>
-		<maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+        <twitter4j.version>4.0.7</twitter4j.version>
+        <lombok.version>1.18.38</lombok.version>
+        <mastodon.version>1.7.0</mastodon.version>
+        <gson.version>2.13.1</gson.version>
     </properties>
 
     <dependencyManagement>
@@ -53,6 +63,32 @@
                 <version>${spring-boot.version}</version>
                 <scope>test</scope>
             </dependency>
+
+            <dependency>
+                <groupId>org.twitter4j</groupId>
+                <artifactId>twitter4j-stream</artifactId>
+                <version>${twitter4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.sys1yagi.mastodon4j</groupId>
+                <artifactId>mastodon4j</artifactId>
+                <version>${mastodon.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${gson.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -64,7 +100,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven-compiler-plugin.version}</version>
                 <configuration>
-                   <release>17</release>
+                    <release>17</release>
                 </configuration>
             </plugin>
         </plugins>
@@ -75,7 +111,6 @@
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <version>${spring-boot.version}</version>
                 </plugin>
-
             </plugins>
         </pluginManagement>
     </build>

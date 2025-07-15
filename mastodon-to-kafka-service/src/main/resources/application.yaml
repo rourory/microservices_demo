@@ -1,0 +1,11 @@
+spring.application.name: mastodon-to-kafka-service
+
+mastodon:
+  instance: "mastodon.social"
+  access-token: qmpRbPVLVXdHBqzMgaroKQTA9gCDDIBJX49AmYCkuC4
+  secret-key: Ow8TIiontBojWsr795L1mkJvoOIxbk3lgaWGrZCUMOE
+  app-id: 7MCtJLqG_v5noh0N6tOElOarMydy2kJcRRdfSCtQTJE
+  tags:
+    - Java
+    - Kafka
+    - Cloud
