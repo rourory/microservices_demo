@@ -1,21 +1,19 @@
 package com.microsorvices.demo.mastodontokafkaservice;
 
-import com.microsorvices.demo.mastodontokafkaservice.config.MastodonToKafkaServiceConfigData;
+import com.microsorvices.demo.mastodontokafkaservice.service.MastodonStreamService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.Arrays;
-
 @SpringBootApplication
 @Slf4j
 public class MastodonToKafkaServiceApplication implements CommandLineRunner {
 
-    private final MastodonToKafkaServiceConfigData configData;
+    private final MastodonStreamService streamService;
 
-    public MastodonToKafkaServiceApplication(MastodonToKafkaServiceConfigData configData) {
-        this.configData = configData;
+    public MastodonToKafkaServiceApplication(MastodonStreamService streamService) {
+        this.streamService = streamService;
     }
 
     public static void main(String[] args) {
@@ -25,7 +23,7 @@ public class MastodonToKafkaServiceApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         log.info("The app is running...");
-        log.info(Arrays.toString(configData.getTags().toArray(new String[]{})));
+        streamService.startStreaming();
     }
 
 }

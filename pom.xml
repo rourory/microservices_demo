@@ -13,6 +13,9 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>microsorvices-demo</name>
     <description>microsorvices-demo</description>
+    <modules>
+        <module>app-config-data</module>
+    </modules>
     <packaging>pom</packaging>
 
     <repositories>
