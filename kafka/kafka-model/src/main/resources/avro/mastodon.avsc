@@ -1,0 +1,10 @@
+{"namespace": "com.microservices.demo.kafka.avro.model",
+  "type": "record",
+  "name": "MastodonTootAvroModel",
+  "fields": [
+    {"name": "id", "type": "long"},
+    {"name": "content", "type": ["null", "string"]},
+    {"name": "username", "type": ["null", "string"]},
+    {"name": "createdAt", "type": ["null", "long"], "logicalType": ["null", "date"]}
+  ]
+}
