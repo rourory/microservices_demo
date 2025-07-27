@@ -1,0 +1,40 @@
+spring.application.name: mastodon-to-kafka-service
+
+mastodon:
+  instance: "mastodon.social"
+  access-token: qmpRbPVLVXdHBqzMgaroKQTA9gCDDIBJX49AmYCkuC4
+  secret-key: Ow8TIiontBojWsr795L1mkJvoOIxbk3lgaWGrZCUMOE
+  app-id: 7MCtJLqG_v5noh0N6tOElOarMydy2kJcRRdfSCtQTJE
+  tags:
+    - Java
+    - Kafka
+    - Cloud
+
+retry-config:
+  initial-interval-ms: 1000
+  max-interval-ms: 10000
+  back-off-multiplier: 1.1
+  max-attempts: 50
+  sleep-time-ms: 3000
+
+kafka-config:
+  bootstrap-servers: localhost:19092, localhost:29092, localhost:39092
+  schema-registry-url-key: schema.registry.url
+  schema-registry-url: http://localhost:8081
+  topic-name: mastodon-topic
+  number-of-partitions: 3
+  replication-factor: 3
+  topic-names-to-create:
+    - mastodon-topic
+
+kafka-producer-config:
+  key-serializer-class: org.apache.kafka.common.serialization.LongSerializer
+  value-serializer-class: io.confluent.kafka.serializers.KafkaAvroSerializer
+  compression-type: snappy
+  acks: all
+  batch-size: 16384
+  batch-size-boost-factor: 100
+  linger-ms: 5
+  request-timeout-ms: 60000
+  retry-count: 10
+

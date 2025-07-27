@@ -25,6 +25,7 @@ public class KafkaProducerConfig<K extends Serializable, V extends SpecificRecor
     public KafkaProducerConfig(KafkaConfigData kafkaConfigData, KafkaProducerConfigData kafkaProducerConfigData) {
         this.kafkaConfigData = kafkaConfigData;
         this.kafkaProducerConfigData = kafkaProducerConfigData;
+        log.info("KafkaProducerConfig constructor. kafkaConfigData = {}, kafkaProducerConfigData = {}", kafkaConfigData, kafkaProducerConfigData);
     }
 
     @Bean

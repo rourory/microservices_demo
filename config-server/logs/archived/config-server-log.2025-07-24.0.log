@@ -1,0 +1,643 @@
+2025-07-24 15:22:03 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-24 15:22:03 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 14852 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-24 15:22:03 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 15:22:04 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=20c033ca-04da-38fa-afd9-f1954dbc9633
+2025-07-24 15:22:04 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-24 15:22:04 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-24 15:22:04 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 15:22:04 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 15:22:04 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 15:22:04 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1399 ms
+2025-07-24 15:22:06 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 15:22:06 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: You need to configure a uri for the git repository.
+2025-07-24 15:22:06 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-07-24 15:22:06 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-24 15:22:06 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Invalid config server configuration.
+
+Action:
+
+If you are using the git profile, you need to set a Git URI in your configuration.  If you have set spring.cloud.config.server.bootstrap=true, you need to use a composite configuration.
+
+2025-07-24 15:24:47 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-24 15:24:47 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 12108 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-24 15:24:47 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 15:24:48 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=20c033ca-04da-38fa-afd9-f1954dbc9633
+2025-07-24 15:24:48 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-24 15:24:48 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-24 15:24:48 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 15:24:48 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 15:24:49 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 15:24:49 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1438 ms
+2025-07-24 15:24:50 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 15:24:51 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: You need to configure a uri for the git repository.
+2025-07-24 15:24:51 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-07-24 15:24:51 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-24 15:24:51 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Invalid config server configuration.
+
+Action:
+
+If you are using the git profile, you need to set a Git URI in your configuration.  If you have set spring.cloud.config.server.bootstrap=true, you need to use a composite configuration.
+
+2025-07-24 15:26:26 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-24 15:26:26 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 14836 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-24 15:26:26 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 15:26:27 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=20c033ca-04da-38fa-afd9-f1954dbc9633
+2025-07-24 15:26:27 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-24 15:26:27 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-24 15:26:27 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 15:26:27 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 15:26:28 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 15:26:28 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1682 ms
+2025-07-24 15:26:30 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 15:26:30 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: You need to configure a uri for the git repository.
+2025-07-24 15:26:30 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-07-24 15:26:30 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-24 15:26:30 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Invalid config server configuration.
+
+Action:
+
+If you are using the git profile, you need to set a Git URI in your configuration.  If you have set spring.cloud.config.server.bootstrap=true, you need to use a composite configuration.
+
+2025-07-24 15:26:40 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-24 15:26:40 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 16720 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-24 15:26:40 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 15:26:41 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=20c033ca-04da-38fa-afd9-f1954dbc9633
+2025-07-24 15:26:41 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-24 15:26:41 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-24 15:26:41 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 15:26:41 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 15:26:41 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 15:26:41 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1451 ms
+2025-07-24 15:26:43 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 15:26:43 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: You need to configure a uri for the git repository.
+2025-07-24 15:26:43 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-07-24 15:26:43 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-24 15:26:43 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Invalid config server configuration.
+
+Action:
+
+If you are using the git profile, you need to set a Git URI in your configuration.  If you have set spring.cloud.config.server.bootstrap=true, you need to use a composite configuration.
+
+2025-07-24 15:29:16 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-24 15:29:16 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 13652 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-24 15:29:16 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 15:29:17 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=20c033ca-04da-38fa-afd9-f1954dbc9633
+2025-07-24 15:29:17 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-24 15:29:17 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-24 15:29:17 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 15:29:17 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 15:29:17 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 15:29:17 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1437 ms
+2025-07-24 15:29:19 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 15:29:19 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: You need to configure a uri for the git repository.
+2025-07-24 15:29:19 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-07-24 15:29:19 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-24 15:29:19 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Invalid config server configuration.
+
+Action:
+
+If you are using the git profile, you need to set a Git URI in your configuration.  If you have set spring.cloud.config.server.bootstrap=true, you need to use a composite configuration.
+
+2025-07-24 15:29:26 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-24 15:29:26 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 13640 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-24 15:29:26 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 15:29:27 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=20c033ca-04da-38fa-afd9-f1954dbc9633
+2025-07-24 15:29:28 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-24 15:29:28 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-24 15:29:28 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 15:29:28 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 15:29:28 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 15:29:28 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1571 ms
+2025-07-24 15:29:30 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 15:29:30 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: You need to configure a uri for the git repository.
+2025-07-24 15:29:30 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-07-24 15:29:30 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-24 15:29:30 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Invalid config server configuration.
+
+Action:
+
+If you are using the git profile, you need to set a Git URI in your configuration.  If you have set spring.cloud.config.server.bootstrap=true, you need to use a composite configuration.
+
+2025-07-24 15:33:43 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-24 15:33:43 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 13736 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-24 15:33:43 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 15:33:45 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=20c033ca-04da-38fa-afd9-f1954dbc9633
+2025-07-24 15:33:45 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-24 15:33:45 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-24 15:33:45 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 15:33:45 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 15:33:46 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 15:33:46 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2368 ms
+2025-07-24 15:33:48 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 15:33:49 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: You need to configure a uri for the git repository.
+2025-07-24 15:33:49 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-07-24 15:33:49 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-24 15:33:49 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Invalid config server configuration.
+
+Action:
+
+If you are using the git profile, you need to set a Git URI in your configuration.  If you have set spring.cloud.config.server.bootstrap=true, you need to use a composite configuration.
+
+2025-07-24 15:36:54 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-24 15:36:54 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 18756 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-24 15:36:54 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 15:36:55 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=20c033ca-04da-38fa-afd9-f1954dbc9633
+2025-07-24 15:36:55 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-24 15:36:55 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-24 15:36:55 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 15:36:55 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 15:36:55 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 15:36:55 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1412 ms
+2025-07-24 15:36:57 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 15:36:57 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: You need to configure a uri for the git repository.
+2025-07-24 15:36:57 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-07-24 15:36:57 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-24 15:36:57 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Invalid config server configuration.
+
+Action:
+
+If you are using the git profile, you need to set a Git URI in your configuration.  If you have set spring.cloud.config.server.bootstrap=true, you need to use a composite configuration.
+
+2025-07-24 15:37:44 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-24 15:37:44 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 4384 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-24 15:37:44 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 15:37:45 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=d7a47e7f-5d04-3d67-b8ba-430575b692f8
+2025-07-24 15:37:46 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-24 15:37:46 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-24 15:37:46 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 15:37:46 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 15:37:46 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 15:37:46 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1471 ms
+2025-07-24 15:37:48 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 15:37:48 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: You need to configure a uri for the git repository.
+2025-07-24 15:37:48 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-07-24 15:37:48 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-24 15:37:48 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Invalid config server configuration.
+
+Action:
+
+If you are using the git profile, you need to set a Git URI in your configuration.  If you have set spring.cloud.config.server.bootstrap=true, you need to use a composite configuration.
+
+2025-07-24 15:40:25 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-24 15:40:25 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 13536 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-24 15:40:25 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 15:40:26 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=20c033ca-04da-38fa-afd9-f1954dbc9633
+2025-07-24 15:40:26 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-24 15:40:27 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-24 15:40:27 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 15:40:27 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 15:40:27 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 15:40:27 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1346 ms
+2025-07-24 15:40:28 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 15:40:29 [main] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
+2025-07-24 15:40:35 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2025-07-24 15:40:35 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path '/'
+2025-07-24 15:40:36 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 15:40:36 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 12.739 seconds (process running for 14.424)
+2025-07-24 15:40:51 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24 15:40:51 [Thread-3] WARN  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Failed to delete temporary directory on exit: java.nio.file.AccessDeniedException: C:\Users\Admin\AppData\Local\Temp\config-repo-15328075276407257374\.git\objects\pack\pack-0319b2424f9604767f71f33b85a9152aa3625c17.idx
+2025-07-24 15:40:51 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-24 15:41:11 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-24 15:41:11 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 14220 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-24 15:41:11 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 15:41:12 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=20c033ca-04da-38fa-afd9-f1954dbc9633
+2025-07-24 15:41:12 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-24 15:41:12 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-24 15:41:12 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 15:41:12 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 15:41:12 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 15:41:12 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1342 ms
+2025-07-24 15:41:14 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 15:41:14 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2025-07-24 15:41:14 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path '/'
+2025-07-24 15:41:16 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 15:41:16 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 6.512 seconds (process running for 7.909)
+2025-07-24 15:50:44 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24 15:50:44 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-24 15:50:50 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-24 15:50:50 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 13680 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-24 15:50:50 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 15:50:51 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=20c033ca-04da-38fa-afd9-f1954dbc9633
+2025-07-24 15:50:51 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-24 15:50:51 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-24 15:50:51 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 15:50:51 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 15:50:51 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 15:50:51 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1377 ms
+2025-07-24 15:50:53 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 15:50:53 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2025-07-24 15:50:53 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path '/'
+2025-07-24 15:50:54 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 15:50:54 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 6.602 seconds (process running for 8.126)
+2025-07-24 15:55:27 [http-nio-8888-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24 15:55:27 [http-nio-8888-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-24 15:55:27 [http-nio-8888-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-07-24 15:55:31 [http-nio-8888-exec-2] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 15:55:31 [http-nio-8888-exec-2] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 15:55:32 [http-nio-8888-exec-2] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 15:55:32 [http-nio-8888-exec-3] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 15:55:32 [http-nio-8888-exec-3] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 15:55:32 [http-nio-8888-exec-3] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:02:44 [http-nio-8888-exec-4] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:02:44 [http-nio-8888-exec-4] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:02:44 [http-nio-8888-exec-4] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:02:44 [http-nio-8888-exec-5] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:02:45 [http-nio-8888-exec-5] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:02:45 [http-nio-8888-exec-5] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:05:00 [http-nio-8888-exec-7] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:05:00 [http-nio-8888-exec-7] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:05:00 [http-nio-8888-exec-7] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:05:00 [http-nio-8888-exec-8] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:05:00 [http-nio-8888-exec-8] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:05:01 [http-nio-8888-exec-8] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:12:41 [http-nio-8888-exec-10] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:12:41 [http-nio-8888-exec-10] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:12:41 [http-nio-8888-exec-10] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:12:41 [http-nio-8888-exec-2] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:12:41 [http-nio-8888-exec-2] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:12:42 [http-nio-8888-exec-2] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:16:28 [http-nio-8888-exec-1] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:16:28 [http-nio-8888-exec-1] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:16:28 [http-nio-8888-exec-1] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:23:36 [http-nio-8888-exec-7] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:23:36 [http-nio-8888-exec-7] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:23:36 [http-nio-8888-exec-7] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:23:43 [http-nio-8888-exec-9] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:23:43 [http-nio-8888-exec-9] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:23:43 [http-nio-8888-exec-9] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:24:12 [http-nio-8888-exec-1] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:24:12 [http-nio-8888-exec-1] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:24:12 [http-nio-8888-exec-1] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:24:12 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository\config-mastodon_to_kafka.yaml]' via location 'file:/D:/Projects/JavaProjects/cloud_ex/microsorvices-demo/config-server-repository/'
+2025-07-24 16:25:40 [http-nio-8888-exec-6] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:25:40 [http-nio-8888-exec-6] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:25:41 [http-nio-8888-exec-6] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:26:31 [http-nio-8888-exec-8] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:26:31 [http-nio-8888-exec-8] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:26:32 [http-nio-8888-exec-8] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:29:04 [http-nio-8888-exec-10] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:29:04 [http-nio-8888-exec-10] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:29:04 [http-nio-8888-exec-10] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:31:10 [http-nio-8888-exec-4] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:31:10 [http-nio-8888-exec-4] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:31:10 [http-nio-8888-exec-4] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:36:22 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24 16:36:22 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-24 16:36:33 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-24 16:36:33 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 16408 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-24 16:36:33 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 16:36:34 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=20c033ca-04da-38fa-afd9-f1954dbc9633
+2025-07-24 16:36:34 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-24 16:36:34 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-24 16:36:34 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 16:36:34 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 16:36:34 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 16:36:34 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1383 ms
+2025-07-24 16:36:36 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 16:36:37 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2025-07-24 16:36:37 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path '/'
+2025-07-24 16:36:38 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 16:36:38 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 6.96 seconds (process running for 9.039)
+2025-07-24 16:37:06 [http-nio-8888-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24 16:37:06 [http-nio-8888-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-24 16:37:06 [http-nio-8888-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-07-24 16:37:06 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Cannot pull from remote https://github.com/rourory/spring-cloud-repo.git, the working tree is not clean.
+2025-07-24 16:37:06 [http-nio-8888-exec-1] WARN  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - The local repository is dirty or ahead of origin. Resetting it to origin/main.
+2025-07-24 16:37:06 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Reset label main to version AnyObjectId[00c67ded8f7425d32be19628cfbcf43f1c806e4a]
+2025-07-24 16:37:07 [http-nio-8888-exec-2] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:37:07 [http-nio-8888-exec-2] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:37:07 [http-nio-8888-exec-2] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:37:25 [http-nio-8888-exec-5] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:37:25 [http-nio-8888-exec-5] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:37:26 [http-nio-8888-exec-5] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:37:50 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24 16:37:50 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-24 16:37:58 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-24 16:37:58 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 11092 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-24 16:37:58 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 16:37:59 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=20c033ca-04da-38fa-afd9-f1954dbc9633
+2025-07-24 16:37:59 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-24 16:37:59 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-24 16:37:59 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 16:37:59 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 16:37:59 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 16:37:59 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1412 ms
+2025-07-24 16:38:01 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 16:38:01 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2025-07-24 16:38:01 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path '/'
+2025-07-24 16:38:03 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 16:38:03 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 6.739 seconds (process running for 8.197)
+2025-07-24 16:38:07 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24 16:38:07 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-24 16:38:07 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-07-24 16:38:07 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Cannot pull from remote https://github.com/rourory/spring-cloud-repo.git, the working tree is not clean.
+2025-07-24 16:38:08 [http-nio-8888-exec-1] WARN  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - The local repository is dirty or ahead of origin. Resetting it to origin/main.
+2025-07-24 16:38:08 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Reset label main to version AnyObjectId[00c67ded8f7425d32be19628cfbcf43f1c806e4a]
+2025-07-24 16:38:19 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24 16:38:19 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-24 16:38:24 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-24 16:38:24 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 20016 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-24 16:38:24 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 16:38:25 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=20c033ca-04da-38fa-afd9-f1954dbc9633
+2025-07-24 16:38:25 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-24 16:38:25 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-24 16:38:25 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 16:38:25 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 16:38:25 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 16:38:25 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1407 ms
+2025-07-24 16:38:27 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 16:38:28 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2025-07-24 16:38:28 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path '/'
+2025-07-24 16:38:29 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 16:38:29 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 6.635 seconds (process running for 8.058)
+2025-07-24 16:38:31 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24 16:38:31 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-24 16:38:31 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-07-24 16:38:32 [http-nio-8888-exec-1] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:38:32 [http-nio-8888-exec-1] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:38:32 [http-nio-8888-exec-1] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:38:33 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository\config-mastodon_to_kafka.yaml]' via location 'file:/D:/Projects/JavaProjects/cloud_ex/microsorvices-demo/config-server-repository/'
+2025-07-24 16:38:45 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24 16:38:45 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-24 16:38:50 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-24 16:38:50 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 12472 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-24 16:38:50 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 16:38:51 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=20c033ca-04da-38fa-afd9-f1954dbc9633
+2025-07-24 16:38:51 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-24 16:38:51 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-24 16:38:51 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 16:38:51 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 16:38:51 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 16:38:51 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1423 ms
+2025-07-24 16:38:53 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 16:38:54 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2025-07-24 16:38:54 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path '/'
+2025-07-24 16:38:55 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 16:38:55 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 6.605 seconds (process running for 8.266)
+2025-07-24 16:38:56 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24 16:38:56 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-24 16:38:56 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-07-24 16:39:03 [http-nio-8888-exec-2] INFO  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Cannot pull from remote https://github.com/rourory/spring-cloud-repo.git, the working tree is not clean.
+2025-07-24 16:39:03 [http-nio-8888-exec-2] WARN  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - The local repository is dirty or ahead of origin. Resetting it to origin/main.
+2025-07-24 16:39:04 [http-nio-8888-exec-2] INFO  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Reset label main to version AnyObjectId[00c67ded8f7425d32be19628cfbcf43f1c806e4a]
+2025-07-24 16:39:46 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24 16:39:46 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-24 16:39:52 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-24 16:39:52 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 19932 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-24 16:39:52 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 16:39:53 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=20c033ca-04da-38fa-afd9-f1954dbc9633
+2025-07-24 16:39:53 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-24 16:39:53 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-24 16:39:53 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 16:39:53 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 16:39:54 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 16:39:54 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1567 ms
+2025-07-24 16:39:55 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 16:39:56 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2025-07-24 16:39:56 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path '/'
+2025-07-24 16:39:57 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 16:39:57 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 6.896 seconds (process running for 8.314)
+2025-07-24 16:39:58 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24 16:39:58 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-24 16:39:58 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-07-24 16:39:59 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Cannot pull from remote https://github.com/rourory/spring-cloud-repo.git, the working tree is not clean.
+2025-07-24 16:39:59 [http-nio-8888-exec-1] WARN  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - The local repository is dirty or ahead of origin. Resetting it to origin/main.
+2025-07-24 16:39:59 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Reset label main to version AnyObjectId[00c67ded8f7425d32be19628cfbcf43f1c806e4a]
+2025-07-24 16:40:02 [http-nio-8888-exec-4] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:40:02 [http-nio-8888-exec-4] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:40:02 [http-nio-8888-exec-4] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:40:12 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24 16:40:12 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-24 16:40:18 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-24 16:40:18 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 13832 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-24 16:40:18 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 16:40:19 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=20c033ca-04da-38fa-afd9-f1954dbc9633
+2025-07-24 16:40:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-24 16:40:20 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-24 16:40:20 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 16:40:20 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 16:40:20 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 16:40:20 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1602 ms
+2025-07-24 16:40:22 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 16:40:22 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2025-07-24 16:40:22 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path '/'
+2025-07-24 16:40:23 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 16:40:23 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 6.965 seconds (process running for 8.517)
+2025-07-24 16:40:42 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24 16:40:42 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-24 16:40:42 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-07-24 16:40:43 [http-nio-8888-exec-1] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:40:43 [http-nio-8888-exec-1] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:40:44 [http-nio-8888-exec-1] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:40:44 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository\config-mastodon_to_kafka.yaml]' via location 'file:/D:/Projects/JavaProjects/cloud_ex/microsorvices-demo/config-server-repository/'
+2025-07-24 16:41:18 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24 16:41:18 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-24 16:41:23 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-24 16:41:23 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 18624 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-24 16:41:23 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 16:41:24 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=20c033ca-04da-38fa-afd9-f1954dbc9633
+2025-07-24 16:41:25 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-24 16:41:25 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-24 16:41:25 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 16:41:25 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 16:41:25 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 16:41:25 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1509 ms
+2025-07-24 16:41:26 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 16:41:27 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2025-07-24 16:41:27 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path '/'
+2025-07-24 16:41:28 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 16:41:28 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 6.862 seconds (process running for 8.528)
+2025-07-24 16:41:35 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24 16:41:35 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-24 16:41:35 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-07-24 16:41:36 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Cannot pull from remote https://github.com/rourory/spring-cloud-repo.git, the working tree is not clean.
+2025-07-24 16:41:36 [http-nio-8888-exec-1] WARN  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - The local repository is dirty or ahead of origin. Resetting it to origin/main.
+2025-07-24 16:41:36 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Reset label main to version AnyObjectId[00c67ded8f7425d32be19628cfbcf43f1c806e4a]
+2025-07-24 16:41:43 [http-nio-8888-exec-2] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:41:43 [http-nio-8888-exec-2] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:41:43 [http-nio-8888-exec-2] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:41:50 [http-nio-8888-exec-3] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:41:50 [http-nio-8888-exec-3] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:41:50 [http-nio-8888-exec-3] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:42:06 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24 16:42:06 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-24 16:42:10 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-24 16:42:11 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 9240 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-24 16:42:11 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 16:42:11 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=20c033ca-04da-38fa-afd9-f1954dbc9633
+2025-07-24 16:42:12 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-24 16:42:12 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-24 16:42:12 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 16:42:12 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 16:42:12 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 16:42:12 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1231 ms
+2025-07-24 16:42:14 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 16:42:14 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2025-07-24 16:42:14 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path '/'
+2025-07-24 16:42:15 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 16:42:15 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 6.229 seconds (process running for 7.775)
+2025-07-24 16:42:20 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24 16:42:20 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-24 16:42:20 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-07-24 16:42:20 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Cannot pull from remote https://github.com/rourory/spring-cloud-repo.git, the working tree is not clean.
+2025-07-24 16:42:20 [http-nio-8888-exec-1] WARN  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - The local repository is dirty or ahead of origin. Resetting it to origin/main.
+2025-07-24 16:42:20 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Reset label main to version AnyObjectId[00c67ded8f7425d32be19628cfbcf43f1c806e4a]
+2025-07-24 16:42:22 [http-nio-8888-exec-3] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:42:22 [http-nio-8888-exec-3] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:42:23 [http-nio-8888-exec-3] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:42:27 [http-nio-8888-exec-6] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:42:27 [http-nio-8888-exec-6] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:42:28 [http-nio-8888-exec-6] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:42:49 [http-nio-8888-exec-9] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:42:49 [http-nio-8888-exec-9] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:42:50 [http-nio-8888-exec-9] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:42:50 [http-nio-8888-exec-9] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository\config-mastodon_to_kafka.yaml]' via location 'file:/D:/Projects/JavaProjects/cloud_ex/microsorvices-demo/config-server-repository/'
+2025-07-24 16:42:57 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24 16:42:57 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-24 16:43:42 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-24 16:43:42 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 16216 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-24 16:43:42 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 16:43:43 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=20c033ca-04da-38fa-afd9-f1954dbc9633
+2025-07-24 16:43:43 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-24 16:43:43 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-24 16:43:43 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 16:43:43 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 16:43:43 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 16:43:43 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1273 ms
+2025-07-24 16:43:45 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 16:43:45 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2025-07-24 16:43:45 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path '/'
+2025-07-24 16:43:46 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 16:43:46 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 6.229 seconds (process running for 7.555)
+2025-07-24 16:43:53 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24 16:43:53 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-24 16:43:53 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-07-24 16:43:53 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Cannot pull from remote https://github.com/rourory/spring-cloud-repo.git, the working tree is not clean.
+2025-07-24 16:43:53 [http-nio-8888-exec-1] WARN  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - The local repository is dirty or ahead of origin. Resetting it to origin/main.
+2025-07-24 16:43:53 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Reset label main to version AnyObjectId[00c67ded8f7425d32be19628cfbcf43f1c806e4a]
+2025-07-24 16:44:02 [http-nio-8888-exec-2] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:44:02 [http-nio-8888-exec-2] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:44:02 [http-nio-8888-exec-2] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:44:19 [http-nio-8888-exec-3] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:44:19 [http-nio-8888-exec-3] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:44:19 [http-nio-8888-exec-3] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:44:19 [http-nio-8888-exec-3] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository\config-mastodon_to_kafka.yaml]' via location 'file:/D:/Projects/JavaProjects/cloud_ex/microsorvices-demo/config-server-repository/'
+2025-07-24 16:45:20 [http-nio-8888-exec-5] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI file://D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
+2025-07-24 16:45:20 [http-nio-8888-exec-5] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/info/refs?service=git-upload-pack
+2025-07-24 16:45:20 [http-nio-8888-exec-5] WARN  o.s.c.c.s.e.HttpClientConfigurableHttpConnectionFactory - No custom http config found for URL: https://github.com/rourory/spring-cloud-repo.git/git-upload-pack
+2025-07-24 16:47:18 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24 16:47:18 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-24 16:47:36 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-24 16:47:36 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 10044 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-24 16:47:36 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 16:47:37 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=20c033ca-04da-38fa-afd9-f1954dbc9633
+2025-07-24 16:47:37 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-24 16:47:37 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-24 16:47:37 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 16:47:37 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 16:47:37 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 16:47:37 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1268 ms
+2025-07-24 16:47:39 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 16:47:39 [main] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
+2025-07-24 16:47:41 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2025-07-24 16:47:41 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path '/'
+2025-07-24 16:47:42 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-24 16:47:42 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 7.79 seconds (process running for 9.164)
+2025-07-24 16:48:01 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24 16:48:01 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-24 16:48:01 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-07-24 16:48:01 [http-nio-8888-exec-1] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
+2025-07-24 16:49:56 [http-nio-8888-exec-3] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
+2025-07-24 16:50:11 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24 16:50:11 [Thread-3] WARN  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Failed to delete temporary directory on exit: java.nio.file.AccessDeniedException: C:\Users\Admin\AppData\Local\Temp\config-repo-15430538988116609241\.git\objects\pack\pack-0319b2424f9604767f71f33b85a9152aa3625c17.idx
+2025-07-24 16:50:11 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete

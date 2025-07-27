@@ -1,0 +1,1961 @@
+2025-07-25 12:05:24 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - Starting MastodonToKafkaServiceApplication using Java 17.0.12 with PID 5668 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\mastodon-to-kafka-service\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-25 12:05:24 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - The following 1 profile is active: "dev"
+2025-07-25 12:05:25 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2025-07-25 12:05:25 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=mastodon-to-kafka-service, profiles=[default], label=null, version=b83d608d04ce557f69fd4ef5808007bd27eebb12, state=
+2025-07-25 12:05:25 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2025-07-25 12:05:25 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=mastodon-to-kafka-service, profiles=[dev], label=null, version=b83d608d04ce557f69fd4ef5808007bd27eebb12, state=
+2025-07-25 12:05:28 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=5c0a47cb-3aad-3277-84e3-a684e3d1ad0c
+2025-07-25 12:05:29 [main] INFO  c.m.demo.config.KafkaConfigData - Kafka config data has initialized with next properties: bootstrapServers: localhost:19092, localhost:29092, localhost:39092
+schemaRegistryUrlKey: schema.registry.url
+schemaRegistryUrl: http://localhost:8081
+topicName : mastodon-topic
+topicNamesToCreate : [mastodon-topic]
+numberOfPartitions : 3
+replicationFactor : 3
+2025-07-25 12:05:29 [main] INFO  c.m.d.config.KafkaProducerConfigData - Kafka config data has initialized with next properties: keySerializerClass: org.apache.kafka.common.serialization.LongSerializer
+valueSerializerClass: io.confluent.kafka.serializers.KafkaAvroSerializer
+compressionType: snappy
+acks : all
+batchSize : 16384
+batchSizeBoostFactor : 100
+lingerMs : 5
+requestTimeoutMs : 60000
+retryCount : 10
+2025-07-25 12:05:29 [main] INFO  c.m.d.k.p.config.KafkaProducerConfig - KafkaProducerConfig constructor. kafkaConfigData = KafkaConfigData{bootstrapServers='localhost:19092, localhost:29092, localhost:39092', schemaRegistryUrlKey='schema.registry.url', schemaRegistryUrl='http://localhost:8081', topicName='mastodon-topic', topicNamesToCreate=[mastodon-topic], numberOfPartitions=3, replicationFactor=3}, kafkaProducerConfigData = KafkaProducerConfigData(keySerializerClass=org.apache.kafka.common.serialization.LongSerializer, valueSerializerClass=io.confluent.kafka.serializers.KafkaAvroSerializer, compressionType=snappy, acks=all, batchSize=16384, batchSizeBoostFactor=100, lingerMs=5, requestTimeoutMs=60000, retryCount=10)
+2025-07-25 12:05:29 [main] INFO  c.m.d.k.p.config.KafkaProducerConfig - Producer configuration: {compression.type=snappy, schema.registry.url=http://localhost:8081, retries=10, value.serializer=io.confluent.kafka.serializers.KafkaAvroSerializer, request.timeout.ms=60000, batch.size=1638400, acks=all, bootstrap.servers=localhost:19092, localhost:29092, localhost:39092, key.serializer=org.apache.kafka.common.serialization.LongSerializer, linger.ms=5}
+2025-07-25 12:05:30 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2025-07-25 12:05:30 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-07-25 12:05:30 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-07-25 12:05:30 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1753434330773
+2025-07-25 12:05:32 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kafkaListenerContainerFactory' defined in class path resource [org/springframework/boot/autoconfigure/kafka/KafkaAnnotationDrivenConfiguration.class]: Failed to instantiate [org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory]: Factory method 'kafkaListenerContainerFactory' threw exception with message: 'void org.springframework.kafka.config.AbstractKafkaListenerContainerFactory.setBatchMessageConverter(org.springframework.kafka.support.converter.BatchMessageConverter)'
+2025-07-25 12:05:32 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2025-07-25 12:05:32 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-07-25 12:05:32 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-25 12:05:32 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-07-25 12:05:32 [main] INFO  c.m.d.k.p.s.MastodonKafkaProducer - Closing kafka producer...
+2025-07-25 12:05:32 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-25 12:05:32 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.boot.autoconfigure.kafka.ConcurrentKafkaListenerContainerFactoryConfigurer.configureListenerFactory(ConcurrentKafkaListenerContainerFactoryConfigurer.java:207)
+
+The following method did not exist:
+
+    'void org.springframework.kafka.config.AbstractKafkaListenerContainerFactory.setBatchMessageConverter(org.springframework.kafka.support.converter.BatchMessageConverter)'
+
+The calling method's class, org.springframework.boot.autoconfigure.kafka.ConcurrentKafkaListenerContainerFactoryConfigurer, was loaded from the following location:
+
+    jar:file:/C:/Users/Admin/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.5.3/spring-boot-autoconfigure-3.5.3.jar!/org/springframework/boot/autoconfigure/kafka/ConcurrentKafkaListenerContainerFactoryConfigurer.class
+
+The called method's class, org.springframework.kafka.config.AbstractKafkaListenerContainerFactory, is available from the following locations:
+
+    jar:file:/C:/Users/Admin/.m2/repository/org/springframework/kafka/spring-kafka/2.9.0/spring-kafka-2.9.0.jar!/org/springframework/kafka/config/AbstractKafkaListenerContainerFactory.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    org.springframework.kafka.config.AbstractKafkaListenerContainerFactory: file:/C:/Users/Admin/.m2/repository/org/springframework/kafka/spring-kafka/2.9.0/spring-kafka-2.9.0.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes org.springframework.boot.autoconfigure.kafka.ConcurrentKafkaListenerContainerFactoryConfigurer and org.springframework.kafka.config.AbstractKafkaListenerContainerFactory
+
+2025-07-25 12:11:11 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - Starting MastodonToKafkaServiceApplication using Java 17.0.12 with PID 14256 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\mastodon-to-kafka-service\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-25 12:11:11 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - The following 1 profile is active: "dev"
+2025-07-25 12:11:11 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2025-07-25 12:11:11 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=mastodon-to-kafka-service, profiles=[default], label=null, version=b83d608d04ce557f69fd4ef5808007bd27eebb12, state=
+2025-07-25 12:11:11 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2025-07-25 12:11:11 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=mastodon-to-kafka-service, profiles=[dev], label=null, version=b83d608d04ce557f69fd4ef5808007bd27eebb12, state=
+2025-07-25 12:11:14 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=5c0a47cb-3aad-3277-84e3-a684e3d1ad0c
+2025-07-25 12:11:15 [main] INFO  c.m.demo.config.KafkaConfigData - Kafka config data has initialized with next properties: bootstrapServers: localhost:19092, localhost:29092, localhost:39092
+schemaRegistryUrlKey: schema.registry.url
+schemaRegistryUrl: http://localhost:8081
+topicName : mastodon-topic
+topicNamesToCreate : [mastodon-topic]
+numberOfPartitions : 3
+replicationFactor : 3
+2025-07-25 12:11:15 [main] INFO  c.m.d.config.KafkaProducerConfigData - Kafka config data has initialized with next properties: keySerializerClass: org.apache.kafka.common.serialization.LongSerializer
+valueSerializerClass: io.confluent.kafka.serializers.KafkaAvroSerializer
+compressionType: snappy
+acks : all
+batchSize : 16384
+batchSizeBoostFactor : 100
+lingerMs : 5
+requestTimeoutMs : 60000
+retryCount : 10
+2025-07-25 12:11:15 [main] INFO  c.m.d.k.p.config.KafkaProducerConfig - KafkaProducerConfig constructor. kafkaConfigData = KafkaConfigData{bootstrapServers='localhost:19092, localhost:29092, localhost:39092', schemaRegistryUrlKey='schema.registry.url', schemaRegistryUrl='http://localhost:8081', topicName='mastodon-topic', topicNamesToCreate=[mastodon-topic], numberOfPartitions=3, replicationFactor=3}, kafkaProducerConfigData = KafkaProducerConfigData(keySerializerClass=org.apache.kafka.common.serialization.LongSerializer, valueSerializerClass=io.confluent.kafka.serializers.KafkaAvroSerializer, compressionType=snappy, acks=all, batchSize=16384, batchSizeBoostFactor=100, lingerMs=5, requestTimeoutMs=60000, retryCount=10)
+2025-07-25 12:11:15 [main] INFO  c.m.d.k.p.config.KafkaProducerConfig - Producer configuration: {compression.type=snappy, schema.registry.url=http://localhost:8081, retries=10, value.serializer=io.confluent.kafka.serializers.KafkaAvroSerializer, request.timeout.ms=60000, batch.size=1638400, acks=all, bootstrap.servers=localhost:19092, localhost:29092, localhost:39092, key.serializer=org.apache.kafka.common.serialization.LongSerializer, linger.ms=5}
+2025-07-25 12:11:16 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2025-07-25 12:11:17 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-07-25 12:11:17 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-07-25 12:11:17 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1753434676998
+2025-07-25 12:11:20 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:11:21 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:11:21 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http)
+2025-07-25 12:11:23 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:11:24 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:11:24 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - Started MastodonToKafkaServiceApplication in 20.099 seconds (process running for 24.036)
+2025-07-25 12:11:24 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - The app is running...
+2025-07-25 12:11:24 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Start creating topics...
+2025-07-25 12:11:24 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Creating 1 topic(s), attempt: 0
+2025-07-25 12:11:24 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Create topic result [KafkaFuture{value=null,exception=null,done=false}]
+2025-07-25 12:11:24 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Start checking if topics are created...
+2025-07-25 12:11:24 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Reading kafka topic [mastodon-topic], attempt 0
+2025-07-25 12:11:24 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic with name (name=_schemas, topicId=AAAAAAAAAAAAAAAAAAAAAA, internal=false) is ready
+2025-07-25 12:11:24 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic with name (name=mastodon-topic, topicId=AAAAAAAAAAAAAAAAAAAAAA, internal=false) is ready
+2025-07-25 12:11:24 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic with name (name=__confluent.support.metrics, topicId=AAAAAAAAAAAAAAAAAAAAAA, internal=false) is ready
+2025-07-25 12:11:24 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic mastodon-topic is now created with 1 attempts!
+2025-07-25 12:11:24 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topics are created!
+2025-07-25 12:11:24 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Start checking schema registry...
+2025-07-25 12:11:24 [main] WARN  i.n.r.d.DefaultDnsServerAddressStreamProvider - Default DNS servers: [/8.8.8.8:53, /8.8.4.4:53] (Google Public DNS as a fallback)
+2025-07-25 12:11:25 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Check if schema-registry is available. Attempt: 1
+2025-07-25 12:11:28 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Schema-registry is available! Attempt: 2
+2025-07-25 12:11:28 [main] INFO  c.m.d.m.i.i.KafkaStreamInitializer - Topics with name mastodon-topic are ready for processing!
+2025-07-25 12:11:31 [Thread-16] INFO  c.m.d.k.p.s.MastodonKafkaProducer - Sending message='{"id": 114913095672599480, "content": "<p><a href=\"https://mastodon.social/tags/TempoAgora\" class=\"mention hashtag\" rel=\"tag\">#<span>TempoAgora</span></a> em Brasília: 🌞 céu limpo, 🌡 <a href=\"https://mastodon.social/tags/temperatura\" class=\"mention hashtag\" rel=\"tag\">#<span>temperatura</span></a> de 11 ºC e <a href=\"https://mastodon.social/tags/umidade\" class=\"mention hashtag\" rel=\"tag\">#<span>umidade</span></a> de ✅ 82% (atualizado em 25/07/2025 06:11)</p>", "username": "kazzttoramt", "createdAt": 1753434687397}' to topic='mastodon-topic'
+2025-07-25 12:11:31 [Thread-16] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 1638400
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = mastodon-to-kafka-service-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = snappy
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.LongSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 60000
+	retries = 10
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
+
+2025-07-25 12:11:31 [Thread-16] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-07-25 12:11:31 [Thread-16] INFO  i.c.k.s.KafkaAvroSerializerConfig - KafkaAvroSerializerConfig values: 
+	bearer.auth.token = [hidden]
+	proxy.port = -1
+	schema.reflection = false
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	schema.registry.url = [http://localhost:8081]
+	basic.auth.user.info = [hidden]
+	proxy.host = 
+	use.latest.version = false
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2025-07-25 12:11:31 [Thread-16] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=mastodon-to-kafka-service-producer-1] Instantiated an idempotent producer.
+2025-07-25 12:11:31 [Thread-16] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-07-25 12:11:31 [Thread-16] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-07-25 12:11:31 [Thread-16] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1753434691837
+2025-07-25 12:11:31 [kafka-producer-network-thread | mastodon-to-kafka-service-producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=mastodon-to-kafka-service-producer-1] Cluster ID: z-HxIqBiRjaImVM2mIMi8Q
+2025-07-25 12:11:31 [kafka-producer-network-thread | mastodon-to-kafka-service-producer-1] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=mastodon-to-kafka-service-producer-1] ProducerId set to 5000 with epoch 0
+2025-07-25 12:41:04 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-25 12:41:04 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete
+2025-07-25 12:41:06 [SpringApplicationShutdownHook] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=mastodon-to-kafka-service-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2025-07-25 12:41:06 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-07-25 12:41:06 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-25 12:41:06 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-07-25 12:41:06 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-07-25 12:41:06 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.producer for mastodon-to-kafka-service-producer-1 unregistered
+2025-07-25 12:41:06 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2025-07-25 12:41:06 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-07-25 12:41:06 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-25 12:41:06 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-07-25 12:41:06 [SpringApplicationShutdownHook] INFO  c.m.d.m.s.MastodonStreamService - Shutting down streaming
+2025-07-25 12:41:06 [SpringApplicationShutdownHook] INFO  c.m.d.k.p.s.MastodonKafkaProducer - Closing kafka producer...
+2025-07-25 12:41:33 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - Starting MastodonToKafkaServiceApplication using Java 17.0.12 with PID 16768 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\mastodon-to-kafka-service\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-25 12:41:33 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - The following 1 profile is active: "dev"
+2025-07-25 12:41:33 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2025-07-25 12:41:33 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=mastodon-to-kafka-service, profiles=[default], label=null, version=b83d608d04ce557f69fd4ef5808007bd27eebb12, state=
+2025-07-25 12:41:33 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2025-07-25 12:41:33 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=mastodon-to-kafka-service, profiles=[dev], label=null, version=b83d608d04ce557f69fd4ef5808007bd27eebb12, state=
+2025-07-25 12:41:34 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=5c0a47cb-3aad-3277-84e3-a684e3d1ad0c
+2025-07-25 12:41:35 [main] INFO  c.m.demo.config.KafkaConfigData - Kafka config data has initialized with next properties: bootstrapServers: localhost:19092, localhost:29092, localhost:39092
+schemaRegistryUrlKey: schema.registry.url
+schemaRegistryUrl: http://localhost:8081
+topicName : mastodon-topic
+topicNamesToCreate : [mastodon-topic]
+numberOfPartitions : 3
+replicationFactor : 3
+2025-07-25 12:41:35 [main] INFO  c.m.d.config.KafkaProducerConfigData - Kafka config data has initialized with next properties: keySerializerClass: org.apache.kafka.common.serialization.LongSerializer
+valueSerializerClass: io.confluent.kafka.serializers.KafkaAvroSerializer
+compressionType: snappy
+acks : all
+batchSize : 16384
+batchSizeBoostFactor : 100
+lingerMs : 5
+requestTimeoutMs : 60000
+retryCount : 10
+2025-07-25 12:41:35 [main] INFO  c.m.d.k.p.config.KafkaProducerConfig - KafkaProducerConfig constructor. kafkaConfigData = KafkaConfigData{bootstrapServers='localhost:19092, localhost:29092, localhost:39092', schemaRegistryUrlKey='schema.registry.url', schemaRegistryUrl='http://localhost:8081', topicName='mastodon-topic', topicNamesToCreate=[mastodon-topic], numberOfPartitions=3, replicationFactor=3}, kafkaProducerConfigData = KafkaProducerConfigData(keySerializerClass=org.apache.kafka.common.serialization.LongSerializer, valueSerializerClass=io.confluent.kafka.serializers.KafkaAvroSerializer, compressionType=snappy, acks=all, batchSize=16384, batchSizeBoostFactor=100, lingerMs=5, requestTimeoutMs=60000, retryCount=10)
+2025-07-25 12:41:35 [main] INFO  c.m.d.k.p.config.KafkaProducerConfig - Producer configuration: {compression.type=snappy, schema.registry.url=http://localhost:8081, retries=10, value.serializer=io.confluent.kafka.serializers.KafkaAvroSerializer, request.timeout.ms=60000, batch.size=1638400, acks=all, bootstrap.servers=localhost:19092, localhost:29092, localhost:39092, key.serializer=org.apache.kafka.common.serialization.LongSerializer, linger.ms=5}
+2025-07-25 12:41:35 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2025-07-25 12:41:35 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-07-25 12:41:35 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-07-25 12:41:35 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1753436495803
+2025-07-25 12:41:37 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:41:38 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:41:39 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http)
+2025-07-25 12:41:40 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:41:41 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:41:41 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - Started MastodonToKafkaServiceApplication in 10.673 seconds (process running for 12.231)
+2025-07-25 12:41:41 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - The app is running...
+2025-07-25 12:41:41 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Start creating topics...
+2025-07-25 12:41:41 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Creating 1 topic(s), attempt: 0
+2025-07-25 12:41:41 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Create topic result [KafkaFuture{value=null,exception=null,done=false}]
+2025-07-25 12:41:41 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Start checking if topics are created...
+2025-07-25 12:41:41 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Reading kafka topic [mastodon-topic], attempt 0
+2025-07-25 12:41:41 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic with name (name=_schemas, topicId=AAAAAAAAAAAAAAAAAAAAAA, internal=false) is ready
+2025-07-25 12:41:41 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic with name (name=mastodon-topic, topicId=AAAAAAAAAAAAAAAAAAAAAA, internal=false) is ready
+2025-07-25 12:41:41 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic with name (name=__confluent.support.metrics, topicId=AAAAAAAAAAAAAAAAAAAAAA, internal=false) is ready
+2025-07-25 12:41:41 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic mastodon-topic is now created with 1 attempts!
+2025-07-25 12:41:41 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topics are created!
+2025-07-25 12:41:41 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Start checking schema registry...
+2025-07-25 12:41:41 [main] WARN  i.n.r.d.DefaultDnsServerAddressStreamProvider - Default DNS servers: [/8.8.8.8:53, /8.8.4.4:53] (Google Public DNS as a fallback)
+2025-07-25 12:41:41 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Check if schema-registry is available. Attempt: 1
+2025-07-25 12:41:44 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Schema-registry is available! Attempt: 2
+2025-07-25 12:41:44 [main] INFO  c.m.d.m.i.i.KafkaStreamInitializer - Topics with name mastodon-topic are ready for processing!
+2025-07-25 12:41:45 [Thread-16] INFO  c.m.d.k.p.s.MastodonKafkaProducer - Sending message='{"id": 114913214586150960, "content": "<p><a href=\"https://music.youtube.com/playlist?list=OLAK5uy_lafBSIzvjh5yExl1bkssdSH_f__vH0trc&amp;si=AY21T_jDvgCT9M0K\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">music.youtube.com/playlist?lis</span><span class=\"invisible\">t=OLAK5uy_lafBSIzvjh5yExl1bkssdSH_f__vH0trc&amp;si=AY21T_jDvgCT9M0K</span></a></p>", "username": "PKQ", "createdAt": 1753436501866}' to topic='mastodon-topic'
+2025-07-25 12:41:45 [Thread-16] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 1638400
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = mastodon-to-kafka-service-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = snappy
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.LongSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 60000
+	retries = 10
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
+
+2025-07-25 12:41:45 [Thread-16] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-07-25 12:41:45 [Thread-16] INFO  i.c.k.s.KafkaAvroSerializerConfig - KafkaAvroSerializerConfig values: 
+	bearer.auth.token = [hidden]
+	proxy.port = -1
+	schema.reflection = false
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	schema.registry.url = [http://localhost:8081]
+	basic.auth.user.info = [hidden]
+	proxy.host = 
+	use.latest.version = false
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2025-07-25 12:41:45 [Thread-16] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=mastodon-to-kafka-service-producer-1] Instantiated an idempotent producer.
+2025-07-25 12:41:45 [Thread-16] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-07-25 12:41:45 [Thread-16] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-07-25 12:41:45 [Thread-16] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1753436505860
+2025-07-25 12:41:45 [kafka-producer-network-thread | mastodon-to-kafka-service-producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=mastodon-to-kafka-service-producer-1] Cluster ID: z-HxIqBiRjaImVM2mIMi8Q
+2025-07-25 12:41:45 [kafka-producer-network-thread | mastodon-to-kafka-service-producer-1] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=mastodon-to-kafka-service-producer-1] ProducerId set to 5001 with epoch 0
+2025-07-25 12:44:46 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-25 12:44:46 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete
+2025-07-25 12:44:48 [SpringApplicationShutdownHook] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=mastodon-to-kafka-service-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2025-07-25 12:44:48 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-07-25 12:44:48 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-25 12:44:48 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-07-25 12:44:48 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-07-25 12:44:48 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.producer for mastodon-to-kafka-service-producer-1 unregistered
+2025-07-25 12:44:48 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2025-07-25 12:44:48 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-07-25 12:44:48 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-25 12:44:48 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-07-25 12:44:48 [SpringApplicationShutdownHook] INFO  c.m.d.m.s.MastodonStreamService - Shutting down streaming
+2025-07-25 12:44:48 [SpringApplicationShutdownHook] INFO  c.m.d.k.p.s.MastodonKafkaProducer - Closing kafka producer...
+2025-07-25 12:44:59 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - Starting MastodonToKafkaServiceApplication using Java 17.0.12 with PID 21344 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\mastodon-to-kafka-service\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-25 12:44:59 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - The following 1 profile is active: "dev"
+2025-07-25 12:44:59 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2025-07-25 12:44:59 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=mastodon-to-kafka-service, profiles=[default], label=null, version=b83d608d04ce557f69fd4ef5808007bd27eebb12, state=
+2025-07-25 12:44:59 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2025-07-25 12:44:59 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=mastodon-to-kafka-service, profiles=[dev], label=null, version=b83d608d04ce557f69fd4ef5808007bd27eebb12, state=
+2025-07-25 12:45:00 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=5c0a47cb-3aad-3277-84e3-a684e3d1ad0c
+2025-07-25 12:45:00 [main] INFO  c.m.demo.config.KafkaConfigData - Kafka config data has initialized with next properties: bootstrapServers: localhost:19092, localhost:29092, localhost:39092
+schemaRegistryUrlKey: schema.registry.url
+schemaRegistryUrl: http://localhost:8081
+topicName : mastodon-topic
+topicNamesToCreate : [mastodon-topic]
+numberOfPartitions : 3
+replicationFactor : 3
+2025-07-25 12:45:00 [main] INFO  c.m.d.config.KafkaProducerConfigData - Kafka config data has initialized with next properties: keySerializerClass: org.apache.kafka.common.serialization.LongSerializer
+valueSerializerClass: io.confluent.kafka.serializers.KafkaAvroSerializer
+compressionType: snappy
+acks : all
+batchSize : 16384
+batchSizeBoostFactor : 100
+lingerMs : 5
+requestTimeoutMs : 60000
+retryCount : 10
+2025-07-25 12:45:00 [main] INFO  c.m.d.k.p.config.KafkaProducerConfig - KafkaProducerConfig constructor. kafkaConfigData = KafkaConfigData{bootstrapServers='localhost:19092, localhost:29092, localhost:39092', schemaRegistryUrlKey='schema.registry.url', schemaRegistryUrl='http://localhost:8081', topicName='mastodon-topic', topicNamesToCreate=[mastodon-topic], numberOfPartitions=3, replicationFactor=3}, kafkaProducerConfigData = KafkaProducerConfigData(keySerializerClass=org.apache.kafka.common.serialization.LongSerializer, valueSerializerClass=io.confluent.kafka.serializers.KafkaAvroSerializer, compressionType=snappy, acks=all, batchSize=16384, batchSizeBoostFactor=100, lingerMs=5, requestTimeoutMs=60000, retryCount=10)
+2025-07-25 12:45:00 [main] INFO  c.m.d.k.p.config.KafkaProducerConfig - Producer configuration: {compression.type=snappy, schema.registry.url=http://localhost:8081, retries=10, value.serializer=io.confluent.kafka.serializers.KafkaAvroSerializer, request.timeout.ms=60000, batch.size=1638400, acks=all, bootstrap.servers=localhost:19092, localhost:29092, localhost:39092, key.serializer=org.apache.kafka.common.serialization.LongSerializer, linger.ms=5}
+2025-07-25 12:45:01 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2025-07-25 12:45:01 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-07-25 12:45:01 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-07-25 12:45:01 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1753436701282
+2025-07-25 12:45:03 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:45:04 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:45:04 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http)
+2025-07-25 12:45:05 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:45:06 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:45:06 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - Started MastodonToKafkaServiceApplication in 10.507 seconds (process running for 11.902)
+2025-07-25 12:45:06 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - The app is running...
+2025-07-25 12:45:06 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Start creating topics...
+2025-07-25 12:45:06 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Creating 1 topic(s), attempt: 0
+2025-07-25 12:45:06 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Create topic result [KafkaFuture{value=null,exception=null,done=false}]
+2025-07-25 12:45:06 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Start checking if topics are created...
+2025-07-25 12:45:06 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Reading kafka topic [mastodon-topic], attempt 0
+2025-07-25 12:45:06 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic with name (name=_schemas, topicId=AAAAAAAAAAAAAAAAAAAAAA, internal=false) is ready
+2025-07-25 12:45:06 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic with name (name=mastodon-topic, topicId=AAAAAAAAAAAAAAAAAAAAAA, internal=false) is ready
+2025-07-25 12:45:06 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic with name (name=__confluent.support.metrics, topicId=AAAAAAAAAAAAAAAAAAAAAA, internal=false) is ready
+2025-07-25 12:45:06 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic mastodon-topic is now created with 1 attempts!
+2025-07-25 12:45:06 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topics are created!
+2025-07-25 12:45:06 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Start checking schema registry...
+2025-07-25 12:45:06 [main] WARN  i.n.r.d.DefaultDnsServerAddressStreamProvider - Default DNS servers: [/8.8.8.8:53, /8.8.4.4:53] (Google Public DNS as a fallback)
+2025-07-25 12:45:07 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Check if schema-registry is available. Attempt: 1
+2025-07-25 12:45:10 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Schema-registry is available! Attempt: 2
+2025-07-25 12:45:10 [main] INFO  c.m.d.m.i.i.KafkaStreamInitializer - Topics with name mastodon-topic are ready for processing!
+2025-07-25 12:45:12 [Thread-16] INFO  c.m.d.k.p.s.MastodonKafkaProducer - Sending message='{"id": 114913228055756263, "content": "<p>Unveiling The Golden Bear\u2019s Financial Success</p><p>Who Is Jack Nicklaus? Hey there, golf enthusiasts and curious minds! Today, we\u2019re diving into the fascinating financial world of one of the most legendary figures in golf history, Jack Nicklaus. Known as &quot;The Golden Bear,&quot; Jack Nicklaus has not only left an indelible mark on the sport but has also amassed an impressive fortune along the way. So, grab your clubs and let\u2019s tee off into the world of Jack Nicklaus\u2019 net worth\u2026</p><p><a href=\"https://blueviolet-shrew-461181.hostingersite.com/unveiling-the-golden-bears-financial-success/\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">blueviolet-shrew-461181.hostin</span><span class=\"invisible\">gersite.com/unveiling-the-golden-bears-financial-success/</span></a></p>", "username": "Tejasmaheshram", "createdAt": 1753436707399}' to topic='mastodon-topic'
+2025-07-25 12:45:12 [Thread-16] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 1638400
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = mastodon-to-kafka-service-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = snappy
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.LongSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 60000
+	retries = 10
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
+
+2025-07-25 12:45:12 [Thread-16] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-07-25 12:45:12 [Thread-16] INFO  i.c.k.s.KafkaAvroSerializerConfig - KafkaAvroSerializerConfig values: 
+	bearer.auth.token = [hidden]
+	proxy.port = -1
+	schema.reflection = false
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	schema.registry.url = [http://localhost:8081]
+	basic.auth.user.info = [hidden]
+	proxy.host = 
+	use.latest.version = false
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2025-07-25 12:45:12 [Thread-16] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=mastodon-to-kafka-service-producer-1] Instantiated an idempotent producer.
+2025-07-25 12:45:12 [Thread-16] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-07-25 12:45:12 [Thread-16] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-07-25 12:45:12 [Thread-16] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1753436712179
+2025-07-25 12:45:12 [kafka-producer-network-thread | mastodon-to-kafka-service-producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=mastodon-to-kafka-service-producer-1] Cluster ID: z-HxIqBiRjaImVM2mIMi8Q
+2025-07-25 12:45:12 [kafka-producer-network-thread | mastodon-to-kafka-service-producer-1] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=mastodon-to-kafka-service-producer-1] ProducerId set to 3000 with epoch 0
+2025-07-25 12:45:17 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-25 12:45:17 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete
+2025-07-25 12:45:19 [SpringApplicationShutdownHook] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=mastodon-to-kafka-service-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2025-07-25 12:45:19 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-07-25 12:45:19 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-25 12:45:19 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-07-25 12:45:19 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-07-25 12:45:19 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.producer for mastodon-to-kafka-service-producer-1 unregistered
+2025-07-25 12:45:19 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2025-07-25 12:45:19 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-07-25 12:45:19 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-25 12:45:19 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-07-25 12:45:19 [SpringApplicationShutdownHook] INFO  c.m.d.m.s.MastodonStreamService - Shutting down streaming
+2025-07-25 12:45:19 [SpringApplicationShutdownHook] INFO  c.m.d.k.p.s.MastodonKafkaProducer - Closing kafka producer...
+2025-07-25 12:46:04 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - Starting MastodonToKafkaServiceApplication using Java 17.0.12 with PID 14572 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\mastodon-to-kafka-service\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-25 12:46:04 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - The following 1 profile is active: "dev"
+2025-07-25 12:46:04 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2025-07-25 12:46:04 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=mastodon-to-kafka-service, profiles=[default], label=null, version=b83d608d04ce557f69fd4ef5808007bd27eebb12, state=
+2025-07-25 12:46:04 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2025-07-25 12:46:04 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=mastodon-to-kafka-service, profiles=[dev], label=null, version=b83d608d04ce557f69fd4ef5808007bd27eebb12, state=
+2025-07-25 12:46:05 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=5c0a47cb-3aad-3277-84e3-a684e3d1ad0c
+2025-07-25 12:46:05 [main] INFO  c.m.demo.config.KafkaConfigData - Kafka config data has initialized with next properties: bootstrapServers: localhost:19092, localhost:29092, localhost:39092
+schemaRegistryUrlKey: schema.registry.url
+schemaRegistryUrl: http://localhost:8081
+topicName : mastodon-topic
+topicNamesToCreate : [mastodon-topic]
+numberOfPartitions : 3
+replicationFactor : 3
+2025-07-25 12:46:05 [main] INFO  c.m.d.config.KafkaProducerConfigData - Kafka config data has initialized with next properties: keySerializerClass: org.apache.kafka.common.serialization.LongSerializer
+valueSerializerClass: io.confluent.kafka.serializers.KafkaAvroSerializer
+compressionType: snappy
+acks : all
+batchSize : 16384
+batchSizeBoostFactor : 100
+lingerMs : 5
+requestTimeoutMs : 60000
+retryCount : 10
+2025-07-25 12:46:05 [main] INFO  c.m.d.k.p.config.KafkaProducerConfig - KafkaProducerConfig constructor. kafkaConfigData = KafkaConfigData{bootstrapServers='localhost:19092, localhost:29092, localhost:39092', schemaRegistryUrlKey='schema.registry.url', schemaRegistryUrl='http://localhost:8081', topicName='mastodon-topic', topicNamesToCreate=[mastodon-topic], numberOfPartitions=3, replicationFactor=3}, kafkaProducerConfigData = KafkaProducerConfigData(keySerializerClass=org.apache.kafka.common.serialization.LongSerializer, valueSerializerClass=io.confluent.kafka.serializers.KafkaAvroSerializer, compressionType=snappy, acks=all, batchSize=16384, batchSizeBoostFactor=100, lingerMs=5, requestTimeoutMs=60000, retryCount=10)
+2025-07-25 12:46:05 [main] INFO  c.m.d.k.p.config.KafkaProducerConfig - Producer configuration: {compression.type=snappy, schema.registry.url=http://localhost:8081, retries=10, value.serializer=io.confluent.kafka.serializers.KafkaAvroSerializer, request.timeout.ms=60000, batch.size=1638400, acks=all, bootstrap.servers=localhost:19092, localhost:29092, localhost:39092, key.serializer=org.apache.kafka.common.serialization.LongSerializer, linger.ms=5}
+2025-07-25 12:46:05 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2025-07-25 12:46:06 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-07-25 12:46:06 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-07-25 12:46:06 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1753436766006
+2025-07-25 12:46:07 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:46:08 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:46:09 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http)
+2025-07-25 12:46:10 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:46:11 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:46:11 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - Started MastodonToKafkaServiceApplication in 10.612 seconds (process running for 12.536)
+2025-07-25 12:46:11 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - The app is running...
+2025-07-25 12:46:11 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Start creating topics...
+2025-07-25 12:46:11 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Creating 1 topic(s), attempt: 0
+2025-07-25 12:46:11 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Create topic result [KafkaFuture{value=null,exception=null,done=false}]
+2025-07-25 12:46:11 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Start checking if topics are created...
+2025-07-25 12:46:11 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Reading kafka topic [mastodon-topic], attempt 0
+2025-07-25 12:46:11 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic with name (name=_schemas, topicId=AAAAAAAAAAAAAAAAAAAAAA, internal=false) is ready
+2025-07-25 12:46:11 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic with name (name=mastodon-topic, topicId=AAAAAAAAAAAAAAAAAAAAAA, internal=false) is ready
+2025-07-25 12:46:11 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic with name (name=__confluent.support.metrics, topicId=AAAAAAAAAAAAAAAAAAAAAA, internal=false) is ready
+2025-07-25 12:46:11 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic mastodon-topic is now created with 1 attempts!
+2025-07-25 12:46:11 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topics are created!
+2025-07-25 12:46:11 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Start checking schema registry...
+2025-07-25 12:46:11 [main] WARN  i.n.r.d.DefaultDnsServerAddressStreamProvider - Default DNS servers: [/8.8.8.8:53, /8.8.4.4:53] (Google Public DNS as a fallback)
+2025-07-25 12:46:11 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Check if schema-registry is available. Attempt: 1
+2025-07-25 12:46:14 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Schema-registry is available! Attempt: 2
+2025-07-25 12:46:14 [main] INFO  c.m.d.m.i.i.KafkaStreamInitializer - Topics with name mastodon-topic are ready for processing!
+2025-07-25 12:46:16 [Thread-16] INFO  c.m.d.k.p.s.MastodonKafkaProducer - Sending message='{"id": 114913232324817088, "content": "<p>Any takers. Let me fill you up</p>", "username": "Kole631961", "createdAt": 1753436772540}' to topic='mastodon-topic'
+2025-07-25 12:46:16 [Thread-16] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 1638400
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = mastodon-to-kafka-service-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = snappy
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.LongSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 60000
+	retries = 10
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
+
+2025-07-25 12:46:16 [Thread-16] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-07-25 12:46:16 [Thread-16] INFO  i.c.k.s.KafkaAvroSerializerConfig - KafkaAvroSerializerConfig values: 
+	bearer.auth.token = [hidden]
+	proxy.port = -1
+	schema.reflection = false
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	schema.registry.url = [http://localhost:8081]
+	basic.auth.user.info = [hidden]
+	proxy.host = 
+	use.latest.version = false
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2025-07-25 12:46:16 [Thread-16] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=mastodon-to-kafka-service-producer-1] Instantiated an idempotent producer.
+2025-07-25 12:46:16 [Thread-16] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-07-25 12:46:16 [Thread-16] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-07-25 12:46:16 [Thread-16] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1753436776393
+2025-07-25 12:46:16 [kafka-producer-network-thread | mastodon-to-kafka-service-producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=mastodon-to-kafka-service-producer-1] Cluster ID: z-HxIqBiRjaImVM2mIMi8Q
+2025-07-25 12:46:16 [kafka-producer-network-thread | mastodon-to-kafka-service-producer-1] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=mastodon-to-kafka-service-producer-1] ProducerId set to 5002 with epoch 0
+2025-07-25 12:46:30 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-25 12:46:30 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete
+2025-07-25 12:46:32 [SpringApplicationShutdownHook] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=mastodon-to-kafka-service-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2025-07-25 12:46:32 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-07-25 12:46:32 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-25 12:46:32 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-07-25 12:46:32 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-07-25 12:46:32 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.producer for mastodon-to-kafka-service-producer-1 unregistered
+2025-07-25 12:46:32 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2025-07-25 12:46:32 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-07-25 12:46:32 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-25 12:46:32 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-07-25 12:46:32 [SpringApplicationShutdownHook] INFO  c.m.d.m.s.MastodonStreamService - Shutting down streaming
+2025-07-25 12:46:32 [SpringApplicationShutdownHook] INFO  c.m.d.k.p.s.MastodonKafkaProducer - Closing kafka producer...
+2025-07-25 12:46:43 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - Starting MastodonToKafkaServiceApplication using Java 17.0.12 with PID 18896 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\mastodon-to-kafka-service\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-25 12:46:43 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - The following 1 profile is active: "dev"
+2025-07-25 12:46:43 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2025-07-25 12:46:43 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=mastodon-to-kafka-service, profiles=[default], label=null, version=b83d608d04ce557f69fd4ef5808007bd27eebb12, state=
+2025-07-25 12:46:43 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2025-07-25 12:46:43 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=mastodon-to-kafka-service, profiles=[dev], label=null, version=b83d608d04ce557f69fd4ef5808007bd27eebb12, state=
+2025-07-25 12:46:46 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=5c0a47cb-3aad-3277-84e3-a684e3d1ad0c
+2025-07-25 12:46:47 [main] INFO  c.m.demo.config.KafkaConfigData - Kafka config data has initialized with next properties: bootstrapServers: localhost:19092, localhost:29092, localhost:39092
+schemaRegistryUrlKey: schema.registry.url
+schemaRegistryUrl: http://localhost:8081
+topicName : mastodon-topic
+topicNamesToCreate : [mastodon-topic]
+numberOfPartitions : 3
+replicationFactor : 3
+2025-07-25 12:46:47 [main] INFO  c.m.d.config.KafkaProducerConfigData - Kafka config data has initialized with next properties: keySerializerClass: org.apache.kafka.common.serialization.LongSerializer
+valueSerializerClass: io.confluent.kafka.serializers.KafkaAvroSerializer
+compressionType: snappy
+acks : all
+batchSize : 16384
+batchSizeBoostFactor : 100
+lingerMs : 5
+requestTimeoutMs : 60000
+retryCount : 10
+2025-07-25 12:46:47 [main] INFO  c.m.d.k.p.config.KafkaProducerConfig - KafkaProducerConfig constructor. kafkaConfigData = KafkaConfigData{bootstrapServers='localhost:19092, localhost:29092, localhost:39092', schemaRegistryUrlKey='schema.registry.url', schemaRegistryUrl='http://localhost:8081', topicName='mastodon-topic', topicNamesToCreate=[mastodon-topic], numberOfPartitions=3, replicationFactor=3}, kafkaProducerConfigData = KafkaProducerConfigData(keySerializerClass=org.apache.kafka.common.serialization.LongSerializer, valueSerializerClass=io.confluent.kafka.serializers.KafkaAvroSerializer, compressionType=snappy, acks=all, batchSize=16384, batchSizeBoostFactor=100, lingerMs=5, requestTimeoutMs=60000, retryCount=10)
+2025-07-25 12:46:47 [main] INFO  c.m.d.k.p.config.KafkaProducerConfig - Producer configuration: {compression.type=snappy, schema.registry.url=http://localhost:8081, retries=10, value.serializer=io.confluent.kafka.serializers.KafkaAvroSerializer, request.timeout.ms=60000, batch.size=1638400, acks=all, bootstrap.servers=localhost:19092, localhost:29092, localhost:39092, key.serializer=org.apache.kafka.common.serialization.LongSerializer, linger.ms=5}
+2025-07-25 12:46:48 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2025-07-25 12:46:48 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-07-25 12:46:48 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-07-25 12:46:48 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1753436808293
+2025-07-25 12:46:50 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:46:51 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:46:51 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http)
+2025-07-25 12:46:53 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:46:54 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:46:54 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - Started MastodonToKafkaServiceApplication in 14.096 seconds (process running for 15.54)
+2025-07-25 12:46:54 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - The app is running...
+2025-07-25 12:46:54 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Start creating topics...
+2025-07-25 12:46:54 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Creating 1 topic(s), attempt: 0
+2025-07-25 12:46:54 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Create topic result [KafkaFuture{value=null,exception=null,done=false}]
+2025-07-25 12:46:54 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Start checking if topics are created...
+2025-07-25 12:46:54 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Reading kafka topic [mastodon-topic], attempt 0
+2025-07-25 12:46:54 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic with name (name=_schemas, topicId=AAAAAAAAAAAAAAAAAAAAAA, internal=false) is ready
+2025-07-25 12:46:54 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic with name (name=mastodon-topic, topicId=AAAAAAAAAAAAAAAAAAAAAA, internal=false) is ready
+2025-07-25 12:46:54 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic with name (name=__confluent.support.metrics, topicId=AAAAAAAAAAAAAAAAAAAAAA, internal=false) is ready
+2025-07-25 12:46:54 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic mastodon-topic is now created with 1 attempts!
+2025-07-25 12:46:54 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topics are created!
+2025-07-25 12:46:54 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Start checking schema registry...
+2025-07-25 12:46:54 [main] WARN  i.n.r.d.DefaultDnsServerAddressStreamProvider - Default DNS servers: [/8.8.8.8:53, /8.8.4.4:53] (Google Public DNS as a fallback)
+2025-07-25 12:46:54 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Check if schema-registry is available. Attempt: 1
+2025-07-25 12:46:57 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Schema-registry is available! Attempt: 2
+2025-07-25 12:46:57 [main] INFO  c.m.d.m.i.i.KafkaStreamInitializer - Topics with name mastodon-topic are ready for processing!
+2025-07-25 12:47:02 [Thread-16] INFO  c.m.d.k.p.s.MastodonKafkaProducer - Sending message='{"id": 114913235373219287, "content": "<p>Now playing on PP Semarang: feels like im falling in love by coldplay! Tune in now: <a href=\"https://radio.pemudapancasila.or.id/public/pp_semarang\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">radio.pemudapancasila.or.id/pu</span><span class=\"invisible\">blic/pp_semarang</span></a> <a href=\"https://mastodon.social/tags/PemudapancasilaFM\" class=\"mention hashtag\" rel=\"tag\">#<span>PemudapancasilaFM</span></a></p>", "username": "PemudapancasilaFM", "createdAt": 1753436819057}' to topic='mastodon-topic'
+2025-07-25 12:47:02 [Thread-16] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 1638400
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = mastodon-to-kafka-service-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = snappy
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.LongSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 60000
+	retries = 10
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
+
+2025-07-25 12:47:02 [Thread-16] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-07-25 12:47:02 [Thread-16] INFO  i.c.k.s.KafkaAvroSerializerConfig - KafkaAvroSerializerConfig values: 
+	bearer.auth.token = [hidden]
+	proxy.port = -1
+	schema.reflection = false
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	schema.registry.url = [http://localhost:8081]
+	basic.auth.user.info = [hidden]
+	proxy.host = 
+	use.latest.version = false
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2025-07-25 12:47:02 [Thread-16] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=mastodon-to-kafka-service-producer-1] Instantiated an idempotent producer.
+2025-07-25 12:47:02 [Thread-16] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-07-25 12:47:02 [Thread-16] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-07-25 12:47:02 [Thread-16] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1753436822909
+2025-07-25 12:47:02 [kafka-producer-network-thread | mastodon-to-kafka-service-producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=mastodon-to-kafka-service-producer-1] Cluster ID: z-HxIqBiRjaImVM2mIMi8Q
+2025-07-25 12:47:02 [kafka-producer-network-thread | mastodon-to-kafka-service-producer-1] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=mastodon-to-kafka-service-producer-1] ProducerId set to 3001 with epoch 0
+2025-07-25 12:47:22 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-25 12:47:22 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete
+2025-07-25 12:47:24 [SpringApplicationShutdownHook] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=mastodon-to-kafka-service-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2025-07-25 12:47:24 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-07-25 12:47:24 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-25 12:47:24 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-07-25 12:47:24 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-07-25 12:47:24 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.producer for mastodon-to-kafka-service-producer-1 unregistered
+2025-07-25 12:47:24 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2025-07-25 12:47:24 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-07-25 12:47:24 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-25 12:47:24 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-07-25 12:47:24 [SpringApplicationShutdownHook] INFO  c.m.d.m.s.MastodonStreamService - Shutting down streaming
+2025-07-25 12:47:24 [SpringApplicationShutdownHook] INFO  c.m.d.k.p.s.MastodonKafkaProducer - Closing kafka producer...
+2025-07-25 12:47:51 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - Starting MastodonToKafkaServiceApplication using Java 17.0.12 with PID 20652 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\mastodon-to-kafka-service\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-25 12:47:51 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - The following 1 profile is active: "dev"
+2025-07-25 12:47:51 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2025-07-25 12:47:51 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=mastodon-to-kafka-service, profiles=[default], label=null, version=b83d608d04ce557f69fd4ef5808007bd27eebb12, state=
+2025-07-25 12:47:51 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2025-07-25 12:47:51 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=mastodon-to-kafka-service, profiles=[dev], label=null, version=b83d608d04ce557f69fd4ef5808007bd27eebb12, state=
+2025-07-25 12:47:52 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=5c0a47cb-3aad-3277-84e3-a684e3d1ad0c
+2025-07-25 12:47:53 [main] INFO  c.m.demo.config.KafkaConfigData - Kafka config data has initialized with next properties: bootstrapServers: localhost:19092, localhost:29092, localhost:39092
+schemaRegistryUrlKey: schema.registry.url
+schemaRegistryUrl: http://localhost:8081
+topicName : mastodon-topic
+topicNamesToCreate : [mastodon-topic]
+numberOfPartitions : 3
+replicationFactor : 3
+2025-07-25 12:47:53 [main] INFO  c.m.d.config.KafkaProducerConfigData - Kafka config data has initialized with next properties: keySerializerClass: org.apache.kafka.common.serialization.LongSerializer
+valueSerializerClass: io.confluent.kafka.serializers.KafkaAvroSerializer
+compressionType: snappy
+acks : all
+batchSize : 16384
+batchSizeBoostFactor : 100
+lingerMs : 5
+requestTimeoutMs : 60000
+retryCount : 10
+2025-07-25 12:47:53 [main] INFO  c.m.d.k.p.config.KafkaProducerConfig - KafkaProducerConfig constructor. kafkaConfigData = KafkaConfigData{bootstrapServers='localhost:19092, localhost:29092, localhost:39092', schemaRegistryUrlKey='schema.registry.url', schemaRegistryUrl='http://localhost:8081', topicName='mastodon-topic', topicNamesToCreate=[mastodon-topic], numberOfPartitions=3, replicationFactor=3}, kafkaProducerConfigData = KafkaProducerConfigData(keySerializerClass=org.apache.kafka.common.serialization.LongSerializer, valueSerializerClass=io.confluent.kafka.serializers.KafkaAvroSerializer, compressionType=snappy, acks=all, batchSize=16384, batchSizeBoostFactor=100, lingerMs=5, requestTimeoutMs=60000, retryCount=10)
+2025-07-25 12:47:53 [main] INFO  c.m.d.k.p.config.KafkaProducerConfig - Producer configuration: {compression.type=snappy, schema.registry.url=http://localhost:8081, retries=10, value.serializer=io.confluent.kafka.serializers.KafkaAvroSerializer, request.timeout.ms=60000, batch.size=1638400, acks=all, bootstrap.servers=localhost:19092, localhost:29092, localhost:39092, key.serializer=org.apache.kafka.common.serialization.LongSerializer, linger.ms=5}
+2025-07-25 12:47:53 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2025-07-25 12:47:53 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-07-25 12:47:53 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-07-25 12:47:53 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1753436873521
+2025-07-25 12:47:55 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:47:56 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:47:56 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http)
+2025-07-25 12:47:57 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:47:58 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:47:58 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - Started MastodonToKafkaServiceApplication in 10.354 seconds (process running for 13.049)
+2025-07-25 12:47:58 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - The app is running...
+2025-07-25 12:47:58 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Start creating topics...
+2025-07-25 12:47:58 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Creating 1 topic(s), attempt: 0
+2025-07-25 12:47:58 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Create topic result [KafkaFuture{value=null,exception=null,done=false}]
+2025-07-25 12:47:58 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Start checking if topics are created...
+2025-07-25 12:47:58 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Reading kafka topic [mastodon-topic], attempt 0
+2025-07-25 12:47:58 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic with name (name=_schemas, topicId=AAAAAAAAAAAAAAAAAAAAAA, internal=false) is ready
+2025-07-25 12:47:58 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic with name (name=mastodon-topic, topicId=AAAAAAAAAAAAAAAAAAAAAA, internal=false) is ready
+2025-07-25 12:47:58 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic with name (name=__confluent.support.metrics, topicId=AAAAAAAAAAAAAAAAAAAAAA, internal=false) is ready
+2025-07-25 12:47:58 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic mastodon-topic is now created with 1 attempts!
+2025-07-25 12:47:58 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topics are created!
+2025-07-25 12:47:58 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Start checking schema registry...
+2025-07-25 12:47:58 [main] WARN  i.n.r.d.DefaultDnsServerAddressStreamProvider - Default DNS servers: [/8.8.8.8:53, /8.8.4.4:53] (Google Public DNS as a fallback)
+2025-07-25 12:47:59 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Check if schema-registry is available. Attempt: 1
+2025-07-25 12:48:02 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Schema-registry is available! Attempt: 2
+2025-07-25 12:48:02 [main] INFO  c.m.d.m.i.i.KafkaStreamInitializer - Topics with name mastodon-topic are ready for processing!
+2025-07-25 12:48:03 [Thread-16] INFO  c.m.d.k.p.s.MastodonKafkaProducer - Sending message='{"id": 114913239332891636, "content": "<p>U maloro naj gre, jebeni reset je bil potreben.</p>", "username": "alan_orlic", "createdAt": 1753436879468}' to topic='mastodon-topic'
+2025-07-25 12:48:03 [Thread-16] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 1638400
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = mastodon-to-kafka-service-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = snappy
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.LongSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 60000
+	retries = 10
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
+
+2025-07-25 12:48:03 [Thread-16] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-07-25 12:48:03 [Thread-16] INFO  i.c.k.s.KafkaAvroSerializerConfig - KafkaAvroSerializerConfig values: 
+	bearer.auth.token = [hidden]
+	proxy.port = -1
+	schema.reflection = false
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	schema.registry.url = [http://localhost:8081]
+	basic.auth.user.info = [hidden]
+	proxy.host = 
+	use.latest.version = false
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2025-07-25 12:48:03 [Thread-16] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=mastodon-to-kafka-service-producer-1] Instantiated an idempotent producer.
+2025-07-25 12:48:03 [Thread-16] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-07-25 12:48:03 [Thread-16] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-07-25 12:48:03 [Thread-16] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1753436883394
+2025-07-25 12:48:03 [kafka-producer-network-thread | mastodon-to-kafka-service-producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=mastodon-to-kafka-service-producer-1] Cluster ID: z-HxIqBiRjaImVM2mIMi8Q
+2025-07-25 12:48:03 [kafka-producer-network-thread | mastodon-to-kafka-service-producer-1] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=mastodon-to-kafka-service-producer-1] ProducerId set to 5003 with epoch 0
+2025-07-25 12:48:14 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-25 12:48:14 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete
+2025-07-25 12:48:58 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - Starting MastodonToKafkaServiceApplication using Java 17.0.12 with PID 6280 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\mastodon-to-kafka-service\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-25 12:48:58 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - The following 1 profile is active: "dev"
+2025-07-25 12:48:58 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2025-07-25 12:48:58 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=mastodon-to-kafka-service, profiles=[default], label=null, version=b83d608d04ce557f69fd4ef5808007bd27eebb12, state=
+2025-07-25 12:48:58 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2025-07-25 12:48:58 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=mastodon-to-kafka-service, profiles=[dev], label=null, version=b83d608d04ce557f69fd4ef5808007bd27eebb12, state=
+2025-07-25 12:48:59 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=5c0a47cb-3aad-3277-84e3-a684e3d1ad0c
+2025-07-25 12:48:59 [main] INFO  c.m.demo.config.KafkaConfigData - Kafka config data has initialized with next properties: bootstrapServers: localhost:19092, localhost:29092, localhost:39092
+schemaRegistryUrlKey: schema.registry.url
+schemaRegistryUrl: http://localhost:8081
+topicName : mastodon-topic
+topicNamesToCreate : [mastodon-topic]
+numberOfPartitions : 3
+replicationFactor : 3
+2025-07-25 12:48:59 [main] INFO  c.m.d.config.KafkaProducerConfigData - Kafka config data has initialized with next properties: keySerializerClass: org.apache.kafka.common.serialization.LongSerializer
+valueSerializerClass: io.confluent.kafka.serializers.KafkaAvroSerializer
+compressionType: snappy
+acks : all
+batchSize : 16384
+batchSizeBoostFactor : 100
+lingerMs : 5
+requestTimeoutMs : 60000
+retryCount : 10
+2025-07-25 12:48:59 [main] INFO  c.m.d.k.p.config.KafkaProducerConfig - KafkaProducerConfig constructor. kafkaConfigData = KafkaConfigData{bootstrapServers='localhost:19092, localhost:29092, localhost:39092', schemaRegistryUrlKey='schema.registry.url', schemaRegistryUrl='http://localhost:8081', topicName='mastodon-topic', topicNamesToCreate=[mastodon-topic], numberOfPartitions=3, replicationFactor=3}, kafkaProducerConfigData = KafkaProducerConfigData(keySerializerClass=org.apache.kafka.common.serialization.LongSerializer, valueSerializerClass=io.confluent.kafka.serializers.KafkaAvroSerializer, compressionType=snappy, acks=all, batchSize=16384, batchSizeBoostFactor=100, lingerMs=5, requestTimeoutMs=60000, retryCount=10)
+2025-07-25 12:48:59 [main] INFO  c.m.d.k.p.config.KafkaProducerConfig - Producer configuration: {compression.type=snappy, schema.registry.url=http://localhost:8081, retries=10, value.serializer=io.confluent.kafka.serializers.KafkaAvroSerializer, request.timeout.ms=60000, batch.size=1638400, acks=all, bootstrap.servers=localhost:19092, localhost:29092, localhost:39092, key.serializer=org.apache.kafka.common.serialization.LongSerializer, linger.ms=5}
+2025-07-25 12:49:00 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2025-07-25 12:49:00 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-07-25 12:49:00 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-07-25 12:49:00 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1753436940416
+2025-07-25 12:49:02 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:49:03 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:49:03 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080 (http)
+2025-07-25 12:49:04 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:49:05 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-25 12:49:05 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - Started MastodonToKafkaServiceApplication in 12.096 seconds (process running for 14.051)
+2025-07-25 12:49:05 [main] INFO  c.m.d.m.MastodonToKafkaServiceApplication - The app is running...
+2025-07-25 12:49:05 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Start creating topics...
+2025-07-25 12:49:05 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Creating 1 topic(s), attempt: 0
+2025-07-25 12:49:05 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Create topic result [KafkaFuture{value=null,exception=null,done=false}]
+2025-07-25 12:49:05 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Start checking if topics are created...
+2025-07-25 12:49:05 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Reading kafka topic [mastodon-topic], attempt 0
+2025-07-25 12:49:05 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic with name (name=_schemas, topicId=AAAAAAAAAAAAAAAAAAAAAA, internal=false) is ready
+2025-07-25 12:49:05 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic with name (name=mastodon-topic, topicId=AAAAAAAAAAAAAAAAAAAAAA, internal=false) is ready
+2025-07-25 12:49:05 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic with name (name=__confluent.support.metrics, topicId=AAAAAAAAAAAAAAAAAAAAAA, internal=false) is ready
+2025-07-25 12:49:05 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topic mastodon-topic is now created with 1 attempts!
+2025-07-25 12:49:05 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Topics are created!
+2025-07-25 12:49:05 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Start checking schema registry...
+2025-07-25 12:49:06 [main] WARN  i.n.r.d.DefaultDnsServerAddressStreamProvider - Default DNS servers: [/8.8.8.8:53, /8.8.4.4:53] (Google Public DNS as a fallback)
+2025-07-25 12:49:06 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Check if schema-registry is available. Attempt: 1
+2025-07-25 12:49:09 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Schema-registry is available! Attempt: 2
+2025-07-25 12:49:09 [main] INFO  c.m.d.m.i.i.KafkaStreamInitializer - Topics with name mastodon-topic are ready for processing!
+2025-07-25 12:49:11 [Thread-16] INFO  c.m.d.k.p.s.MastodonKafkaProducer - Sending message='{"id": 114913243817693525, "content": "<p>Now playing:</p><p> Station:\tThe Indie Beat Radio - NHAM<br /> Title:\tghost dance<br /> Artist:\tshe hacked you<br /> Album:\t spiral spirit case demos<br /> Support:\t<a href=\"https://shehackedyou.bandcamp.com/track/ghost-dance\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">shehackedyou.bandcamp.com/trac</span><span class=\"invisible\">k/ghost-dance</span></a><br /> Live:\t<a href=\"https://nham.co.uk/listen\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">nham.co.uk/listen</span><span class=\"invisible\"></span></a></p><p>Up next:\tSarah Wallin Huff - Astral Rail</p><p>Visit:\t<a href=\"https://theindiebeat.fm\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">theindiebeat.fm</span><span class=\"invisible\"></span></a> </p><p><a href=\"https://mastodon.social/tags/tibrNowPlaying\" class=\"mention hashtag\" rel=\"tag\">#<span>tibrNowPlaying</span></a> <a href=\"https://mastodon.social/tags/theIndieBeatNowPlaying\" class=\"mention hashtag\" rel=\"tag\">#<span>theIndieBeatNowPlaying</span></a> <a href=\"https://mastodon.social/tags/tibrNham\" class=\"mention hashtag\" rel=\"tag\">#<span>tibrNham</span></a></p>", "username": "tibrnowplayingbot", "createdAt": 1753436947907}' to topic='mastodon-topic'
+2025-07-25 12:49:11 [Thread-16] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 1638400
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = mastodon-to-kafka-service-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = snappy
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.LongSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 60000
+	retries = 10
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
+
+2025-07-25 12:49:11 [Thread-16] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-07-25 12:49:11 [Thread-16] INFO  i.c.k.s.KafkaAvroSerializerConfig - KafkaAvroSerializerConfig values: 
+	bearer.auth.token = [hidden]
+	proxy.port = -1
+	schema.reflection = false
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	schema.registry.url = [http://localhost:8081]
+	basic.auth.user.info = [hidden]
+	proxy.host = 
+	use.latest.version = false
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2025-07-25 12:49:11 [Thread-16] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=mastodon-to-kafka-service-producer-1] Instantiated an idempotent producer.
+2025-07-25 12:49:11 [Thread-16] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-07-25 12:49:11 [Thread-16] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-07-25 12:49:11 [Thread-16] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1753436951851
+2025-07-25 12:49:11 [kafka-producer-network-thread | mastodon-to-kafka-service-producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=mastodon-to-kafka-service-producer-1] Cluster ID: z-HxIqBiRjaImVM2mIMi8Q
+2025-07-25 12:49:11 [kafka-producer-network-thread | mastodon-to-kafka-service-producer-1] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=mastodon-to-kafka-service-producer-1] ProducerId set to 3002 with epoch 0
+2025-07-25 12:49:44 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-25 12:49:44 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete
+2025-07-25 12:49:46 [SpringApplicationShutdownHook] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=mastodon-to-kafka-service-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2025-07-25 12:49:46 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-07-25 12:49:46 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-25 12:49:46 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-07-25 12:49:46 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-07-25 12:49:46 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.producer for mastodon-to-kafka-service-producer-1 unregistered
+2025-07-25 12:49:46 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2025-07-25 12:49:46 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-07-25 12:49:46 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-25 12:49:46 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-07-25 12:49:46 [SpringApplicationShutdownHook] INFO  c.m.d.m.s.MastodonStreamService - Shutting down streaming
+2025-07-25 12:49:46 [SpringApplicationShutdownHook] INFO  c.m.d.k.p.s.MastodonKafkaProducer - Closing kafka producer...

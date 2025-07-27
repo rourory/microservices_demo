@@ -1,13 +1,13 @@
 package com.microsorvices.demo.kafka.producer.service;
 
 import com.microservices.demo.kafka.avro.model.MastodonTootAvroModel;
+import jakarta.annotation.PreDestroy;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.producer.RecordMetadata;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.SendResult;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PreDestroy;
 import java.util.concurrent.CompletableFuture;
 
 @Service
@@ -24,7 +24,7 @@ public class MastodonKafkaProducer implements KafkaProducer<Long, MastodonTootAv
     public void send(String topicName, Long key, MastodonTootAvroModel message) {
         log.info("Sending message='{}' to topic='{}'", message, topicName);
         CompletableFuture<SendResult<Long, MastodonTootAvroModel>> kafkaResultFuture =
-                kafkaTemplate.send(topicName, key, message).completable();
+                kafkaTemplate.send(topicName, key, message);
         kafkaResultFuture.handle((longMastodonTootAvroModelSendResult, throwable) -> {
             if (throwable == null) {
                 RecordMetadata recordMetadata = longMastodonTootAvroModelSendResult.getRecordMetadata();

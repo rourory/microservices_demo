@@ -9,12 +9,11 @@ import com.sys1yagi.mastodon4j.api.Shutdownable;
 import com.sys1yagi.mastodon4j.api.method.Streaming;
 
 
+import jakarta.annotation.PreDestroy;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.OkHttpClient;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PreDestroy;
-import java.util.List;
 
 @Slf4j
 @Service
