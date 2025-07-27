@@ -17,3 +17,7 @@ spring:
           uri: https://github.com/rourory/spring-cloud-repo.git
           clone-on-start: true
       fail-fast: true
+  security:
+    user:
+      name: spring_cloud_user
+      password: springCloud_Pwd!

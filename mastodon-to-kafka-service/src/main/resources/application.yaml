@@ -8,6 +8,8 @@ spring:
       uri: http://localhost:8888
       profile: dev
       name: mastodon-to-kafka-service,config-client
+      username: spring_cloud_user
+      password: springCloud_Pwd!
   config:
     import: 'configserver:'
 #    name: mastodon-to-kafka-service,config-client
