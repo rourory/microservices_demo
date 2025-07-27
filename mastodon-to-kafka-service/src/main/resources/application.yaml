@@ -3,6 +3,11 @@ spring:
     name: mastodon-to-kafka-service
   profiles:
     active: dev
+  cloud:
+    config:
+      uri: http://localhost:8888
+      profile: dev
+      name: mastodon-to-kafka-service,config-client
   config:
-    import: configserver:http://localhost:8888
-    name: mastodon-to-kafka-service,config-client
+    import: 'configserver:'
+#    name: mastodon-to-kafka-service,config-client
