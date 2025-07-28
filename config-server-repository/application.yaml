@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    config:
+      allow-override: true
+      override-none: true
+
+retry-config:
+  initial-interval-ms: 1000
+  max-interval-ms: 10000
+  back-off-multiplier: 1.1
+  max-attempts: 50
+  sleep-time-ms: 3000
+
+kafka-config:
+  bootstrap-servers: localhost:19092, localhost:29092, localhost:39092
+  schema-registry-url-key: schema.registry.url
+  schema-registry-url: http://localhost:8081
+  topic-name: mastodon-topic
+  number-of-partitions: 3
+  replication-factor: 3
+  topic-names-to-create:
+    - mastodon-topic

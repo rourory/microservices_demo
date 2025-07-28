@@ -13,9 +13,9 @@ spring:
     config:
       server:
         git:
-#          uri: file:///D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server-repository
           uri: https://github.com/rourory/spring-cloud-repo.git
           clone-on-start: true
+          search-paths: "{application}"
       fail-fast: true
   security:
     user:

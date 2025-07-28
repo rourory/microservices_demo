@@ -12,4 +12,3 @@ spring:
       password: springCloud_Pwd!
   config:
     import: 'configserver:'
-#    name: mastodon-to-kafka-service,config-client
