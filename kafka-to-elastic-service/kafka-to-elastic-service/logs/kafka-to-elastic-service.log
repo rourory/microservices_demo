@@ -1,0 +1,692 @@
+2025-07-29 11:51:38 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.microsorvices.demo.kafka.to.elastic.service.KafkaToElasticServiceTests]: KafkaToElasticServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-07-29 11:51:38 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.microsorvices.demo.kafka.to.elastic.service.KafkaToElasticServiceApplication for test class com.microsorvices.demo.kafka.to.elastic.service.KafkaToElasticServiceTests
+2025-07-29 11:51:42 [main] INFO  c.m.d.k.t.e.s.KafkaToElasticServiceTests - Starting KafkaToElasticServiceTests using Java 17.0.12 with PID 6376 (started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\kafka-to-elastic-service)
+2025-07-29 11:51:42 [main] INFO  c.m.d.k.t.e.s.KafkaToElasticServiceTests - The following 1 profile is active: "dev"
+2025-07-29 11:51:42 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2025-07-29 11:51:42 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=kafka-to-elastic-service, profiles=[dev], label=null, version=4f69a9375b588edec929039aa72c5ef3b2061670, state=
+2025-07-29 11:51:44 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=7b68da4c-5797-3e7b-b38b-a825f997edc3
+2025-07-29 11:51:44 [main] INFO  c.m.demo.config.KafkaConfigData - Kafka config data has initialized with next properties: bootstrapServers: localhost:19092, localhost:29092, localhost:39092
+schemaRegistryUrlKey: schema.registry.url
+schemaRegistryUrl: http://localhost:8081
+topicName : mastodon-topic
+topicNamesToCreate : [mastodon-topic]
+numberOfPartitions : 3
+replicationFactor : 3
+2025-07-29 11:51:44 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2025-07-29 11:51:44 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-07-29 11:51:44 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-07-29 11:51:44 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1753779104967
+2025-07-29 11:51:45 [main] INFO  c.m.d.config.KafkaProducerConfigData - Kafka config data has initialized with next properties: keySerializerClass: null
+valueSerializerClass: null
+compressionType: null
+acks : null
+batchSize : null
+batchSizeBoostFactor : null
+lingerMs : null
+requestTimeoutMs : null
+retryCount : null
+2025-07-29 11:51:46 [main] INFO  o.s.b.a.s.r.ReactiveUserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 7fb5339d-84ff-42df-a8aa-698965439354
+
+2025-07-29 11:51:48 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-29 11:51:49 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-29 11:51:49 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-mastodonTopicListener-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = mastodonTopicListener
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.LongDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+
+2025-07-29 11:51:49 [main] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-07-29 11:51:49 [main] INFO  i.c.k.s.KafkaAvroDeserializerConfig - KafkaAvroDeserializerConfig values: 
+	auto.register.schemas = true
+	avro.reflection.allow.null = false
+	avro.use.logical.type.converters = false
+	basic.auth.credentials.source = URL
+	basic.auth.user.info = [hidden]
+	bearer.auth.cache.expiry.buffer.seconds = 300
+	bearer.auth.client.id = null
+	bearer.auth.client.secret = null
+	bearer.auth.credentials.source = STATIC_TOKEN
+	bearer.auth.custom.provider.class = null
+	bearer.auth.identity.pool.id = null
+	bearer.auth.issuer.endpoint.url = null
+	bearer.auth.logical.cluster = null
+	bearer.auth.scope = null
+	bearer.auth.scope.claim.name = scope
+	bearer.auth.sub.claim.name = sub
+	bearer.auth.token = [hidden]
+	context.name.strategy = class io.confluent.kafka.serializers.context.NullContextNameStrategy
+	http.connect.timeout.ms = 60000
+	http.read.timeout.ms = 60000
+	id.compatibility.strict = true
+	key.schema.id.deserializer = class io.confluent.kafka.serializers.schema.id.DualSchemaIdDeserializer
+	key.schema.id.serializer = class io.confluent.kafka.serializers.schema.id.PrefixSchemaIdSerializer
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	latest.cache.size = 1000
+	latest.cache.ttl.sec = -1
+	latest.compatibility.strict = true
+	max.retries = 3
+	max.schemas.per.subject = 1000
+	normalize.schemas = false
+	propagate.schema.tags = false
+	proxy.host = 
+	proxy.port = -1
+	retries.max.wait.ms = 20000
+	retries.wait.ms = 1000
+	rule.actions = []
+	rule.executors = []
+	rule.service.loader.enable = true
+	schema.format = null
+	schema.reflection = false
+	schema.registry.basic.auth.user.info = [hidden]
+	schema.registry.ssl.cipher.suites = null
+	schema.registry.ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	schema.registry.ssl.endpoint.identification.algorithm = https
+	schema.registry.ssl.engine.factory.class = null
+	schema.registry.ssl.key.password = null
+	schema.registry.ssl.keymanager.algorithm = SunX509
+	schema.registry.ssl.keystore.certificate.chain = null
+	schema.registry.ssl.keystore.key = null
+	schema.registry.ssl.keystore.location = null
+	schema.registry.ssl.keystore.password = null
+	schema.registry.ssl.keystore.type = JKS
+	schema.registry.ssl.protocol = TLSv1.3
+	schema.registry.ssl.provider = null
+	schema.registry.ssl.secure.random.implementation = null
+	schema.registry.ssl.trustmanager.algorithm = PKIX
+	schema.registry.ssl.truststore.certificates = null
+	schema.registry.ssl.truststore.location = null
+	schema.registry.ssl.truststore.password = null
+	schema.registry.ssl.truststore.type = JKS
+	schema.registry.url = [http://localhost:8081]
+	schema.registry.url.randomize = false
+	specific.avro.key.type = null
+	specific.avro.reader = true
+	specific.avro.value.type = null
+	use.latest.version = false
+	use.latest.with.metadata = null
+	use.schema.id = -1
+	value.schema.id.deserializer = class io.confluent.kafka.serializers.schema.id.DualSchemaIdDeserializer
+	value.schema.id.serializer = class io.confluent.kafka.serializers.schema.id.PrefixSchemaIdSerializer
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2025-07-29 11:51:49 [main] INFO  o.a.k.c.consumer.ConsumerConfig - These configurations '[specific.avro.reader, schema.registry.url]' were supplied but are not used yet.
+2025-07-29 11:51:49 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-07-29 11:51:49 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-07-29 11:51:49 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1753779109977
+2025-07-29 11:51:49 [main] INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-mastodonTopicListener-1, groupId=mastodonTopicListener] Subscribed to topic(s): mastodon-topic
+2025-07-29 11:51:49 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-mastodonTopicListener-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = mastodonTopicListener
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.LongDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+
+2025-07-29 11:51:50 [main] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-07-29 11:51:50 [main] INFO  i.c.k.s.KafkaAvroDeserializerConfig - KafkaAvroDeserializerConfig values: 
+	auto.register.schemas = true
+	avro.reflection.allow.null = false
+	avro.use.logical.type.converters = false
+	basic.auth.credentials.source = URL
+	basic.auth.user.info = [hidden]
+	bearer.auth.cache.expiry.buffer.seconds = 300
+	bearer.auth.client.id = null
+	bearer.auth.client.secret = null
+	bearer.auth.credentials.source = STATIC_TOKEN
+	bearer.auth.custom.provider.class = null
+	bearer.auth.identity.pool.id = null
+	bearer.auth.issuer.endpoint.url = null
+	bearer.auth.logical.cluster = null
+	bearer.auth.scope = null
+	bearer.auth.scope.claim.name = scope
+	bearer.auth.sub.claim.name = sub
+	bearer.auth.token = [hidden]
+	context.name.strategy = class io.confluent.kafka.serializers.context.NullContextNameStrategy
+	http.connect.timeout.ms = 60000
+	http.read.timeout.ms = 60000
+	id.compatibility.strict = true
+	key.schema.id.deserializer = class io.confluent.kafka.serializers.schema.id.DualSchemaIdDeserializer
+	key.schema.id.serializer = class io.confluent.kafka.serializers.schema.id.PrefixSchemaIdSerializer
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	latest.cache.size = 1000
+	latest.cache.ttl.sec = -1
+	latest.compatibility.strict = true
+	max.retries = 3
+	max.schemas.per.subject = 1000
+	normalize.schemas = false
+	propagate.schema.tags = false
+	proxy.host = 
+	proxy.port = -1
+	retries.max.wait.ms = 20000
+	retries.wait.ms = 1000
+	rule.actions = []
+	rule.executors = []
+	rule.service.loader.enable = true
+	schema.format = null
+	schema.reflection = false
+	schema.registry.basic.auth.user.info = [hidden]
+	schema.registry.ssl.cipher.suites = null
+	schema.registry.ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	schema.registry.ssl.endpoint.identification.algorithm = https
+	schema.registry.ssl.engine.factory.class = null
+	schema.registry.ssl.key.password = null
+	schema.registry.ssl.keymanager.algorithm = SunX509
+	schema.registry.ssl.keystore.certificate.chain = null
+	schema.registry.ssl.keystore.key = null
+	schema.registry.ssl.keystore.location = null
+	schema.registry.ssl.keystore.password = null
+	schema.registry.ssl.keystore.type = JKS
+	schema.registry.ssl.protocol = TLSv1.3
+	schema.registry.ssl.provider = null
+	schema.registry.ssl.secure.random.implementation = null
+	schema.registry.ssl.trustmanager.algorithm = PKIX
+	schema.registry.ssl.truststore.certificates = null
+	schema.registry.ssl.truststore.location = null
+	schema.registry.ssl.truststore.password = null
+	schema.registry.ssl.truststore.type = JKS
+	schema.registry.url = [http://localhost:8081]
+	schema.registry.url.randomize = false
+	specific.avro.key.type = null
+	specific.avro.reader = true
+	specific.avro.value.type = null
+	use.latest.version = false
+	use.latest.with.metadata = null
+	use.schema.id = -1
+	value.schema.id.deserializer = class io.confluent.kafka.serializers.schema.id.DualSchemaIdDeserializer
+	value.schema.id.serializer = class io.confluent.kafka.serializers.schema.id.PrefixSchemaIdSerializer
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2025-07-29 11:51:50 [main] INFO  o.a.k.c.consumer.ConsumerConfig - These configurations '[specific.avro.reader, schema.registry.url]' were supplied but are not used yet.
+2025-07-29 11:51:50 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-07-29 11:51:50 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-07-29 11:51:50 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1753779110026
+2025-07-29 11:51:50 [main] INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-mastodonTopicListener-2, groupId=mastodonTopicListener] Subscribed to topic(s): mastodon-topic
+2025-07-29 11:51:50 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-mastodonTopicListener-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = mastodonTopicListener
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.LongDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+
+2025-07-29 11:51:50 [main] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-07-29 11:51:50 [main] INFO  i.c.k.s.KafkaAvroDeserializerConfig - KafkaAvroDeserializerConfig values: 
+	auto.register.schemas = true
+	avro.reflection.allow.null = false
+	avro.use.logical.type.converters = false
+	basic.auth.credentials.source = URL
+	basic.auth.user.info = [hidden]
+	bearer.auth.cache.expiry.buffer.seconds = 300
+	bearer.auth.client.id = null
+	bearer.auth.client.secret = null
+	bearer.auth.credentials.source = STATIC_TOKEN
+	bearer.auth.custom.provider.class = null
+	bearer.auth.identity.pool.id = null
+	bearer.auth.issuer.endpoint.url = null
+	bearer.auth.logical.cluster = null
+	bearer.auth.scope = null
+	bearer.auth.scope.claim.name = scope
+	bearer.auth.sub.claim.name = sub
+	bearer.auth.token = [hidden]
+	context.name.strategy = class io.confluent.kafka.serializers.context.NullContextNameStrategy
+	http.connect.timeout.ms = 60000
+	http.read.timeout.ms = 60000
+	id.compatibility.strict = true
+	key.schema.id.deserializer = class io.confluent.kafka.serializers.schema.id.DualSchemaIdDeserializer
+	key.schema.id.serializer = class io.confluent.kafka.serializers.schema.id.PrefixSchemaIdSerializer
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	latest.cache.size = 1000
+	latest.cache.ttl.sec = -1
+	latest.compatibility.strict = true
+	max.retries = 3
+	max.schemas.per.subject = 1000
+	normalize.schemas = false
+	propagate.schema.tags = false
+	proxy.host = 
+	proxy.port = -1
+	retries.max.wait.ms = 20000
+	retries.wait.ms = 1000
+	rule.actions = []
+	rule.executors = []
+	rule.service.loader.enable = true
+	schema.format = null
+	schema.reflection = false
+	schema.registry.basic.auth.user.info = [hidden]
+	schema.registry.ssl.cipher.suites = null
+	schema.registry.ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	schema.registry.ssl.endpoint.identification.algorithm = https
+	schema.registry.ssl.engine.factory.class = null
+	schema.registry.ssl.key.password = null
+	schema.registry.ssl.keymanager.algorithm = SunX509
+	schema.registry.ssl.keystore.certificate.chain = null
+	schema.registry.ssl.keystore.key = null
+	schema.registry.ssl.keystore.location = null
+	schema.registry.ssl.keystore.password = null
+	schema.registry.ssl.keystore.type = JKS
+	schema.registry.ssl.protocol = TLSv1.3
+	schema.registry.ssl.provider = null
+	schema.registry.ssl.secure.random.implementation = null
+	schema.registry.ssl.trustmanager.algorithm = PKIX
+	schema.registry.ssl.truststore.certificates = null
+	schema.registry.ssl.truststore.location = null
+	schema.registry.ssl.truststore.password = null
+	schema.registry.ssl.truststore.type = JKS
+	schema.registry.url = [http://localhost:8081]
+	schema.registry.url.randomize = false
+	specific.avro.key.type = null
+	specific.avro.reader = true
+	specific.avro.value.type = null
+	use.latest.version = false
+	use.latest.with.metadata = null
+	use.schema.id = -1
+	value.schema.id.deserializer = class io.confluent.kafka.serializers.schema.id.DualSchemaIdDeserializer
+	value.schema.id.serializer = class io.confluent.kafka.serializers.schema.id.PrefixSchemaIdSerializer
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2025-07-29 11:51:50 [main] INFO  o.a.k.c.consumer.ConsumerConfig - These configurations '[specific.avro.reader, schema.registry.url]' were supplied but are not used yet.
+2025-07-29 11:51:50 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-07-29 11:51:50 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-07-29 11:51:50 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1753779110061
+2025-07-29 11:51:50 [main] INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-mastodonTopicListener-3, groupId=mastodonTopicListener] Subscribed to topic(s): mastodon-topic
+2025-07-29 11:51:50 [main] INFO  c.m.d.k.t.e.s.KafkaToElasticServiceTests - Started KafkaToElasticServiceTests in 11.097 seconds (process running for 13.59)
+2025-07-29 11:51:50 [mastodonTopicListener-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-mastodonTopicListener-2, groupId=mastodonTopicListener] The metadata response from the cluster reported a recoverable issue with correlation id 3 : {mastodon-topic=LEADER_NOT_AVAILABLE}
+2025-07-29 11:51:50 [mastodonTopicListener-1-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-mastodonTopicListener-2, groupId=mastodonTopicListener] Cluster ID: v14rzI7nQ9OceBdZ8nB_9Q
+2025-07-29 11:51:50 [mastodonTopicListener-2-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-mastodonTopicListener-3, groupId=mastodonTopicListener] The metadata response from the cluster reported a recoverable issue with correlation id 3 : {mastodon-topic=LEADER_NOT_AVAILABLE}
+2025-07-29 11:51:50 [mastodonTopicListener-2-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-mastodonTopicListener-3, groupId=mastodonTopicListener] Cluster ID: v14rzI7nQ9OceBdZ8nB_9Q
+2025-07-29 11:51:50 [mastodonTopicListener-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-mastodonTopicListener-1, groupId=mastodonTopicListener] The metadata response from the cluster reported a recoverable issue with correlation id 3 : {mastodon-topic=LEADER_NOT_AVAILABLE}
+2025-07-29 11:51:50 [mastodonTopicListener-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-mastodonTopicListener-1, groupId=mastodonTopicListener] Cluster ID: v14rzI7nQ9OceBdZ8nB_9Q
+2025-07-29 11:51:50 [mastodonTopicListener-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-mastodonTopicListener-2, groupId=mastodonTopicListener] The metadata response from the cluster reported a recoverable issue with correlation id 9 : {mastodon-topic=LEADER_NOT_AVAILABLE}
+2025-07-29 11:51:50 [mastodonTopicListener-2-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-mastodonTopicListener-3, groupId=mastodonTopicListener] The metadata response from the cluster reported a recoverable issue with correlation id 9 : {mastodon-topic=LEADER_NOT_AVAILABLE}
+2025-07-29 11:51:50 [mastodonTopicListener-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-mastodonTopicListener-1, groupId=mastodonTopicListener] The metadata response from the cluster reported a recoverable issue with correlation id 9 : {mastodon-topic=LEADER_NOT_AVAILABLE}
+2025-07-29 11:51:54 [mastodonTopicListener-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-mastodonTopicListener-1, groupId=mastodonTopicListener] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-07-29 11:51:54 [mastodonTopicListener-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-mastodonTopicListener-1, groupId=mastodonTopicListener] Request joining group due to: consumer pro-actively leaving the group
+2025-07-29 11:51:54 [mastodonTopicListener-0-C-1] INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-mastodonTopicListener-1, groupId=mastodonTopicListener] Unsubscribed all topics or patterns and assigned partitions
+2025-07-29 11:51:54 [mastodonTopicListener-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-mastodonTopicListener-2, groupId=mastodonTopicListener] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-07-29 11:51:54 [mastodonTopicListener-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-mastodonTopicListener-2, groupId=mastodonTopicListener] Request joining group due to: consumer pro-actively leaving the group
+2025-07-29 11:51:54 [mastodonTopicListener-1-C-1] INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-mastodonTopicListener-2, groupId=mastodonTopicListener] Unsubscribed all topics or patterns and assigned partitions
+2025-07-29 11:51:54 [mastodonTopicListener-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-mastodonTopicListener-1, groupId=mastodonTopicListener] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-07-29 11:51:54 [mastodonTopicListener-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-mastodonTopicListener-1, groupId=mastodonTopicListener] Request joining group due to: consumer pro-actively leaving the group
+2025-07-29 11:51:54 [mastodonTopicListener-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-mastodonTopicListener-2, groupId=mastodonTopicListener] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-07-29 11:51:54 [mastodonTopicListener-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-mastodonTopicListener-2, groupId=mastodonTopicListener] Request joining group due to: consumer pro-actively leaving the group
+2025-07-29 11:51:54 [mastodonTopicListener-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-07-29 11:51:54 [mastodonTopicListener-1-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-07-29 11:51:54 [mastodonTopicListener-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-29 11:51:54 [mastodonTopicListener-1-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-29 11:51:54 [mastodonTopicListener-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-07-29 11:51:54 [mastodonTopicListener-1-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-07-29 11:51:54 [mastodonTopicListener-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-07-29 11:51:54 [mastodonTopicListener-1-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-07-29 11:51:54 [mastodonTopicListener-1-C-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-mastodonTopicListener-2 unregistered
+2025-07-29 11:51:54 [mastodonTopicListener-1-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - mastodonTopicListener: Consumer stopped
+2025-07-29 11:51:54 [mastodonTopicListener-0-C-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-mastodonTopicListener-1 unregistered
+2025-07-29 11:51:54 [mastodonTopicListener-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - mastodonTopicListener: Consumer stopped
+2025-07-29 11:51:54 [mastodonTopicListener-2-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-mastodonTopicListener-3, groupId=mastodonTopicListener] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-07-29 11:51:54 [mastodonTopicListener-2-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-mastodonTopicListener-3, groupId=mastodonTopicListener] Request joining group due to: consumer pro-actively leaving the group
+2025-07-29 11:51:54 [mastodonTopicListener-2-C-1] INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-mastodonTopicListener-3, groupId=mastodonTopicListener] Unsubscribed all topics or patterns and assigned partitions
+2025-07-29 11:51:54 [mastodonTopicListener-2-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-mastodonTopicListener-3, groupId=mastodonTopicListener] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-07-29 11:51:54 [mastodonTopicListener-2-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-mastodonTopicListener-3, groupId=mastodonTopicListener] Request joining group due to: consumer pro-actively leaving the group
+2025-07-29 11:51:54 [mastodonTopicListener-2-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-07-29 11:51:54 [mastodonTopicListener-2-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-29 11:51:54 [mastodonTopicListener-2-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-07-29 11:51:54 [mastodonTopicListener-2-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-07-29 11:51:54 [mastodonTopicListener-2-C-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-mastodonTopicListener-3 unregistered
+2025-07-29 11:51:54 [mastodonTopicListener-2-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - mastodonTopicListener: Consumer stopped
+2025-07-29 11:51:54 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2025-07-29 11:51:54 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-07-29 11:51:54 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-07-29 11:51:54 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed

@@ -1,26 +1,78 @@
-2025-07-28 14:44:32 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
-2025-07-28 14:44:32 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 15500 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
-2025-07-28 14:44:32 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
-2025-07-28 14:44:35 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=9481ef09-9d3b-3b1f-afe9-a6d2c95ee90a
-2025-07-28 14:44:36 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
-2025-07-28 14:44:36 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2025-07-28 14:44:36 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-07-28 14:44:36 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
-2025-07-28 14:44:36 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-07-28 14:44:36 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3796 ms
-2025-07-28 14:44:38 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2025-07-28 14:44:40 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
-2025-07-28 14:44:41 [main] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
-2025-07-28 14:44:44 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2025-07-28 14:44:45 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path '/'
-2025-07-28 14:44:46 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
-2025-07-28 14:44:46 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 16.391 seconds (process running for 18.974)
-2025-07-28 14:45:44 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-07-28 14:45:44 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-07-28 14:45:44 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
-2025-07-28 14:45:44 [http-nio-8888-exec-1] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
-2025-07-28 14:45:45 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [C:\Users\Admin\AppData\Local\Temp\config-repo-15449989712526801263\mastodon-to-kafka-service\application-dev.yaml]' via location 'file:/C:/Users/Admin/AppData/Local/Temp/config-repo-15449989712526801263/mastodon-to-kafka-service/'
-2025-07-28 14:45:45 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [C:\Users\Admin\AppData\Local\Temp\config-repo-15449989712526801263\application.yaml]' via location 'file:/C:/Users/Admin/AppData/Local/Temp/config-repo-15449989712526801263/'
-2025-07-28 14:46:19 [Thread-3] WARN  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Failed to delete temporary directory on exit: java.nio.file.AccessDeniedException: C:\Users\Admin\AppData\Local\Temp\config-repo-15449989712526801263\.git\objects\pack\pack-61ef10f8e1b3f6c2afe315142ac84ec4f76f465b.idx
-2025-07-28 14:46:19 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-07-28 14:46:20 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-29 11:44:56 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-29 11:44:56 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 13144 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-29 11:44:56 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-29 11:44:57 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=9481ef09-9d3b-3b1f-afe9-a6d2c95ee90a
+2025-07-29 11:44:57 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-29 11:44:58 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-29 11:44:58 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-29 11:44:58 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-29 11:44:58 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-29 11:44:58 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2257 ms
+2025-07-29 11:45:00 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-07-29 11:45:02 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-29 11:45:02 [main] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
+2025-07-29 11:45:06 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2025-07-29 11:45:06 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path '/'
+2025-07-29 11:45:07 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-29 11:45:07 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 13.988 seconds (process running for 16.522)
+2025-07-29 11:51:40 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-29 11:51:40 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-29 11:51:40 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-07-29 11:51:40 [http-nio-8888-exec-1] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
+2025-07-29 11:51:41 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [C:\Users\Admin\AppData\Local\Temp\config-repo-9909361260396996994\kafka-to-elastic-service\application-dev.yaml]' via location 'file:/C:/Users/Admin/AppData/Local/Temp/config-repo-9909361260396996994/kafka-to-elastic-service/'
+2025-07-29 11:51:41 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [C:\Users\Admin\AppData\Local\Temp\config-repo-9909361260396996994\application.yaml]' via location 'file:/C:/Users/Admin/AppData/Local/Temp/config-repo-9909361260396996994/'
+2025-07-29 11:53:25 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-29 11:53:25 [Thread-3] WARN  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Failed to delete temporary directory on exit: java.nio.file.AccessDeniedException: C:\Users\Admin\AppData\Local\Temp\config-repo-9909361260396996994\.git\objects\pack\pack-26f7f270f70b9c89b33c62543e0004a3f1d41a16.idx
+2025-07-29 11:53:25 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-29 12:04:41 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-29 12:04:42 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 12332 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-29 12:04:42 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-29 12:04:44 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=9481ef09-9d3b-3b1f-afe9-a6d2c95ee90a
+2025-07-29 12:04:45 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-29 12:04:45 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-29 12:04:45 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-29 12:04:45 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-29 12:04:45 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-29 12:04:45 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2974 ms
+2025-07-29 12:04:46 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-07-29 12:04:48 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-29 12:04:48 [main] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
+2025-07-29 12:04:52 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2025-07-29 12:04:52 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path '/'
+2025-07-29 12:04:53 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-29 12:04:53 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 14.45 seconds (process running for 16.945)
+2025-07-29 12:05:14 [http-nio-8888-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-29 12:05:14 [http-nio-8888-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-29 12:05:14 [http-nio-8888-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-07-29 12:05:15 [http-nio-8888-exec-2] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
+2025-07-29 12:05:15 [http-nio-8888-exec-2] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [C:\Users\Admin\AppData\Local\Temp\config-repo-257179980470308632\mastodon-to-kafka-service\application-dev.yaml]' via location 'file:/C:/Users/Admin/AppData/Local/Temp/config-repo-257179980470308632/mastodon-to-kafka-service/'
+2025-07-29 12:05:15 [http-nio-8888-exec-2] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [C:\Users\Admin\AppData\Local\Temp\config-repo-257179980470308632\application.yaml]' via location 'file:/C:/Users/Admin/AppData/Local/Temp/config-repo-257179980470308632/'
+2025-07-29 12:06:55 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-29 12:06:55 [Thread-3] WARN  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Failed to delete temporary directory on exit: java.nio.file.AccessDeniedException: C:\Users\Admin\AppData\Local\Temp\config-repo-257179980470308632\.git\objects\pack\pack-26f7f270f70b9c89b33c62543e0004a3f1d41a16.idx
+2025-07-29 12:06:56 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-29 12:11:52 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-07-29 12:11:53 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 17.0.12 with PID 14316 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\config-server\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-07-29 12:11:53 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-07-29 12:11:54 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=9481ef09-9d3b-3b1f-afe9-a6d2c95ee90a
+2025-07-29 12:11:54 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-07-29 12:11:54 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-07-29 12:11:54 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-29 12:11:54 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-29 12:11:54 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-29 12:11:54 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1418 ms
+2025-07-29 12:11:55 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-07-29 12:11:56 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-29 12:11:56 [main] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
+2025-07-29 12:11:58 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2025-07-29 12:11:58 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path '/'
+2025-07-29 12:12:00 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-07-29 12:12:00 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 8.819 seconds (process running for 10.335)
+2025-07-29 12:12:15 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-29 12:12:15 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-29 12:12:15 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-07-29 12:12:33 [http-nio-8888-exec-6] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
+2025-07-29 12:12:34 [http-nio-8888-exec-6] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [C:\Users\Admin\AppData\Local\Temp\config-repo-7424758046440606123\kafka-to-elastic-service\application-dev.yaml]' via location 'file:/C:/Users/Admin/AppData/Local/Temp/config-repo-7424758046440606123/kafka-to-elastic-service/'
+2025-07-29 12:12:34 [http-nio-8888-exec-6] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [C:\Users\Admin\AppData\Local\Temp\config-repo-7424758046440606123\application.yaml]' via location 'file:/C:/Users/Admin/AppData/Local/Temp/config-repo-7424758046440606123/'
+2025-07-29 12:12:43 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-29 12:12:43 [Thread-3] WARN  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Failed to delete temporary directory on exit: java.nio.file.AccessDeniedException: C:\Users\Admin\AppData\Local\Temp\config-repo-7424758046440606123\.git\objects\pack\pack-26f7f270f70b9c89b33c62543e0004a3f1d41a16.idx
+2025-07-29 12:12:44 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete

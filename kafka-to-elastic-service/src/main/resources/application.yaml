@@ -1,13 +1,13 @@
 spring:
   application:
-    name: mastodon-to-kafka-service
+    name: kafka-to-elastic-service
   profiles:
     active: dev
   cloud:
     config:
       uri: http://localhost:8888
       profile: dev
-      name: mastodon-to-kafka-service
+      name: kafka-to-elastic-service
       username: spring_cloud_user
       password: springCloud_Pwd!
   config:

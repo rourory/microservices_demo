@@ -19,6 +19,7 @@
         <module>kafka</module>
         <module>common-config</module>
         <module>config-server</module>
+        <module>kafka-to-elastic-service</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -58,7 +59,6 @@
         <mastodon.version>1.7.0</mastodon.version>
         <gson.version>2.13.1</gson.version>
         <spring-retry.version>2.0.12</spring-retry.version>
-<!--        <spring-kafka.version>2.9.0</spring-kafka.version>-->
         <spring-kafka.version>3.3.8</spring-kafka.version>
         <avro.version>1.12.0</avro.version>
         <avro-serializer.version>8.0.0</avro-serializer.version>
@@ -170,6 +170,12 @@
             <dependency>
                 <groupId>com.microsorvices.demo</groupId>
                 <artifactId>kafka-producer</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.microsorvices.demo</groupId>
+                <artifactId>kafka-consumer</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
