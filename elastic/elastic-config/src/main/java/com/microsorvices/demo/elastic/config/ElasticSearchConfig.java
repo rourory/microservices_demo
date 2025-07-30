@@ -1,18 +1,17 @@
 package com.microsorvices.demo.elastic.config;
 
+import co.elastic.clients.elasticsearch.ElasticsearchClient;
+import co.elastic.clients.json.jackson.JacksonJsonpMapper;
+import co.elastic.clients.transport.rest_client.RestClientTransport;
 import com.microsorvices.demo.config.ElasticConfigData;
 import org.apache.http.HttpHost;
-import org.apache.http.client.config.RequestConfig;
 import org.elasticsearch.client.RestClient;
-import org.elasticsearch.client.RestHighLevelClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
-import org.springframework.web.util.UriComponents;
-import org.springframework.web.util.UriComponentsBuilder;
 
-import java.util.Objects;
+import java.net.URI;
 
 
 @Configuration
@@ -28,27 +27,23 @@ public class ElasticSearchConfig {
     }
 
     @Bean
-    public RestHighLevelClient restHighLevelClient() {
-        return new RestHighLevelClient(RestClient.builder(elasticHttpHost())
-                .setRequestConfigCallback(this::configureRequestConfigBuilder));
+    public RestClient restClient() {
+        var fullUri = URI.create(elasticConfigData.getConnectionUrl());
+        return RestClient.builder(
+                        new HttpHost(
+                                fullUri.getHost(),
+                                fullUri.getPort(),
+                                fullUri.getScheme()))
+                .build();
     }
 
-    public HttpHost elasticHttpHost() {
-        UriComponents serverUri = buildServerUri();
-        return new HttpHost(
-                Objects.requireNonNull(serverUri.getHost()),
-                serverUri.getPort(),
-                serverUri.getScheme()
+    @Bean
+    public ElasticsearchClient elasticsearchClient(RestClient restClient) {
+        RestClientTransport transport = new RestClientTransport(
+                restClient,
+                new JacksonJsonpMapper()
         );
-    }
-
-    private UriComponents buildServerUri(){
-        return UriComponentsBuilder.fromHttpUrl(elasticConfigData.getConnectionUrl()).build();
-    }
-
-    public RequestConfig.Builder configureRequestConfigBuilder(RequestConfig.Builder builder) {
-        return builder.setSocketTimeout(elasticConfigData.getSocketTimeoutMs())
-                .setConnectTimeout(elasticConfigData.getConnectTimeoutMs());
+        return new ElasticsearchClient(transport);
     }
 
 }

@@ -1,8 +1,9 @@
 services:
   config-server:
-    image:  rourory/config-server:${SERVICE_VERSION:-latest}
+    image: rourory/config-server:${SERVICE_VERSION:-latest}
     ports:
       - ${CONFIG_SERVER_PORT}:${CONFIG_SERVER_PORT}
+      - "5007:5007"
     volumes:
       - "./docker-logs:/workspace/config-server/logs"
     networks:
@@ -13,19 +14,28 @@ services:
   mastodon-to-kafka-service:
     restart: always
     depends_on:
-      - config-server
-      - schema-registry
+      config-server:
+        condition: service_started
+      schema-registry:
+        condition: service_started
+      kafka-broker-1:
+        condition: service_healthy
+      kafka-broker-2:
+        condition: service_healthy
+      kafka-broker-3:
+        condition: service_healthy
     image: rourory/mastodon-to-kafka-service:${SERVICE_VERSION:-latest}
+    user: root
     ports:
       - "5005:5005"
     volumes:
       - "./docker-logs:/workspace/mastodon-to-kafka-service/logs"
     environment:
       - "JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -Xms128m -Xmx256m"
-      - "LOGGING_LEVEL_COM_MICROSERVICES_DEMO=info"
+      - "LOGGING_LEVEL_COM_MICROSORVICES_DEMO=info"
       - "LOGGING_LEVEL_ROOT=info"
       - "KAFKA-CONFIG_TOPIC-NAME=mastodon-topic"
-      - "KAFKA-CONFIG_BOOTSTRAP-SERVERS=kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092"
+      - "KAFKA-CONFIG_BOOTSTRAP-SERVERS=kafka-broker-1:9092,kafka-broker-2:9092,kafka-broker-3:9092"
       - "KAFKA-CONFIG_SCHEMA-REGISTRY-URL=http://schema-registry:8081"
       - SPRING_CLOUD_CONFIG_URI=http://config-server:${CONFIG_SERVER_PORT}
     networks:
@@ -34,15 +44,37 @@ services:
   kafka-to-elastic-service:
     restart: always
     depends_on:
-      - config-server
-      - schema-registry
+      config-server:
+        condition: service_started
+      schema-registry:
+        condition: service_started
+      elastic-1:
+        condition: service_healthy
+      elastic-2:
+        condition: service_healthy
+      elastic-3:
+        condition: service_healthy
+      kafka-broker-1:
+        condition: service_healthy
+      kafka-broker-2:
+        condition: service_healthy
+      kafka-broker-3:
+        condition: service_healthy
     image: rourory/kafka-to-elastic-service:${SERVICE_VERSION:-latest}
+    user: root
+    ports:
+      - "5006:5006"
     volumes:
       - "./docker-logs:/workspace/kafka-to-elastic-service/logs"
     environment:
       - "JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -Xms128m -Xmx256m"
-      - "KAFKA-CONFIG_BOOTSTRAP-SERVERS=kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092"
+      - "LOGGING_LEVEL_COM_MICROSORVICES_DEMO=info"
+      - "LOGGING_LEVEL_ROOT=info"
+      - "KAFKA-CONFIG_BOOTSTRAP-SERVERS=kafka-broker-1:9092,kafka-broker-2:9092,kafka-broker-3:9092"
+      - "KAFKA-CONFIG_TOPIC-NAME=mastodon-topic"
       - "KAFKA-CONFIG_SCHEMA-REGISTRY-URL=http://schema-registry:8081"
       - SPRING_CLOUD_CONFIG_URI=http://config-server:${CONFIG_SERVER_PORT}
+      - ELASTIC_CONFIG_CONNECTION_URL=http://elastic-1:9200
+      - xpack.security.enabled=false
     networks:
       - ${GLOBAL_NETWORK:-services}

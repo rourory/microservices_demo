@@ -10,11 +10,11 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
-import java.time.LocalDateTime;
+import java.time.Instant;
 
 @Data
 @Builder
-@Document(indexName = "#{elasticConfigData.indexName}")
+@Document(indexName = "mastodon-index")
 public class MastodonIndexModel implements IndexModel {
 
     @JsonProperty
@@ -24,8 +24,8 @@ public class MastodonIndexModel implements IndexModel {
     @JsonProperty
     private String text;
 
-    @Field(type = FieldType.Date, format = DateFormat.date_time, pattern = "uuuu-MM-dd'T'HH:mm:ssZZ")
+    @Field(type = FieldType.Date)
     @JsonProperty
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "uuuu-MM-dd'T'HH:mm:ssZZ")
-    private LocalDateTime createdAt;
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Instant createdAt;
 }

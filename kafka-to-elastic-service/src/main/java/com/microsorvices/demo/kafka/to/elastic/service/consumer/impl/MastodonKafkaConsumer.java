@@ -31,7 +31,7 @@ public class MastodonKafkaConsumer implements KafkaConsumer<Long, MastodonTootAv
     }
 
     @Override
-    @KafkaListener(id = "${kafka-consume-config.consumer-group-id}", topics = "${kafka-config.topic-name}")
+    @KafkaListener(id = "${kafka-consumer-config.consumer-group-id}", topics = "${kafka-config.topic-name}")
     public void receive(@Payload List<MastodonTootAvroModel> messages,
                         @Header(KafkaHeaders.RECEIVED_KEY) List<Integer> keys,
                         @Header(KafkaHeaders.RECEIVED_PARTITION) List<Integer> partitions,

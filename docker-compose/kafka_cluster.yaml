@@ -30,6 +30,7 @@ services:
       SCHEMA_REGISTRY_DEBUG: 'true'
     networks:
       - ${GLOBAL_NETWORK:-kafka}
+
   kafka-broker-1:
     image: confluentinc/cp-kafka:${KAFKA_VERSION}
     hostname: kafka-broker-1
@@ -46,6 +47,16 @@ services:
       KAFKA_COMPRESSION_TYPE: producer
     networks:
       - ${GLOBAL_NETWORK:-kafka}
+    healthcheck:
+      test: >
+        bash -c "kafka-broker-api-versions \
+                 --bootstrap-server localhost:9092 \
+                 > /dev/null 2>&1"
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 30s
+
   kafka-broker-2:
     image: confluentinc/cp-kafka:${KAFKA_VERSION}
     hostname: kafka-broker-2
@@ -60,9 +71,18 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,LISTENER_LOCAL:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_COMPRESSION_TYPE: producer
-
     networks:
       - ${GLOBAL_NETWORK:-kafka}
+    healthcheck:
+      test: >
+        bash -c "kafka-broker-api-versions \
+                 --bootstrap-server localhost:9092 \
+                 > /dev/null 2>&1"
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 30s
+
   kafka-broker-3:
     image: confluentinc/cp-kafka:${KAFKA_VERSION}
     hostname: kafka-broker-3
@@ -79,3 +99,12 @@ services:
       KAFKA_COMPRESSION_TYPE: producer
     networks:
       - ${GLOBAL_NETWORK:-kafka}
+    healthcheck:
+      test: >
+        bash -c "kafka-broker-api-versions \
+                 --bootstrap-server localhost:9092 \
+                 > /dev/null 2>&1"
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 30s

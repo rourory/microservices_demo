@@ -5,8 +5,6 @@ import com.microsorvices.demo.elastic.model.index.impl.MastodonIndexModel;
 import org.springframework.stereotype.Component;
 
 import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.util.List;
 
 @Component
@@ -17,10 +15,7 @@ public class MastodonAvroToElasticModelMapper {
                 .id(String.valueOf(toot.getId()))
                 .username(toot.getUsername())
                 .text(toot.getContent())
-                .createdAt(LocalDateTime.ofInstant(
-                        Instant.ofEpochMilli(toot.getCreatedAt()),
-                        ZoneId.systemDefault())
-                )
+                .createdAt(Instant.ofEpochMilli(toot.getCreatedAt()))
                 .build()
         ).toList();
     }

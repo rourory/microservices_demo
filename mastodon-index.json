@@ -1,8 +1,8 @@
 {
   "mappings": {
     "properties": {
-      "userId": {
-        "type": "long"
+      "username": {
+        "type": "text"
       },
       "id": {
         "type": "text",
