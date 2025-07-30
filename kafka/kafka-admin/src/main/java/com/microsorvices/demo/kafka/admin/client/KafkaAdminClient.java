@@ -103,7 +103,7 @@ public class KafkaAdminClient {
         return HttpStatus.resolve(httpStatusCode.value());
     }
 
-    private void checkTopicsCreated() {
+    public void checkTopicsCreated() {
         Collection<TopicListing> topics = getTopics();
         int retryCount = 1;
         Integer maxRetry = retryConfigData.getMaxAttempts();
