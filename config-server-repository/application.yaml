@@ -20,3 +20,9 @@ kafka-config:
   replication-factor: 3
   topic-names-to-create:
     - mastodon-topic
+
+elastic-config:
+  index-name: mastodon-index
+  connection-url: http://localhost:9200
+  connect-timeout-ms: 10000
+  socket-timeout-ms: 45000

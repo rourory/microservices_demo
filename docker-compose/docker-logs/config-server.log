@@ -1,73 +1,29 @@
-2025-07-30 12:41:27 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
-2025-07-30 12:41:28 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer v0.0.1-SNAPSHOT using Java 17.0.16 with PID 1 (/workspace/BOOT-INF/classes started by cnb in /workspace)
-2025-07-30 12:41:28 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
-2025-07-30 12:41:46 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=4e0dca91-d11c-32a3-8925-3d637a8eabe9
-2025-07-30 12:41:49 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8886 (http)
-2025-07-30 12:41:49 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8886"]
-2025-07-30 12:41:49 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-07-30 12:41:49 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
-2025-07-30 12:41:50 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-07-30 12:41:50 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 20576 ms
-2025-07-30 12:41:59 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2025-07-30 12:42:07 [main] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
-2025-07-30 12:42:19 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8886"]
-2025-07-30 12:42:19 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8886 (http) with context path '/'
-2025-07-30 12:42:19 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 59.114 seconds (process running for 73.931)
-2025-07-30 12:42:20 [http-nio-8886-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-07-30 12:42:20 [http-nio-8886-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-07-30 12:42:20 [http-nio-8886-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
-2025-07-30 12:42:21 [http-nio-8886-exec-1] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
-2025-07-30 12:42:22 [http-nio-8886-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-17393035600444792232/mastodon-to-kafka-service/application-dev.yaml]' via location 'file:/tmp/config-repo-17393035600444792232/mastodon-to-kafka-service/'
-2025-07-30 12:42:22 [http-nio-8886-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-17393035600444792232/application.yaml]' via location 'file:/tmp/config-repo-17393035600444792232/'
-2025-07-30 12:42:22 [http-nio-8886-exec-2] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
-2025-07-30 12:42:24 [http-nio-8886-exec-2] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-17393035600444792232/kafka-to-elastic-service/application-dev.yaml]' via location 'file:/tmp/config-repo-17393035600444792232/kafka-to-elastic-service/'
-2025-07-30 12:42:24 [http-nio-8886-exec-2] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-17393035600444792232/application.yaml]' via location 'file:/tmp/config-repo-17393035600444792232/'
-2025-07-30 12:43:00 [http-nio-8886-exec-4] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
-2025-07-30 12:43:01 [http-nio-8886-exec-4] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-17393035600444792232/kafka-to-elastic-service/application-dev.yaml]' via location 'file:/tmp/config-repo-17393035600444792232/kafka-to-elastic-service/'
-2025-07-30 12:43:01 [http-nio-8886-exec-4] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-17393035600444792232/application.yaml]' via location 'file:/tmp/config-repo-17393035600444792232/'
-2025-07-30 12:43:28 [http-nio-8886-exec-8] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
-2025-07-30 12:43:29 [http-nio-8886-exec-8] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-17393035600444792232/kafka-to-elastic-service/application-dev.yaml]' via location 'file:/tmp/config-repo-17393035600444792232/kafka-to-elastic-service/'
-2025-07-30 12:43:29 [http-nio-8886-exec-8] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-17393035600444792232/application.yaml]' via location 'file:/tmp/config-repo-17393035600444792232/'
-2025-07-30 12:44:38 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-07-30 12:44:38 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-07-30 13:05:51 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
-2025-07-30 13:05:52 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer v0.0.1-SNAPSHOT using Java 17.0.16 with PID 1 (/workspace/BOOT-INF/classes started by cnb in /workspace)
-2025-07-30 13:05:52 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
-2025-07-30 13:06:09 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=4e0dca91-d11c-32a3-8925-3d637a8eabe9
-2025-07-30 13:06:11 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8886 (http)
-2025-07-30 13:06:11 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8886"]
-2025-07-30 13:06:11 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-07-30 13:06:11 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
-2025-07-30 13:06:12 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-07-30 13:06:12 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 18717 ms
-2025-07-30 13:06:23 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2025-07-30 13:06:32 [main] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
-2025-07-30 13:06:48 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8886"]
-2025-07-30 13:06:48 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8886 (http) with context path '/'
-2025-07-30 13:06:49 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 64.123 seconds (process running for 75.906)
-2025-07-30 13:17:48 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
-2025-07-30 13:17:49 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer v0.0.1-SNAPSHOT using Java 17.0.16 with PID 1 (/workspace/BOOT-INF/classes started by cnb in /workspace)
-2025-07-30 13:17:49 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
-2025-07-30 13:18:07 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=4e0dca91-d11c-32a3-8925-3d637a8eabe9
-2025-07-30 13:18:11 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8886 (http)
-2025-07-30 13:18:11 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8886"]
-2025-07-30 13:18:11 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-07-30 13:18:11 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
-2025-07-30 13:18:12 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-07-30 13:18:12 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 22187 ms
-2025-07-30 13:18:21 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2025-07-30 13:18:29 [main] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
-2025-07-30 13:18:42 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8886"]
-2025-07-30 13:18:42 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8886 (http) with context path '/'
-2025-07-30 13:18:43 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 62.771 seconds (process running for 71.702)
-2025-07-30 13:20:29 [http-nio-8886-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-07-30 13:20:29 [http-nio-8886-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-07-30 13:20:29 [http-nio-8886-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
-2025-07-30 13:20:29 [http-nio-8886-exec-2] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
-2025-07-30 13:20:30 [http-nio-8886-exec-2] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-12655469237919930753/kafka-to-elastic-service/application-dev.yaml]' via location 'file:/tmp/config-repo-12655469237919930753/kafka-to-elastic-service/'
-2025-07-30 13:20:30 [http-nio-8886-exec-2] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-12655469237919930753/application.yaml]' via location 'file:/tmp/config-repo-12655469237919930753/'
-2025-07-30 13:20:30 [http-nio-8886-exec-1] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
-2025-07-30 13:20:31 [http-nio-8886-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-12655469237919930753/mastodon-to-kafka-service/application-dev.yaml]' via location 'file:/tmp/config-repo-12655469237919930753/mastodon-to-kafka-service/'
-2025-07-30 13:20:31 [http-nio-8886-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-12655469237919930753/application.yaml]' via location 'file:/tmp/config-repo-12655469237919930753/'
-2025-07-30 13:30:38 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-07-30 13:30:38 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-04 11:44:50 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-08-04 11:44:51 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer v0.0.1-SNAPSHOT using Java 17.0.16 with PID 1 (/workspace/BOOT-INF/classes started by cnb in /workspace)
+2025-08-04 11:44:51 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2025-08-04 11:45:09 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=4e0dca91-d11c-32a3-8925-3d637a8eabe9
+2025-08-04 11:45:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8886 (http)
+2025-08-04 11:45:16 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8886"]
+2025-08-04 11:45:16 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-04 11:45:16 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-04 11:45:17 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-04 11:45:17 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 24611 ms
+2025-08-04 11:45:27 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-08-04 11:45:34 [main] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
+2025-08-04 11:45:46 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8886"]
+2025-08-04 11:45:46 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8886 (http) with context path '/'
+2025-08-04 11:45:47 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 65.319 seconds (process running for 79.293)
+2025-08-04 11:46:34 [http-nio-8886-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-04 11:46:34 [http-nio-8886-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-04 11:46:35 [http-nio-8886-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2025-08-04 11:46:35 [http-nio-8886-exec-2] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
+2025-08-04 11:46:36 [http-nio-8886-exec-2] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-5605217607666150988/kafka-to-elastic-service/application-dev.yaml]' via location 'file:/tmp/config-repo-5605217607666150988/kafka-to-elastic-service/'
+2025-08-04 11:46:36 [http-nio-8886-exec-2] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-5605217607666150988/application.yaml]' via location 'file:/tmp/config-repo-5605217607666150988/'
+2025-08-04 11:46:36 [http-nio-8886-exec-1] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
+2025-08-04 11:46:37 [http-nio-8886-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-5605217607666150988/mastodon-to-kafka-service/application-dev.yaml]' via location 'file:/tmp/config-repo-5605217607666150988/mastodon-to-kafka-service/'
+2025-08-04 11:46:37 [http-nio-8886-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-5605217607666150988/application.yaml]' via location 'file:/tmp/config-repo-5605217607666150988/'
+2025-08-04 13:01:03 [http-nio-8886-exec-10] DEBUG o.s.c.c.s.s.GitCredentialsProviderFactory - No credentials provider required for URI https://github.com/rourory/spring-cloud-repo.git
+2025-08-04 13:01:04 [http-nio-8886-exec-10] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-5605217607666150988/elastic-query-service/application-dev.yaml]' via location 'file:/tmp/config-repo-5605217607666150988/elastic-query-service/'
+2025-08-04 13:01:04 [http-nio-8886-exec-10] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-5605217607666150988/application.yaml]' via location 'file:/tmp/config-repo-5605217607666150988/'
+2025-08-04 13:22:16 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-04 13:22:16 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete

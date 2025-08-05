@@ -19,8 +19,3 @@ kafka-consumer-config:
   max-partition-fetch-bytes-boost-factor: 1
   poll-timeout-ms: 150
 
-elastic-config:
-  index-name: mastodon-index
-  connection-url: http://localhost:9200
-  connect-timeout-ms: 10000
-  socket-timeout-ms: 45000

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: elastic-query-service
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:8886
+      profile: dev
+      name: elastic-query-service
+      username: spring_cloud_user
+      password: springCloud_Pwd!
+  config:
+    import: 'configserver:'
+

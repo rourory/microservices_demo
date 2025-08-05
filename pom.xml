@@ -21,6 +21,7 @@
         <module>config-server</module>
         <module>kafka-to-elastic-service</module>
         <module>elastic</module>
+        <module>elastic-query-service</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -65,7 +66,7 @@
         <avro-serializer.version>8.0.0</avro-serializer.version>
         <spring-cloud-config-server.version>4.3.0</spring-cloud-config-server.version>
         <spring-cloud-dependencies.version>2025.0.0</spring-cloud-dependencies.version>
-        <elasticsearch.version>9.0.4</elasticsearch.version>
+        <elasticsearch.version>8.9.0</elasticsearch.version>
     </properties>
 
     <dependencyManagement>
@@ -91,6 +92,18 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-webflux</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-validation</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-hateoas</artifactId>
                 <version>${spring-boot.version}</version>
             </dependency>
 
@@ -163,7 +176,7 @@
 
             <dependency>
                 <groupId>com.microsorvices.demo</groupId>
-                <artifactId>elastic-index-client</artifactId>
+                <artifactId>elastic-client-index</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

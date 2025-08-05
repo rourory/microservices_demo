@@ -23,7 +23,7 @@
 
         <dependency>
             <groupId>com.microsorvices.demo</groupId>
-            <artifactId>elastic-index-client</artifactId>
+            <artifactId>elastic-client-index</artifactId>
         </dependency>
 
         <dependency>

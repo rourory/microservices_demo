@@ -7,7 +7,6 @@ import com.microsorvices.demo.config.ElasticConfigData;
 import org.apache.http.HttpHost;
 import org.elasticsearch.client.RestClient;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
 
@@ -16,8 +15,7 @@ import java.net.URI;
 
 @Configuration
 @EnableElasticsearchRepositories(basePackages
-        = "com.microsorvices.demo")
-@ComponentScan(basePackages = {"com.microsorvices.demo"})
+        = "com.microsorvices.demo.elastic")
 public class ElasticSearchConfig {
 
     private final ElasticConfigData elasticConfigData;

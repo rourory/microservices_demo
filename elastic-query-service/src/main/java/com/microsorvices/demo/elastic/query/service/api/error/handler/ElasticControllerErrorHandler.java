@@ -1,0 +1,53 @@
+package com.microsorvices.demo.elastic.query.service.api.error.handler;
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
+
+import java.util.HashMap;
+import java.util.Map;
+
+@ControllerAdvice
+@Slf4j
+public class ElasticControllerErrorHandler {
+
+    @ExceptionHandler(AccessDeniedException.class)
+    public ResponseEntity<String> handle(AccessDeniedException e) {
+        log.error("Access denied exception: {}", e.getMessage());
+        return ResponseEntity.status(HttpStatus.FORBIDDEN).body("You are not authorized to access this resource :(");
+    }
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<String> handle(IllegalArgumentException e) {
+        log.error("Illegal argument exception: {}", e.getMessage());
+        return ResponseEntity.badRequest().body("Illegal argument exception: " + e.getMessage());
+    }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<Map<String, String>> handle(MethodArgumentNotValidException e) {
+        log.error("Method argument is not valid: {}", e.getMessage());
+        Map<String, String> errors = new HashMap<>();
+        e.getBindingResult().getAllErrors().forEach(error ->
+                errors.put(error.getObjectName(), error.getDefaultMessage()));
+        return ResponseEntity.badRequest().body(errors);
+    }
+
+    @ExceptionHandler(RuntimeException.class)
+    public ResponseEntity<String> handle(RuntimeException e) {
+        log.error("Service runtime exception: {}", e.getMessage());
+        return ResponseEntity.badRequest().body("Service runtime exception: " + e.getMessage());
+    }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<String> handle(Exception e) {
+        log.error("Internal server error: {}", e.getMessage());
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Internal server error: " + e.getMessage());
+    }
+
+
+}
