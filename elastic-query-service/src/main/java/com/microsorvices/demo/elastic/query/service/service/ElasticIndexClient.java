@@ -2,7 +2,7 @@ package com.microsorvices.demo.elastic.query.service.service;
 
 
 import com.microsorvices.demo.elastic.model.index.IndexModel;
-import com.microsorvices.demo.elastic.query.service.body.ElasticQueryServiceResponseModel;
+import com.microsorvices.demo.elastic.query.service.common.body.ElasticQueryServiceResponseModel;
 
 import java.util.List;
 

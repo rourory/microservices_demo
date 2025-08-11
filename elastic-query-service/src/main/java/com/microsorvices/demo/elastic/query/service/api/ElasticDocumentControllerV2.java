@@ -1,15 +1,13 @@
 package com.microsorvices.demo.elastic.query.service.api;
 
-import com.microsorvices.demo.elastic.query.service.body.ElasticQueryServiceResponseModel;
 import com.microsorvices.demo.elastic.query.service.body.ElasticQueryServiceResponseModelV2;
-import com.microsorvices.demo.elastic.query.service.body.ElasticServiceSearchRequestBody;
+import com.microsorvices.demo.elastic.query.service.common.body.ElasticQueryServiceResponseModel;
 import com.microsorvices.demo.elastic.query.service.service.impl.MastodonElasticIndexService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

@@ -1,0 +1,1223 @@
+2025-08-06 12:05:10 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-08-06 12:05:10 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - Starting ReactiveElasticQueryServiceApplication using Java 17.0.12 with PID 13072 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\reactive-elastic-query-service\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-08-06 12:05:10 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - The following 1 profile is active: "dev"
+2025-08-06 12:05:10 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8886
+2025-08-06 12:05:10 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=reactive-elastic-query-service, profiles=[dev], label=null, version=a6f219ed5d315c3663811b37fbc37206ee917bbf, state=
+2025-08-06 12:05:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2025-08-06 12:05:13 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 344 ms. Found 0 Elasticsearch repository interfaces.
+2025-08-06 12:05:13 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2025-08-06 12:05:13 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 41 ms. Found 1 Reactive Elasticsearch repository interface.
+2025-08-06 12:05:13 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=5b906252-9a57-3f9b-98b7-f2e41ea9f9a4
+2025-08-06 12:05:16 [main] INFO  c.m.demo.config.KafkaConfigData - Kafka config data has initialized with next properties: bootstrapServers: localhost:19092, localhost:29092, localhost:39092
+schemaRegistryUrlKey: schema.registry.url
+schemaRegistryUrl: http://localhost:8081
+topicName : mastodon-topic
+topicNamesToCreate : [mastodon-topic]
+numberOfPartitions : 3
+replicationFactor : 3
+2025-08-06 12:05:16 [main] INFO  c.m.d.config.KafkaProducerConfigData - Kafka config data has initialized with next properties: keySerializerClass: null
+valueSerializerClass: null
+compressionType: null
+acks : null
+batchSize : null
+batchSizeBoostFactor : null
+lingerMs : null
+requestTimeoutMs : null
+retryCount : null
+2025-08-06 12:05:16 [main] INFO  o.s.b.a.s.r.ReactiveUserDetailsServiceAutoConfiguration - 
+
+Using generated security password: b5aa776e-534b-46b9-b334-773f83fc173e
+
+2025-08-06 12:05:20 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 12:05:21 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 12:05:22 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8183 (http)
+2025-08-06 12:05:23 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 12:05:24 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 12:05:24 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - Started ReactiveElasticQueryServiceApplication in 21.473 seconds (process running for 25.167)
+2025-08-06 12:05:48 [parallel-1] ERROR c.m.d.e.q.s.c.a.e.h.ElasticControllerErrorHandler - Service runtime exception: 404 NOT_FOUND "No static resource documents."
+2025-08-06 12:06:21 [parallel-2] ERROR c.m.d.e.q.s.c.a.e.h.ElasticControllerErrorHandler - Service runtime exception: 404 NOT_FOUND "No static resource get-doc-by-text."
+2025-08-06 12:06:45 [parallel-3] ERROR c.m.d.e.q.s.c.a.e.h.ElasticControllerErrorHandler - Service runtime exception: 404 NOT_FOUND "No static resource get-doc-by-text."
+2025-08-06 12:07:21 [parallel-4] ERROR c.m.d.e.q.s.c.a.e.h.ElasticControllerErrorHandler - Service runtime exception: 404 NOT_FOUND "No static resource get-doc-by-text."
+2025-08-06 12:07:30 [parallel-5] ERROR c.m.d.e.q.s.c.a.e.h.ElasticControllerErrorHandler - Service runtime exception: 404 NOT_FOUND "No static resource get-doc-by-text."
+2025-08-06 12:08:52 [reactor-http-nio-5] INFO  reactor.Flux.Map.1 - onSubscribe(FluxMap.MapSubscriber)
+2025-08-06 12:08:52 [reactor-http-nio-5] INFO  reactor.Flux.Map.1 - request(1)
+2025-08-06 12:08:54 [elasticsearch-rest-client-0-thread-2] WARN  reactor.core.Exceptions - throwIfFatal detected a jvm fatal exception, which is thrown and logged below:
+java.lang.NoSuchMethodError: 'co.elastic.clients.elasticsearch._types.FieldValue co.elastic.clients.elasticsearch._types.FieldValue.of(java.lang.Object)'
+	at org.springframework.data.elasticsearch.client.elc.TypeUtils.toFieldValue(TypeUtils.java:194)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.prepareSearchRequest(RequestConverter.java:1533)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.searchRequest(RequestConverter.java:1227)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.searchRequest(RequestConverter.java:1215)
+	at org.springframework.data.elasticsearch.client.elc.ReactiveElasticsearchTemplate.lambda$doFindUnbounded$35(ReactiveElasticsearchTemplate.java:420)
+	at reactor.core.publisher.FluxExpand$ExpandBreathSubscriber.onNext(FluxExpand.java:122)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:121)
+	at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:67)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at co.elastic.clients.transport.ElasticsearchTransportBase.lambda$performRequestAsync$0(ElasticsearchTransportBase.java:158)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at co.elastic.clients.transport.rest_client.RestClientHttpClient$1.onSuccess(RestClientHttpClient.java:115)
+	at org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:680)
+	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:403)
+	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:397)
+	at org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122)
+	at org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:182)
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448)
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338)
+	at org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:87)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:40)
+	at org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:114)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-08-06 12:08:54 [elasticsearch-rest-client-0-thread-2] ERROR reactor.core.publisher.Operators - Operator called default onErrorDropped
+java.lang.NoSuchMethodError: 'co.elastic.clients.elasticsearch._types.FieldValue co.elastic.clients.elasticsearch._types.FieldValue.of(java.lang.Object)'
+	at org.springframework.data.elasticsearch.client.elc.TypeUtils.toFieldValue(TypeUtils.java:194)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.prepareSearchRequest(RequestConverter.java:1533)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.searchRequest(RequestConverter.java:1227)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.searchRequest(RequestConverter.java:1215)
+	at org.springframework.data.elasticsearch.client.elc.ReactiveElasticsearchTemplate.lambda$doFindUnbounded$35(ReactiveElasticsearchTemplate.java:420)
+	at reactor.core.publisher.FluxExpand$ExpandBreathSubscriber.onNext(FluxExpand.java:122)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:121)
+	at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:67)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at co.elastic.clients.transport.ElasticsearchTransportBase.lambda$performRequestAsync$0(ElasticsearchTransportBase.java:158)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at co.elastic.clients.transport.rest_client.RestClientHttpClient$1.onSuccess(RestClientHttpClient.java:115)
+	at org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:680)
+	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:403)
+	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:397)
+	at org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122)
+	at org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:182)
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448)
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338)
+	at org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:87)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:40)
+	at org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:114)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-08-06 12:08:54 [elasticsearch-rest-client-0-thread-2] WARN  reactor.core.Exceptions - throwIfFatal detected a jvm fatal exception, which is thrown and logged below:
+java.lang.NoSuchMethodError: 'co.elastic.clients.elasticsearch._types.FieldValue co.elastic.clients.elasticsearch._types.FieldValue.of(java.lang.Object)'
+	at org.springframework.data.elasticsearch.client.elc.TypeUtils.toFieldValue(TypeUtils.java:194)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.prepareSearchRequest(RequestConverter.java:1533)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.searchRequest(RequestConverter.java:1227)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.searchRequest(RequestConverter.java:1215)
+	at org.springframework.data.elasticsearch.client.elc.ReactiveElasticsearchTemplate.lambda$doFindUnbounded$35(ReactiveElasticsearchTemplate.java:420)
+	at reactor.core.publisher.FluxExpand$ExpandBreathSubscriber.onNext(FluxExpand.java:122)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:121)
+	at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:67)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at co.elastic.clients.transport.ElasticsearchTransportBase.lambda$performRequestAsync$0(ElasticsearchTransportBase.java:158)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at co.elastic.clients.transport.rest_client.RestClientHttpClient$1.onSuccess(RestClientHttpClient.java:115)
+	at org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:680)
+	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:403)
+	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:397)
+	at org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122)
+	at org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:182)
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448)
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338)
+	at org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:87)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:40)
+	at org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:114)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-08-06 12:08:55 [parallel-7] INFO  reactor.Flux.Map.1 - onNext(ElasticQueryServiceResponseModel(id=114975312973594966, username=tonline, text=<p>Die Niederlande sagen der Ukraine erste Patriot-Systeme zu – ein Teil des Ultimatums, das Trump Moskau für eine Waffenruhe gesetzt hat. Auch Deutschland sagt weitere Militärhilfe zu. <a href="https://www.t-online.de/nachrichten/ukraine/id_100853722/ukraine-niederlande-starten-mit-patriot-lieferung-neue-hilfe-fuer-kiew.html?utm_source=dlvr.it&amp;utm_medium=mastodon" target="_blank" rel="nofollow noopener" translate="no"><span class="invisible">https://www.</span><span class="ellipsis">t-online.de/nachrichten/ukrain</span><span class="invisible">e/id_100853722/ukraine-niederlande-starten-mit-patriot-lieferung-neue-hilfe-fuer-kiew.html?utm_source=dlvr.it&amp;utm_medium=mastodon</span></a></p>, createdAt=2025-08-05T08:54:08.062Z))
+2025-08-06 12:08:55 [reactor-http-nio-5] INFO  reactor.Flux.Map.1 - request(31)
+2025-08-06 12:08:55 [parallel-8] INFO  reactor.Flux.Map.1 - onNext(ElasticQueryServiceResponseModel(id=114975316580465375, username=Le_M_Poireau, text=<p>Le ministre néerlandais de la Défense, Ruben Brekelmans, a fait savoir, lundi, que les Pays-Bas allaient livrer à l’Ukraine 500 millions d’euros d’équipements militaires achetés aux États-Unis. <a href="https://www.leparisien.fr/international/ukraine/les-pays-bas-premiers-pays-de-lotan-a-livrer-des-armes-a-lukraine-via-laccord-avec-donald-trump-05-08-2025-FJC7T5ZVGVBW3AXUP4CQIC2PHY.php" target="_blank" rel="nofollow noopener" translate="no"><span class="invisible">https://www.</span><span class="ellipsis">leparisien.fr/international/uk</span><span class="invisible">raine/les-pays-bas-premiers-pays-de-lotan-a-livrer-des-armes-a-lukraine-via-laccord-avec-donald-trump-05-08-2025-FJC7T5ZVGVBW3AXUP4CQIC2PHY.php</span></a></p>, createdAt=2025-08-05T08:55:03.101Z))
+2025-08-06 12:08:56 [parallel-1] INFO  reactor.Flux.Map.1 - onNext(ElasticQueryServiceResponseModel(id=114981017648673925, username=AltEvil, text=<p>You must comply.</p><p><a href="https://thegodlessliberal.blogspot.com/2025/08/trump-to-deny-federal.html" target="_blank" rel="nofollow noopener" translate="no"><span class="invisible">https://</span><span class="ellipsis">thegodlessliberal.blogspot.com</span><span class="invisible">/2025/08/trump-to-deny-federal.html</span></a></p>, createdAt=2025-08-06T09:04:54.507Z))
+2025-08-06 12:08:56 [parallel-2] INFO  reactor.Flux.Map.1 - onNext(ElasticQueryServiceResponseModel(id=114975312943789242, username=DJ_2280, text=<p><span class="h-card" translate="no"><a href="https://mastodon.xyz/@Trump" class="u-url mention">@<span>Trump</span></a></span> <br />Trump administration issues new warning to states</p><p>ORANGE-FACED SOAB THINKS HE&#39;S OUR KING. KISS MY ASS JUICY FRUIT</p><p><a href="https://www.msn.com/en-us/news/us/trump-administration-issues-new-warning-to-states/ar-AA1JT5hb?ocid=socialshare" target="_blank" rel="nofollow noopener" translate="no"><span class="invisible">https://www.</span><span class="ellipsis">msn.com/en-us/news/us/trump-ad</span><span class="invisible">ministration-issues-new-warning-to-states/ar-AA1JT5hb?ocid=socialshare</span></a></p>, createdAt=2025-08-05T08:54:07.611Z))
+2025-08-06 12:08:57 [parallel-3] INFO  reactor.Flux.Map.1 - onNext(ElasticQueryServiceResponseModel(id=114981008509843898, username=automotivas, text=<p>Trump detona Jaguar por campanha “woke” e culpa rebranding fracassado pela saída do CEO <a href="https://www.noticiasautomotivas.com.br/trump-detona-jaguar-por-campanha-woke-e-culpa-rebranding-fracassado-pela-saida-do-ceo/" target="_blank" rel="nofollow noopener" translate="no"><span class="invisible">https://www.</span><span class="ellipsis">noticiasautomotivas.com.br/tru</span><span class="invisible">mp-detona-jaguar-por-campanha-woke-e-culpa-rebranding-fracassado-pela-saida-do-ceo/</span></a> <a href="https://mastodon.social/tags/Jaguar" class="mention hashtag" rel="tag">#<span>Jaguar</span></a></p>, createdAt=2025-08-06T09:02:35.059Z))
+2025-08-06 12:08:57 [parallel-4] INFO  reactor.Flux.Map.1 - onNext(ElasticQueryServiceResponseModel(id=114981026344557220, username=ezeromt, text=<p>when it comes to policy debates:<br />- we saw how people received the cnn debate; oddly, they claimed biden lost because he didn&#39;t answer fast enough -- not that trump won because he made logically convincing and accurate arguments<br />- people simply want someone that will lie to their face</p>, createdAt=2025-08-06T09:07:07.187Z))
+2025-08-06 12:08:58 [parallel-5] INFO  reactor.Flux.Map.1 - onNext(ElasticQueryServiceResponseModel(id=114981029192877467, username=theurbanherald, text=<p>Trump envoy Steve Witkoff arrives in Moscow ahead of critical talks with Russian leaders as a ceasefire deadline looms in the Ukraine conflict. This visit marks a key moment in White House efforts to end the war that began in 2022, with sanctions threats still on the table. 🌍🕊️</p>, createdAt=2025-08-06T09:07:50.646Z))
+2025-08-06 12:08:58 [parallel-6] INFO  reactor.Flux.Map.1 - onNext(ElasticQueryServiceResponseModel(id=114981030008962760, username=naim144__qw, text=<p>Justice Department releases list of sanctuary jurisdictions</p><p>The Department of Justice published a new list Tuesday of “sanctuary” jurisdictions that it claims have policies, laws or regulations that obstruct enforcement of federal immigration laws. Although the list includes the Trump administration’s typical targets — the city of Los Angeles and the state of California — it is much shorter than a previous list issued by the Department of Homeland Security.</p><p><a href="https://news24.allforu24.com/justice-department-releases-list-of-sanctuary-jurisdictions/?utm_source=mastodon&amp;utm_medium=jetpack_social" target="_blank" rel="nofollow noopener" translate="no"><span class="invisible">https://</span><span class="ellipsis">news24.allforu24.com/justice-d</span><span class="invisible">epartment-releases-list-of-sanctuary-jurisdictions/?utm_source=mastodon&amp;utm_medium=jetpack_social</span></a></p>, createdAt=2025-08-06T09:08:03.098Z))
+2025-08-06 12:08:59 [parallel-7] INFO  reactor.Flux.Map.1 - onNext(ElasticQueryServiceResponseModel(id=114981030089644725, username=Liam123__Q, text=<p>Justice Department releases list of sanctuary jurisdictions</p><p>The Department of Justice published a new list Tuesday of “sanctuary” jurisdictions that it claims have policies, laws or regulations that obstruct enforcement of federal immigration laws. Although the list includes the Trump administration’s typical targets — the city of Los Angeles and the state of California — it is much shorter than a previous list issued by the Department of Homeland Security.</p><p><a href="https://news24.allforu24.com/justice-department-releases-list-of-sanctuary-jurisdictions/?utm_source=mastodon&amp;utm_medium=jetpack_social" target="_blank" rel="nofollow noopener" translate="no"><span class="invisible">https://</span><span class="ellipsis">news24.allforu24.com/justice-d</span><span class="invisible">epartment-releases-list-of-sanctuary-jurisdictions/?utm_source=mastodon&amp;utm_medium=jetpack_social</span></a></p>, createdAt=2025-08-06T09:08:04.328Z))
+2025-08-06 12:08:59 [parallel-8] INFO  reactor.Flux.Map.1 - onNext(ElasticQueryServiceResponseModel(id=114981030303027192, username=finans, text=<p>Trump truer med særlig told: Novo ryster ikke på hånden <a href="https://finans.dk/erhverv/ECE18411331/vi-er-i-en-solid-position-ingen-bekymring-hos-novo-efter-trumps-toldtrussel/?utm_source=dlvr.it&amp;utm_medium=mastodon" target="_blank" rel="nofollow noopener" translate="no"><span class="invisible">https://</span><span class="ellipsis">finans.dk/erhverv/ECE18411331/</span><span class="invisible">vi-er-i-en-solid-position-ingen-bekymring-hos-novo-efter-trumps-toldtrussel/?utm_source=dlvr.it&amp;utm_medium=mastodon</span></a> <a href="https://mastodon.social/tags/dkbiz" class="mention hashtag" rel="tag">#<span>dkbiz</span></a></p>, createdAt=2025-08-06T09:08:07.590Z))
+2025-08-06 12:09:00 [parallel-1] INFO  reactor.Flux.Map.1 - onNext(ElasticQueryServiceResponseModel(id=114981030601693301, username=lemonde, text=<p>Donald Trump s’immisce dans l’organisation des Jeux de Los Angeles 2028, avec la création d’un groupe de travail spécial <a href="https://www.lemonde.fr/sport/article/2025/08/06/donald-trump-s-immisce-dans-l-organisation-des-jeux-de-los-angeles-2028-avec-la-creation-d-un-groupe-de-travail-special_6627117_3242.html?utm_source=dlvr.it&amp;utm_medium=mastodon" target="_blank" rel="nofollow noopener" translate="no"><span class="invisible">https://www.</span><span class="ellipsis">lemonde.fr/sport/article/2025/</span><span class="invisible">08/06/donald-trump-s-immisce-dans-l-organisation-des-jeux-de-los-angeles-2028-avec-la-creation-d-un-groupe-de-travail-special_6627117_3242.html?utm_source=dlvr.it&amp;utm_medium=mastodon</span></a></p>, createdAt=2025-08-06T09:08:12.143Z))
+2025-08-06 12:10:13 [reactor-http-nio-5] INFO  reactor.Flux.Map.1 - cancel()
+2025-08-06 12:10:13 [reactor-http-nio-5] WARN  o.s.d.e.c.e.ReactiveElasticsearchTemplate - pit/search_after was cancelled
+2025-08-06 12:10:56 [reactor-http-nio-7] INFO  reactor.Flux.Map.2 - onSubscribe(FluxMap.MapSubscriber)
+2025-08-06 12:10:56 [reactor-http-nio-7] INFO  reactor.Flux.Map.2 - request(1)
+2025-08-06 12:10:56 [elasticsearch-rest-client-0-thread-2] INFO  reactor.Flux.Map.2 - onComplete()
+2025-08-06 12:11:00 [reactor-http-nio-7] INFO  reactor.Flux.Map.3 - onSubscribe(FluxMap.MapSubscriber)
+2025-08-06 12:11:00 [reactor-http-nio-7] INFO  reactor.Flux.Map.3 - request(1)
+2025-08-06 12:11:00 [elasticsearch-rest-client-0-thread-2] INFO  reactor.Flux.Map.3 - onComplete()
+2025-08-06 12:11:09 [reactor-http-nio-7] INFO  reactor.Flux.Map.4 - onSubscribe(FluxMap.MapSubscriber)
+2025-08-06 12:11:09 [reactor-http-nio-7] INFO  reactor.Flux.Map.4 - request(1)
+2025-08-06 12:11:09 [elasticsearch-rest-client-0-thread-2] INFO  reactor.Flux.Map.4 - onComplete()
+2025-08-06 12:11:17 [reactor-http-nio-7] INFO  reactor.Flux.Map.5 - onSubscribe(FluxMap.MapSubscriber)
+2025-08-06 12:11:17 [reactor-http-nio-7] INFO  reactor.Flux.Map.5 - request(1)
+2025-08-06 12:11:17 [elasticsearch-rest-client-0-thread-2] INFO  reactor.Flux.Map.5 - onComplete()
+2025-08-06 12:11:21 [reactor-http-nio-7] INFO  reactor.Flux.Map.6 - onSubscribe(FluxMap.MapSubscriber)
+2025-08-06 12:11:21 [reactor-http-nio-7] INFO  reactor.Flux.Map.6 - request(1)
+2025-08-06 12:11:21 [elasticsearch-rest-client-0-thread-2] WARN  reactor.core.Exceptions - throwIfFatal detected a jvm fatal exception, which is thrown and logged below:
+java.lang.NoSuchMethodError: 'co.elastic.clients.elasticsearch._types.FieldValue co.elastic.clients.elasticsearch._types.FieldValue.of(java.lang.Object)'
+	at org.springframework.data.elasticsearch.client.elc.TypeUtils.toFieldValue(TypeUtils.java:194)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.prepareSearchRequest(RequestConverter.java:1533)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.searchRequest(RequestConverter.java:1227)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.searchRequest(RequestConverter.java:1215)
+	at org.springframework.data.elasticsearch.client.elc.ReactiveElasticsearchTemplate.lambda$doFindUnbounded$35(ReactiveElasticsearchTemplate.java:420)
+	at reactor.core.publisher.FluxExpand$ExpandBreathSubscriber.onNext(FluxExpand.java:122)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:121)
+	at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:67)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at co.elastic.clients.transport.ElasticsearchTransportBase.lambda$performRequestAsync$0(ElasticsearchTransportBase.java:158)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at co.elastic.clients.transport.rest_client.RestClientHttpClient$1.onSuccess(RestClientHttpClient.java:115)
+	at org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:680)
+	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:403)
+	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:397)
+	at org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122)
+	at org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:182)
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448)
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338)
+	at org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:87)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:40)
+	at org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:114)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-08-06 12:11:21 [elasticsearch-rest-client-0-thread-2] ERROR reactor.core.publisher.Operators - Operator called default onErrorDropped
+java.lang.NoSuchMethodError: 'co.elastic.clients.elasticsearch._types.FieldValue co.elastic.clients.elasticsearch._types.FieldValue.of(java.lang.Object)'
+	at org.springframework.data.elasticsearch.client.elc.TypeUtils.toFieldValue(TypeUtils.java:194)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.prepareSearchRequest(RequestConverter.java:1533)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.searchRequest(RequestConverter.java:1227)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.searchRequest(RequestConverter.java:1215)
+	at org.springframework.data.elasticsearch.client.elc.ReactiveElasticsearchTemplate.lambda$doFindUnbounded$35(ReactiveElasticsearchTemplate.java:420)
+	at reactor.core.publisher.FluxExpand$ExpandBreathSubscriber.onNext(FluxExpand.java:122)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:121)
+	at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:67)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at co.elastic.clients.transport.ElasticsearchTransportBase.lambda$performRequestAsync$0(ElasticsearchTransportBase.java:158)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at co.elastic.clients.transport.rest_client.RestClientHttpClient$1.onSuccess(RestClientHttpClient.java:115)
+	at org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:680)
+	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:403)
+	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:397)
+	at org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122)
+	at org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:182)
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448)
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338)
+	at org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:87)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:40)
+	at org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:114)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-08-06 12:11:21 [elasticsearch-rest-client-0-thread-2] WARN  reactor.core.Exceptions - throwIfFatal detected a jvm fatal exception, which is thrown and logged below:
+java.lang.NoSuchMethodError: 'co.elastic.clients.elasticsearch._types.FieldValue co.elastic.clients.elasticsearch._types.FieldValue.of(java.lang.Object)'
+	at org.springframework.data.elasticsearch.client.elc.TypeUtils.toFieldValue(TypeUtils.java:194)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.prepareSearchRequest(RequestConverter.java:1533)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.searchRequest(RequestConverter.java:1227)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.searchRequest(RequestConverter.java:1215)
+	at org.springframework.data.elasticsearch.client.elc.ReactiveElasticsearchTemplate.lambda$doFindUnbounded$35(ReactiveElasticsearchTemplate.java:420)
+	at reactor.core.publisher.FluxExpand$ExpandBreathSubscriber.onNext(FluxExpand.java:122)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:121)
+	at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:67)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at co.elastic.clients.transport.ElasticsearchTransportBase.lambda$performRequestAsync$0(ElasticsearchTransportBase.java:158)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at co.elastic.clients.transport.rest_client.RestClientHttpClient$1.onSuccess(RestClientHttpClient.java:115)
+	at org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:680)
+	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:403)
+	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:397)
+	at org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122)
+	at org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:182)
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448)
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338)
+	at org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:87)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:40)
+	at org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:114)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-08-06 12:11:22 [parallel-7] INFO  reactor.Flux.Map.6 - onNext(ElasticQueryServiceResponseModel(id=114975312973594966, username=tonline, text=<p>Die Niederlande sagen der Ukraine erste Patriot-Systeme zu – ein Teil des Ultimatums, das Trump Moskau für eine Waffenruhe gesetzt hat. Auch Deutschland sagt weitere Militärhilfe zu. <a href="https://www.t-online.de/nachrichten/ukraine/id_100853722/ukraine-niederlande-starten-mit-patriot-lieferung-neue-hilfe-fuer-kiew.html?utm_source=dlvr.it&amp;utm_medium=mastodon" target="_blank" rel="nofollow noopener" translate="no"><span class="invisible">https://www.</span><span class="ellipsis">t-online.de/nachrichten/ukrain</span><span class="invisible">e/id_100853722/ukraine-niederlande-starten-mit-patriot-lieferung-neue-hilfe-fuer-kiew.html?utm_source=dlvr.it&amp;utm_medium=mastodon</span></a></p>, createdAt=2025-08-05T08:54:08.062Z))
+2025-08-06 12:11:22 [reactor-http-nio-7] INFO  reactor.Flux.Map.6 - request(31)
+2025-08-06 12:11:22 [parallel-8] INFO  reactor.Flux.Map.6 - onNext(ElasticQueryServiceResponseModel(id=114975316580465375, username=Le_M_Poireau, text=<p>Le ministre néerlandais de la Défense, Ruben Brekelmans, a fait savoir, lundi, que les Pays-Bas allaient livrer à l’Ukraine 500 millions d’euros d’équipements militaires achetés aux États-Unis. <a href="https://www.leparisien.fr/international/ukraine/les-pays-bas-premiers-pays-de-lotan-a-livrer-des-armes-a-lukraine-via-laccord-avec-donald-trump-05-08-2025-FJC7T5ZVGVBW3AXUP4CQIC2PHY.php" target="_blank" rel="nofollow noopener" translate="no"><span class="invisible">https://www.</span><span class="ellipsis">leparisien.fr/international/uk</span><span class="invisible">raine/les-pays-bas-premiers-pays-de-lotan-a-livrer-des-armes-a-lukraine-via-laccord-avec-donald-trump-05-08-2025-FJC7T5ZVGVBW3AXUP4CQIC2PHY.php</span></a></p>, createdAt=2025-08-05T08:55:03.101Z))
+2025-08-06 12:11:23 [parallel-1] INFO  reactor.Flux.Map.6 - onNext(ElasticQueryServiceResponseModel(id=114981017648673925, username=AltEvil, text=<p>You must comply.</p><p><a href="https://thegodlessliberal.blogspot.com/2025/08/trump-to-deny-federal.html" target="_blank" rel="nofollow noopener" translate="no"><span class="invisible">https://</span><span class="ellipsis">thegodlessliberal.blogspot.com</span><span class="invisible">/2025/08/trump-to-deny-federal.html</span></a></p>, createdAt=2025-08-06T09:04:54.507Z))
+2025-08-06 12:11:23 [parallel-2] INFO  reactor.Flux.Map.6 - onNext(ElasticQueryServiceResponseModel(id=114975312943789242, username=DJ_2280, text=<p><span class="h-card" translate="no"><a href="https://mastodon.xyz/@Trump" class="u-url mention">@<span>Trump</span></a></span> <br />Trump administration issues new warning to states</p><p>ORANGE-FACED SOAB THINKS HE&#39;S OUR KING. KISS MY ASS JUICY FRUIT</p><p><a href="https://www.msn.com/en-us/news/us/trump-administration-issues-new-warning-to-states/ar-AA1JT5hb?ocid=socialshare" target="_blank" rel="nofollow noopener" translate="no"><span class="invisible">https://www.</span><span class="ellipsis">msn.com/en-us/news/us/trump-ad</span><span class="invisible">ministration-issues-new-warning-to-states/ar-AA1JT5hb?ocid=socialshare</span></a></p>, createdAt=2025-08-05T08:54:07.611Z))
+2025-08-06 12:11:24 [parallel-3] INFO  reactor.Flux.Map.6 - onNext(ElasticQueryServiceResponseModel(id=114981008509843898, username=automotivas, text=<p>Trump detona Jaguar por campanha “woke” e culpa rebranding fracassado pela saída do CEO <a href="https://www.noticiasautomotivas.com.br/trump-detona-jaguar-por-campanha-woke-e-culpa-rebranding-fracassado-pela-saida-do-ceo/" target="_blank" rel="nofollow noopener" translate="no"><span class="invisible">https://www.</span><span class="ellipsis">noticiasautomotivas.com.br/tru</span><span class="invisible">mp-detona-jaguar-por-campanha-woke-e-culpa-rebranding-fracassado-pela-saida-do-ceo/</span></a> <a href="https://mastodon.social/tags/Jaguar" class="mention hashtag" rel="tag">#<span>Jaguar</span></a></p>, createdAt=2025-08-06T09:02:35.059Z))
+2025-08-06 12:11:24 [reactor-http-nio-7] INFO  reactor.Flux.Map.6 - cancel()
+2025-08-06 12:11:24 [reactor-http-nio-7] WARN  o.s.d.e.c.e.ReactiveElasticsearchTemplate - pit/search_after was cancelled
+2025-08-06 13:23:00 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-06 13:23:00 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete
+2025-08-06 13:23:02 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of close method failed on bean with name 'reactiveElasticsearchClient': java.lang.NoSuchMethodError: 'void co.elastic.clients.ApiClient.close()'
+2025-08-06 16:13:49 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-08-06 16:13:49 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - Starting ReactiveElasticQueryServiceApplication using Java 17.0.12 with PID 6620 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\reactive-elastic-query-service\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-08-06 16:13:49 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - The following 1 profile is active: "dev"
+2025-08-06 16:13:49 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8886
+2025-08-06 16:13:49 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=reactive-elastic-query-service, profiles=[dev], label=null, version=a6f219ed5d315c3663811b37fbc37206ee917bbf, state=
+2025-08-06 16:13:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2025-08-06 16:13:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 162 ms. Found 0 Elasticsearch repository interfaces.
+2025-08-06 16:13:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2025-08-06 16:13:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 1 Reactive Elasticsearch repository interface.
+2025-08-06 16:13:51 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=0eb0589e-f5cf-3fc0-aee1-a864cec4934d
+2025-08-06 16:13:52 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8183 (http)
+2025-08-06 16:13:52 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8183"]
+2025-08-06 16:13:52 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-06 16:13:52 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-06 16:13:52 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-06 16:13:52 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2714 ms
+2025-08-06 16:13:53 [main] INFO  c.m.demo.config.KafkaConfigData - Kafka config data has initialized with next properties: bootstrapServers: localhost:19092, localhost:29092, localhost:39092
+schemaRegistryUrlKey: schema.registry.url
+schemaRegistryUrl: http://localhost:8081
+topicName : mastodon-topic
+topicNamesToCreate : [mastodon-topic]
+numberOfPartitions : 3
+replicationFactor : 3
+2025-08-06 16:13:53 [main] INFO  c.m.d.config.KafkaProducerConfigData - Kafka config data has initialized with next properties: keySerializerClass: null
+valueSerializerClass: null
+compressionType: null
+acks : null
+batchSize : null
+batchSizeBoostFactor : null
+lingerMs : null
+requestTimeoutMs : null
+retryCount : null
+2025-08-06 16:13:53 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 88adbfad-a5b1-4c45-ab7d-d4047b2327d7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-06 16:13:53 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-08-06 16:13:55 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:13:56 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:13:56 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8183"]
+2025-08-06 16:13:56 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8183 (http) with context path '/'
+2025-08-06 16:13:57 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:13:59 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:13:59 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - Started ReactiveElasticQueryServiceApplication in 14.2 seconds (process running for 16.537)
+2025-08-06 16:14:27 [http-nio-8183-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-06 16:14:27 [http-nio-8183-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-06 16:14:27 [http-nio-8183-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2025-08-06 16:14:27 [http-nio-8183-exec-3] ERROR c.m.d.e.q.s.c.a.e.h.ElasticControllerErrorHandler - Internal server error: No static resource reactive/documents/get-doc-by-text.
+2025-08-06 16:14:58 [http-nio-8183-exec-4] ERROR c.m.d.e.q.s.c.a.e.h.ElasticControllerErrorHandler - Internal server error: No static resource reactive/documents/get-doc-by-text.
+2025-08-06 16:15:12 [http-nio-8183-exec-6] INFO  reactor.Flux.Map.1 - onSubscribe(FluxMap.MapSubscriber)
+2025-08-06 16:15:12 [http-nio-8183-exec-6] INFO  reactor.Flux.Map.1 - request(1)
+2025-08-06 16:15:12 [elasticsearch-rest-client-0-thread-2] WARN  reactor.core.Exceptions - throwIfFatal detected a jvm fatal exception, which is thrown and logged below:
+java.lang.NoSuchMethodError: 'co.elastic.clients.elasticsearch._types.FieldValue co.elastic.clients.elasticsearch._types.FieldValue.of(java.lang.Object)'
+	at org.springframework.data.elasticsearch.client.elc.TypeUtils.toFieldValue(TypeUtils.java:194)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.prepareSearchRequest(RequestConverter.java:1533)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.searchRequest(RequestConverter.java:1227)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.searchRequest(RequestConverter.java:1215)
+	at org.springframework.data.elasticsearch.client.elc.ReactiveElasticsearchTemplate.lambda$doFindUnbounded$35(ReactiveElasticsearchTemplate.java:420)
+	at reactor.core.publisher.FluxExpand$ExpandBreathSubscriber.onNext(FluxExpand.java:122)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:121)
+	at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:67)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at co.elastic.clients.transport.ElasticsearchTransportBase.lambda$performRequestAsync$0(ElasticsearchTransportBase.java:158)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at co.elastic.clients.transport.rest_client.RestClientHttpClient$1.onSuccess(RestClientHttpClient.java:115)
+	at org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:680)
+	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:403)
+	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:397)
+	at org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122)
+	at org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:182)
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448)
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338)
+	at org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:87)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:40)
+	at org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:114)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-08-06 16:15:12 [elasticsearch-rest-client-0-thread-2] ERROR reactor.core.publisher.Operators - Operator called default onErrorDropped
+java.lang.NoSuchMethodError: 'co.elastic.clients.elasticsearch._types.FieldValue co.elastic.clients.elasticsearch._types.FieldValue.of(java.lang.Object)'
+	at org.springframework.data.elasticsearch.client.elc.TypeUtils.toFieldValue(TypeUtils.java:194)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.prepareSearchRequest(RequestConverter.java:1533)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.searchRequest(RequestConverter.java:1227)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.searchRequest(RequestConverter.java:1215)
+	at org.springframework.data.elasticsearch.client.elc.ReactiveElasticsearchTemplate.lambda$doFindUnbounded$35(ReactiveElasticsearchTemplate.java:420)
+	at reactor.core.publisher.FluxExpand$ExpandBreathSubscriber.onNext(FluxExpand.java:122)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:121)
+	at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:67)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at co.elastic.clients.transport.ElasticsearchTransportBase.lambda$performRequestAsync$0(ElasticsearchTransportBase.java:158)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at co.elastic.clients.transport.rest_client.RestClientHttpClient$1.onSuccess(RestClientHttpClient.java:115)
+	at org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:680)
+	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:403)
+	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:397)
+	at org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122)
+	at org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:182)
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448)
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338)
+	at org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:87)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:40)
+	at org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:114)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-08-06 16:15:12 [elasticsearch-rest-client-0-thread-2] WARN  reactor.core.Exceptions - throwIfFatal detected a jvm fatal exception, which is thrown and logged below:
+java.lang.NoSuchMethodError: 'co.elastic.clients.elasticsearch._types.FieldValue co.elastic.clients.elasticsearch._types.FieldValue.of(java.lang.Object)'
+	at org.springframework.data.elasticsearch.client.elc.TypeUtils.toFieldValue(TypeUtils.java:194)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.prepareSearchRequest(RequestConverter.java:1533)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.searchRequest(RequestConverter.java:1227)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.searchRequest(RequestConverter.java:1215)
+	at org.springframework.data.elasticsearch.client.elc.ReactiveElasticsearchTemplate.lambda$doFindUnbounded$35(ReactiveElasticsearchTemplate.java:420)
+	at reactor.core.publisher.FluxExpand$ExpandBreathSubscriber.onNext(FluxExpand.java:122)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:121)
+	at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:67)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at co.elastic.clients.transport.ElasticsearchTransportBase.lambda$performRequestAsync$0(ElasticsearchTransportBase.java:158)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at co.elastic.clients.transport.rest_client.RestClientHttpClient$1.onSuccess(RestClientHttpClient.java:115)
+	at org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:680)
+	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:403)
+	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:397)
+	at org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122)
+	at org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:182)
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448)
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338)
+	at org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:87)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:40)
+	at org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:114)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-08-06 16:15:13 [parallel-1] INFO  reactor.Flux.Map.1 - onNext(ElasticQueryServiceResponseModel(id=114981012914876569, username=realTuckFrumper, text=<p>MAGA expectations soar after DOJ orders Russia grand jury probe <a href="https://twp.ai/9PUPTl" target="_blank" rel="nofollow noopener" translate="no"><span class="invisible">https://</span><span class="">twp.ai/9PUPTl</span><span class="invisible"></span></a></p>, createdAt=2025-08-06T09:03:42.265Z))
+2025-08-06 16:15:13 [task-1] INFO  reactor.Flux.Map.1 - cancel()
+2025-08-06 16:15:13 [task-1] WARN  o.s.d.e.c.e.ReactiveElasticsearchTemplate - pit/search_after was cancelled
+2025-08-06 16:15:13 [http-nio-8183-exec-7] ERROR c.m.d.e.q.s.c.a.e.h.ElasticControllerErrorHandler - Service runtime exception: Failed to send [org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter$DataWithMediaType@1362abd3, org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter$DataWithMediaType@225113f, org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter$DataWithMediaType@3e8e9480]
+2025-08-06 16:15:42 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-06 16:15:42 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-06 16:15:42 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of close method failed on bean with name 'reactiveElasticsearchClient': java.lang.NoSuchMethodError: 'void co.elastic.clients.ApiClient.close()'
+2025-08-06 16:19:07 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-08-06 16:19:07 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - Starting ReactiveElasticQueryServiceApplication using Java 17.0.12 with PID 10092 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\reactive-elastic-query-service\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-08-06 16:19:07 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - The following 1 profile is active: "dev"
+2025-08-06 16:19:07 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8886
+2025-08-06 16:19:07 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=reactive-elastic-query-service, profiles=[dev], label=null, version=a6f219ed5d315c3663811b37fbc37206ee917bbf, state=
+2025-08-06 16:19:09 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2025-08-06 16:19:09 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 243 ms. Found 0 Elasticsearch repository interfaces.
+2025-08-06 16:19:09 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2025-08-06 16:19:09 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 1 Reactive Elasticsearch repository interface.
+2025-08-06 16:19:09 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=3ffab6e6-110a-332f-89b7-4aea816d78ce
+2025-08-06 16:19:10 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8183 (http)
+2025-08-06 16:19:10 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8183"]
+2025-08-06 16:19:10 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-06 16:19:10 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-06 16:19:10 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-06 16:19:10 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2583 ms
+2025-08-06 16:19:11 [main] INFO  c.m.demo.config.KafkaConfigData - Kafka config data has initialized with next properties: bootstrapServers: localhost:19092, localhost:29092, localhost:39092
+schemaRegistryUrlKey: schema.registry.url
+schemaRegistryUrl: http://localhost:8081
+topicName : mastodon-topic
+topicNamesToCreate : [mastodon-topic]
+numberOfPartitions : 3
+replicationFactor : 3
+2025-08-06 16:19:11 [main] INFO  c.m.d.config.KafkaProducerConfigData - Kafka config data has initialized with next properties: keySerializerClass: null
+valueSerializerClass: null
+compressionType: null
+acks : null
+batchSize : null
+batchSizeBoostFactor : null
+lingerMs : null
+requestTimeoutMs : null
+retryCount : null
+2025-08-06 16:19:11 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webFluxSecurityConfig' defined in class path resource [com/microsorvices/demo/reactive/elastic/query/service/config/WebSecurityConfig.class]: Unsatisfied dependency expressed through method 'webFluxSecurityConfig' parameter 0: No qualifying bean of type 'org.springframework.security.config.web.server.ServerHttpSecurity' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-08-06 16:19:11 [main] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of close method failed on bean with name 'reactiveElasticsearchClient': java.lang.NoSuchMethodError: 'void co.elastic.clients.ApiClient.close()'
+2025-08-06 16:19:11 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-08-06 16:19:11 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-06 16:19:11 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method webFluxSecurityConfig in com.microsorvices.demo.reactive.elastic.query.service.config.WebSecurityConfig required a bean of type 'org.springframework.security.config.web.server.ServerHttpSecurity' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.config.web.server.ServerHttpSecurity' in your configuration.
+
+2025-08-06 16:20:03 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-08-06 16:20:03 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - Starting ReactiveElasticQueryServiceApplication using Java 17.0.12 with PID 11896 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\reactive-elastic-query-service\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-08-06 16:20:03 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - The following 1 profile is active: "dev"
+2025-08-06 16:20:04 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8886
+2025-08-06 16:20:04 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=reactive-elastic-query-service, profiles=[dev], label=null, version=a6f219ed5d315c3663811b37fbc37206ee917bbf, state=
+2025-08-06 16:20:05 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2025-08-06 16:20:05 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 319 ms. Found 0 Elasticsearch repository interfaces.
+2025-08-06 16:20:05 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2025-08-06 16:20:05 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 1 Reactive Elasticsearch repository interface.
+2025-08-06 16:20:05 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'conversionServicePostProcessor' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Cannot register bean definition [Root bean: class=org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=conversionServicePostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]] for bean 'conversionServicePostProcessor' since there is already [Root bean: class=org.springframework.security.config.annotation.web.reactive.WebFluxSecurityConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=conversionServicePostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/reactive/WebFluxSecurityConfiguration.class]] bound.
+2025-08-06 16:20:05 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-06 16:20:06 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'conversionServicePostProcessor', defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class], could not be registered. A bean with that name has already been defined in class path resource [org/springframework/security/config/annotation/web/reactive/WebFluxSecurityConfiguration.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2025-08-06 16:21:39 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-08-06 16:21:39 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - Starting ReactiveElasticQueryServiceApplication using Java 17.0.12 with PID 3864 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\reactive-elastic-query-service\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-08-06 16:21:39 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - The following 1 profile is active: "dev"
+2025-08-06 16:21:39 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8886
+2025-08-06 16:21:39 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=reactive-elastic-query-service, profiles=[dev], label=null, version=a6f219ed5d315c3663811b37fbc37206ee917bbf, state=
+2025-08-06 16:21:43 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2025-08-06 16:21:44 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 888 ms. Found 0 Elasticsearch repository interfaces.
+2025-08-06 16:21:44 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2025-08-06 16:21:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 421 ms. Found 1 Reactive Elasticsearch repository interface.
+2025-08-06 16:21:46 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=3ffab6e6-110a-332f-89b7-4aea816d78ce
+2025-08-06 16:21:48 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8183 (http)
+2025-08-06 16:21:48 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8183"]
+2025-08-06 16:21:48 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-06 16:21:48 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-06 16:21:48 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-06 16:21:48 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 8491 ms
+2025-08-06 16:21:50 [main] INFO  c.m.demo.config.KafkaConfigData - Kafka config data has initialized with next properties: bootstrapServers: localhost:19092, localhost:29092, localhost:39092
+schemaRegistryUrlKey: schema.registry.url
+schemaRegistryUrl: http://localhost:8081
+topicName : mastodon-topic
+topicNamesToCreate : [mastodon-topic]
+numberOfPartitions : 3
+replicationFactor : 3
+2025-08-06 16:21:51 [main] INFO  c.m.d.config.KafkaProducerConfigData - Kafka config data has initialized with next properties: keySerializerClass: null
+valueSerializerClass: null
+compressionType: null
+acks : null
+batchSize : null
+batchSizeBoostFactor : null
+lingerMs : null
+requestTimeoutMs : null
+retryCount : null
+2025-08-06 16:21:51 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webFluxSecurityConfig' defined in class path resource [com/microsorvices/demo/reactive/elastic/query/service/config/WebSecurityConfig.class]: Unsatisfied dependency expressed through method 'webFluxSecurityConfig' parameter 0: No qualifying bean of type 'org.springframework.security.config.web.server.ServerHttpSecurity' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-08-06 16:21:51 [main] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of close method failed on bean with name 'reactiveElasticsearchClient': java.lang.NoSuchMethodError: 'void co.elastic.clients.ApiClient.close()'
+2025-08-06 16:21:51 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-08-06 16:21:51 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-06 16:21:51 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method webFluxSecurityConfig in com.microsorvices.demo.reactive.elastic.query.service.config.WebSecurityConfig required a bean of type 'org.springframework.security.config.web.server.ServerHttpSecurity' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.config.web.server.ServerHttpSecurity' in your configuration.
+
+2025-08-06 16:23:06 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-08-06 16:23:06 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - Starting ReactiveElasticQueryServiceApplication using Java 17.0.12 with PID 16928 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\reactive-elastic-query-service\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-08-06 16:23:06 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - The following 1 profile is active: "dev"
+2025-08-06 16:23:06 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8886
+2025-08-06 16:23:06 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=reactive-elastic-query-service, profiles=[dev], label=null, version=a6f219ed5d315c3663811b37fbc37206ee917bbf, state=
+2025-08-06 16:23:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2025-08-06 16:23:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 285 ms. Found 0 Elasticsearch repository interfaces.
+2025-08-06 16:23:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2025-08-06 16:23:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 1 Reactive Elasticsearch repository interface.
+2025-08-06 16:23:07 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'conversionServicePostProcessor' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Cannot register bean definition [Root bean: class=org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=conversionServicePostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]] for bean 'conversionServicePostProcessor' since there is already [Root bean: class=org.springframework.security.config.annotation.web.reactive.WebFluxSecurityConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=conversionServicePostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/reactive/WebFluxSecurityConfiguration.class]] bound.
+2025-08-06 16:23:07 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-06 16:23:07 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'conversionServicePostProcessor', defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class], could not be registered. A bean with that name has already been defined in class path resource [org/springframework/security/config/annotation/web/reactive/WebFluxSecurityConfiguration.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2025-08-06 16:31:10 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-08-06 16:31:10 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - Starting ReactiveElasticQueryServiceApplication using Java 17.0.12 with PID 6604 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\reactive-elastic-query-service\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-08-06 16:31:10 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - The following 1 profile is active: "dev"
+2025-08-06 16:31:10 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8886
+2025-08-06 16:31:10 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=reactive-elastic-query-service, profiles=[dev], label=null, version=a6f219ed5d315c3663811b37fbc37206ee917bbf, state=
+2025-08-06 16:31:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2025-08-06 16:31:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 295 ms. Found 0 Elasticsearch repository interfaces.
+2025-08-06 16:31:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2025-08-06 16:31:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 1 Reactive Elasticsearch repository interface.
+2025-08-06 16:31:12 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'conversionServicePostProcessor' with a different definition: replacing [Root bean: class=org.springframework.security.config.annotation.web.reactive.WebFluxSecurityConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=conversionServicePostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/reactive/WebFluxSecurityConfiguration.class]] with [Root bean: class=org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=conversionServicePostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]]
+2025-08-06 16:31:12 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'requestDataValueProcessor' with a different definition: replacing [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=org.springframework.security.config.annotation.web.reactive.WebFluxSecurityConfiguration; factoryMethodName=requestDataValueProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/reactive/WebFluxSecurityConfiguration.class]] with [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration; factoryMethodName=requestDataValueProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebMvcSecurityConfiguration.class]]
+2025-08-06 16:31:12 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'webAuthorizationManagerPostProcessor' with a different definition: replacing [Root bean: class=org.springframework.security.config.annotation.web.reactive.ReactiveObservationConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=webAuthorizationManagerPostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/reactive/ReactiveObservationConfiguration.class]] with [Root bean: class=org.springframework.security.config.annotation.web.configuration.ObservationConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=webAuthorizationManagerPostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/configuration/ObservationConfiguration.class]]
+2025-08-06 16:31:12 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'filterChainDecoratorPostProcessor' with a different definition: replacing [Root bean: class=org.springframework.security.config.annotation.web.reactive.ReactiveObservationConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=filterChainDecoratorPostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/reactive/ReactiveObservationConfiguration.class]] with [Root bean: class=org.springframework.security.config.annotation.web.configuration.ObservationConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=filterChainDecoratorPostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/configuration/ObservationConfiguration.class]]
+2025-08-06 16:31:13 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=979d51bb-2d89-3807-9cfc-70c1dab80837
+2025-08-06 16:31:13 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8183 (http)
+2025-08-06 16:31:13 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8183"]
+2025-08-06 16:31:13 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-06 16:31:13 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-06 16:31:13 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-06 16:31:13 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3211 ms
+2025-08-06 16:31:14 [main] INFO  c.m.demo.config.KafkaConfigData - Kafka config data has initialized with next properties: bootstrapServers: localhost:19092, localhost:29092, localhost:39092
+schemaRegistryUrlKey: schema.registry.url
+schemaRegistryUrl: http://localhost:8081
+topicName : mastodon-topic
+topicNamesToCreate : [mastodon-topic]
+numberOfPartitions : 3
+replicationFactor : 3
+2025-08-06 16:31:14 [main] INFO  c.m.d.config.KafkaProducerConfigData - Kafka config data has initialized with next properties: keySerializerClass: null
+valueSerializerClass: null
+compressionType: null
+acks : null
+batchSize : null
+batchSizeBoostFactor : null
+lingerMs : null
+requestTimeoutMs : null
+retryCount : null
+2025-08-06 16:31:15 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 436c2197-18be-477d-8c3d-ef8b2120fe20
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-06 16:31:15 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-08-06 16:31:17 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:31:18 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:31:18 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8183"]
+2025-08-06 16:31:18 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8183 (http) with context path '/'
+2025-08-06 16:31:19 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:31:20 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:31:20 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - Started ReactiveElasticQueryServiceApplication in 14.841 seconds (process running for 16.792)
+2025-08-06 16:31:31 [http-nio-8183-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-06 16:31:31 [http-nio-8183-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-06 16:31:31 [http-nio-8183-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-08-06 16:33:41 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-06 16:33:41 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-06 16:33:41 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of close method failed on bean with name 'reactiveElasticsearchClient': java.lang.NoSuchMethodError: 'void co.elastic.clients.ApiClient.close()'
+2025-08-06 16:33:54 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-08-06 16:33:54 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - Starting ReactiveElasticQueryServiceApplication using Java 17.0.12 with PID 16616 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\reactive-elastic-query-service\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-08-06 16:33:54 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - The following 1 profile is active: "dev"
+2025-08-06 16:33:54 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8886
+2025-08-06 16:33:54 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=reactive-elastic-query-service, profiles=[dev], label=null, version=a6f219ed5d315c3663811b37fbc37206ee917bbf, state=
+2025-08-06 16:33:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2025-08-06 16:33:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 206 ms. Found 0 Elasticsearch repository interfaces.
+2025-08-06 16:33:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2025-08-06 16:33:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 1 Reactive Elasticsearch repository interface.
+2025-08-06 16:33:55 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'conversionServicePostProcessor' with a different definition: replacing [Root bean: class=org.springframework.security.config.annotation.web.reactive.WebFluxSecurityConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=conversionServicePostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/reactive/WebFluxSecurityConfiguration.class]] with [Root bean: class=org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=conversionServicePostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]]
+2025-08-06 16:33:55 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'requestDataValueProcessor' with a different definition: replacing [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=org.springframework.security.config.annotation.web.reactive.WebFluxSecurityConfiguration; factoryMethodName=requestDataValueProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/reactive/WebFluxSecurityConfiguration.class]] with [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration; factoryMethodName=requestDataValueProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebMvcSecurityConfiguration.class]]
+2025-08-06 16:33:55 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'webAuthorizationManagerPostProcessor' with a different definition: replacing [Root bean: class=org.springframework.security.config.annotation.web.reactive.ReactiveObservationConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=webAuthorizationManagerPostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/reactive/ReactiveObservationConfiguration.class]] with [Root bean: class=org.springframework.security.config.annotation.web.configuration.ObservationConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=webAuthorizationManagerPostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/configuration/ObservationConfiguration.class]]
+2025-08-06 16:33:55 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'filterChainDecoratorPostProcessor' with a different definition: replacing [Root bean: class=org.springframework.security.config.annotation.web.reactive.ReactiveObservationConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=filterChainDecoratorPostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/reactive/ReactiveObservationConfiguration.class]] with [Root bean: class=org.springframework.security.config.annotation.web.configuration.ObservationConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=filterChainDecoratorPostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/configuration/ObservationConfiguration.class]]
+2025-08-06 16:33:55 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=979d51bb-2d89-3807-9cfc-70c1dab80837
+2025-08-06 16:33:56 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8183 (http)
+2025-08-06 16:33:56 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8183"]
+2025-08-06 16:33:56 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-06 16:33:56 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-06 16:33:56 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-06 16:33:56 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2409 ms
+2025-08-06 16:33:58 [main] INFO  c.m.demo.config.KafkaConfigData - Kafka config data has initialized with next properties: bootstrapServers: localhost:19092, localhost:29092, localhost:39092
+schemaRegistryUrlKey: schema.registry.url
+schemaRegistryUrl: http://localhost:8081
+topicName : mastodon-topic
+topicNamesToCreate : [mastodon-topic]
+numberOfPartitions : 3
+replicationFactor : 3
+2025-08-06 16:33:58 [main] INFO  c.m.d.config.KafkaProducerConfigData - Kafka config data has initialized with next properties: keySerializerClass: null
+valueSerializerClass: null
+compressionType: null
+acks : null
+batchSize : null
+batchSizeBoostFactor : null
+lingerMs : null
+requestTimeoutMs : null
+retryCount : null
+2025-08-06 16:33:59 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: b3b06517-b75e-45c7-a121-f3d28f8ac6c6
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-06 16:33:59 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-08-06 16:34:00 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:34:02 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:34:02 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8183"]
+2025-08-06 16:34:02 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8183 (http) with context path '/'
+2025-08-06 16:34:03 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:34:04 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:34:04 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - Started ReactiveElasticQueryServiceApplication in 13.724 seconds (process running for 15.839)
+2025-08-06 16:34:11 [http-nio-8183-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-06 16:34:11 [http-nio-8183-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-06 16:34:11 [http-nio-8183-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2025-08-06 16:37:29 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-06 16:37:29 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-06 16:37:29 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of close method failed on bean with name 'reactiveElasticsearchClient': java.lang.NoSuchMethodError: 'void co.elastic.clients.ApiClient.close()'
+2025-08-06 16:37:46 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-08-06 16:37:46 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - Starting ReactiveElasticQueryServiceApplication using Java 17.0.12 with PID 17764 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\reactive-elastic-query-service\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-08-06 16:37:46 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - The following 1 profile is active: "dev"
+2025-08-06 16:37:46 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8886
+2025-08-06 16:37:46 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=reactive-elastic-query-service, profiles=[dev], label=null, version=a6f219ed5d315c3663811b37fbc37206ee917bbf, state=
+2025-08-06 16:37:48 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2025-08-06 16:37:48 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 426 ms. Found 0 Elasticsearch repository interfaces.
+2025-08-06 16:37:48 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2025-08-06 16:37:48 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 1 Reactive Elasticsearch repository interface.
+2025-08-06 16:37:49 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'conversionServicePostProcessor' with a different definition: replacing [Root bean: class=org.springframework.security.config.annotation.web.reactive.WebFluxSecurityConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=conversionServicePostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/reactive/WebFluxSecurityConfiguration.class]] with [Root bean: class=org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=conversionServicePostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]]
+2025-08-06 16:37:49 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'requestDataValueProcessor' with a different definition: replacing [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=org.springframework.security.config.annotation.web.reactive.WebFluxSecurityConfiguration; factoryMethodName=requestDataValueProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/reactive/WebFluxSecurityConfiguration.class]] with [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration; factoryMethodName=requestDataValueProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebMvcSecurityConfiguration.class]]
+2025-08-06 16:37:49 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'webAuthorizationManagerPostProcessor' with a different definition: replacing [Root bean: class=org.springframework.security.config.annotation.web.reactive.ReactiveObservationConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=webAuthorizationManagerPostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/reactive/ReactiveObservationConfiguration.class]] with [Root bean: class=org.springframework.security.config.annotation.web.configuration.ObservationConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=webAuthorizationManagerPostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/configuration/ObservationConfiguration.class]]
+2025-08-06 16:37:49 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'filterChainDecoratorPostProcessor' with a different definition: replacing [Root bean: class=org.springframework.security.config.annotation.web.reactive.ReactiveObservationConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=filterChainDecoratorPostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/reactive/ReactiveObservationConfiguration.class]] with [Root bean: class=org.springframework.security.config.annotation.web.configuration.ObservationConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=filterChainDecoratorPostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/configuration/ObservationConfiguration.class]]
+2025-08-06 16:37:49 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=979d51bb-2d89-3807-9cfc-70c1dab80837
+2025-08-06 16:37:50 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8183 (http)
+2025-08-06 16:37:50 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8183"]
+2025-08-06 16:37:50 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-06 16:37:50 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-06 16:37:51 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-06 16:37:51 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4542 ms
+2025-08-06 16:37:52 [main] INFO  c.m.demo.config.KafkaConfigData - Kafka config data has initialized with next properties: bootstrapServers: localhost:19092, localhost:29092, localhost:39092
+schemaRegistryUrlKey: schema.registry.url
+schemaRegistryUrl: http://localhost:8081
+topicName : mastodon-topic
+topicNamesToCreate : [mastodon-topic]
+numberOfPartitions : 3
+replicationFactor : 3
+2025-08-06 16:37:52 [main] INFO  c.m.d.config.KafkaProducerConfigData - Kafka config data has initialized with next properties: keySerializerClass: null
+valueSerializerClass: null
+compressionType: null
+acks : null
+batchSize : null
+batchSizeBoostFactor : null
+lingerMs : null
+requestTimeoutMs : null
+retryCount : null
+2025-08-06 16:37:53 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: abe0da3b-c5c9-4883-9193-69e38492468e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-06 16:37:53 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-08-06 16:37:54 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:37:55 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:37:56 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8183"]
+2025-08-06 16:37:56 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8183 (http) with context path '/'
+2025-08-06 16:37:57 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:37:58 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:37:58 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - Started ReactiveElasticQueryServiceApplication in 15.494 seconds (process running for 17.218)
+2025-08-06 16:38:05 [http-nio-8183-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-06 16:38:05 [http-nio-8183-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-06 16:38:05 [http-nio-8183-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2025-08-06 16:40:59 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-06 16:40:59 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-06 16:40:59 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of close method failed on bean with name 'reactiveElasticsearchClient': java.lang.NoSuchMethodError: 'void co.elastic.clients.ApiClient.close()'
+2025-08-06 16:41:14 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-08-06 16:41:14 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - Starting ReactiveElasticQueryServiceApplication using Java 17.0.12 with PID 17140 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\reactive-elastic-query-service\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-08-06 16:41:14 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - The following 1 profile is active: "dev"
+2025-08-06 16:41:14 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8886
+2025-08-06 16:41:14 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=reactive-elastic-query-service, profiles=[dev], label=null, version=a6f219ed5d315c3663811b37fbc37206ee917bbf, state=
+2025-08-06 16:41:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2025-08-06 16:41:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 186 ms. Found 0 Elasticsearch repository interfaces.
+2025-08-06 16:41:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2025-08-06 16:41:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 1 Reactive Elasticsearch repository interface.
+2025-08-06 16:41:15 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'conversionServicePostProcessor' with a different definition: replacing [Root bean: class=org.springframework.security.config.annotation.web.reactive.WebFluxSecurityConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=conversionServicePostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/reactive/WebFluxSecurityConfiguration.class]] with [Root bean: class=org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=conversionServicePostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]]
+2025-08-06 16:41:15 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'requestDataValueProcessor' with a different definition: replacing [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=org.springframework.security.config.annotation.web.reactive.WebFluxSecurityConfiguration; factoryMethodName=requestDataValueProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/reactive/WebFluxSecurityConfiguration.class]] with [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration; factoryMethodName=requestDataValueProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebMvcSecurityConfiguration.class]]
+2025-08-06 16:41:15 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'webAuthorizationManagerPostProcessor' with a different definition: replacing [Root bean: class=org.springframework.security.config.annotation.web.reactive.ReactiveObservationConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=webAuthorizationManagerPostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/reactive/ReactiveObservationConfiguration.class]] with [Root bean: class=org.springframework.security.config.annotation.web.configuration.ObservationConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=webAuthorizationManagerPostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/configuration/ObservationConfiguration.class]]
+2025-08-06 16:41:15 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'filterChainDecoratorPostProcessor' with a different definition: replacing [Root bean: class=org.springframework.security.config.annotation.web.reactive.ReactiveObservationConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=filterChainDecoratorPostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/reactive/ReactiveObservationConfiguration.class]] with [Root bean: class=org.springframework.security.config.annotation.web.configuration.ObservationConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=filterChainDecoratorPostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/configuration/ObservationConfiguration.class]]
+2025-08-06 16:41:16 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=979d51bb-2d89-3807-9cfc-70c1dab80837
+2025-08-06 16:41:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8183 (http)
+2025-08-06 16:41:16 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8183"]
+2025-08-06 16:41:16 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-06 16:41:16 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-06 16:41:16 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-06 16:41:16 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2430 ms
+2025-08-06 16:41:17 [main] INFO  c.m.demo.config.KafkaConfigData - Kafka config data has initialized with next properties: bootstrapServers: localhost:19092, localhost:29092, localhost:39092
+schemaRegistryUrlKey: schema.registry.url
+schemaRegistryUrl: http://localhost:8081
+topicName : mastodon-topic
+topicNamesToCreate : [mastodon-topic]
+numberOfPartitions : 3
+replicationFactor : 3
+2025-08-06 16:41:17 [main] INFO  c.m.d.config.KafkaProducerConfigData - Kafka config data has initialized with next properties: keySerializerClass: null
+valueSerializerClass: null
+compressionType: null
+acks : null
+batchSize : null
+batchSizeBoostFactor : null
+lingerMs : null
+requestTimeoutMs : null
+retryCount : null
+2025-08-06 16:41:18 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: ed29e3b5-003a-4598-8057-d6a358f61278
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-06 16:41:18 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-08-06 16:41:20 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:41:21 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:41:21 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8183"]
+2025-08-06 16:41:21 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8183 (http) with context path '/'
+2025-08-06 16:41:22 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:41:23 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:41:23 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - Started ReactiveElasticQueryServiceApplication in 14.412 seconds (process running for 16.526)
+2025-08-06 16:41:28 [http-nio-8183-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-06 16:41:28 [http-nio-8183-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-06 16:41:28 [http-nio-8183-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-08-06 16:41:31 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-06 16:41:31 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-06 16:41:31 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of close method failed on bean with name 'reactiveElasticsearchClient': java.lang.NoSuchMethodError: 'void co.elastic.clients.ApiClient.close()'
+2025-08-06 16:41:57 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-08-06 16:41:57 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - Starting ReactiveElasticQueryServiceApplication using Java 17.0.12 with PID 16412 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\reactive-elastic-query-service\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-08-06 16:41:57 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - The following 1 profile is active: "dev"
+2025-08-06 16:41:57 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8886
+2025-08-06 16:41:57 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=reactive-elastic-query-service, profiles=[dev], label=null, version=a6f219ed5d315c3663811b37fbc37206ee917bbf, state=
+2025-08-06 16:41:58 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2025-08-06 16:41:58 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 172 ms. Found 0 Elasticsearch repository interfaces.
+2025-08-06 16:41:58 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2025-08-06 16:41:58 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 1 Reactive Elasticsearch repository interface.
+2025-08-06 16:41:58 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'conversionServicePostProcessor' with a different definition: replacing [Root bean: class=org.springframework.security.config.annotation.web.reactive.WebFluxSecurityConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=conversionServicePostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/reactive/WebFluxSecurityConfiguration.class]] with [Root bean: class=org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=conversionServicePostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]]
+2025-08-06 16:41:58 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'requestDataValueProcessor' with a different definition: replacing [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=org.springframework.security.config.annotation.web.reactive.WebFluxSecurityConfiguration; factoryMethodName=requestDataValueProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/reactive/WebFluxSecurityConfiguration.class]] with [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration; factoryMethodName=requestDataValueProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebMvcSecurityConfiguration.class]]
+2025-08-06 16:41:58 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'webAuthorizationManagerPostProcessor' with a different definition: replacing [Root bean: class=org.springframework.security.config.annotation.web.reactive.ReactiveObservationConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=webAuthorizationManagerPostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/reactive/ReactiveObservationConfiguration.class]] with [Root bean: class=org.springframework.security.config.annotation.web.configuration.ObservationConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=webAuthorizationManagerPostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/configuration/ObservationConfiguration.class]]
+2025-08-06 16:41:58 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'filterChainDecoratorPostProcessor' with a different definition: replacing [Root bean: class=org.springframework.security.config.annotation.web.reactive.ReactiveObservationConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=filterChainDecoratorPostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/reactive/ReactiveObservationConfiguration.class]] with [Root bean: class=org.springframework.security.config.annotation.web.configuration.ObservationConfiguration; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=filterChainDecoratorPostProcessor; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/security/config/annotation/web/configuration/ObservationConfiguration.class]]
+2025-08-06 16:41:58 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=979d51bb-2d89-3807-9cfc-70c1dab80837
+2025-08-06 16:41:59 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8183 (http)
+2025-08-06 16:41:59 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8183"]
+2025-08-06 16:41:59 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-06 16:41:59 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-06 16:41:59 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-06 16:41:59 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2261 ms
+2025-08-06 16:42:00 [main] INFO  c.m.demo.config.KafkaConfigData - Kafka config data has initialized with next properties: bootstrapServers: localhost:19092, localhost:29092, localhost:39092
+schemaRegistryUrlKey: schema.registry.url
+schemaRegistryUrl: http://localhost:8081
+topicName : mastodon-topic
+topicNamesToCreate : [mastodon-topic]
+numberOfPartitions : 3
+replicationFactor : 3
+2025-08-06 16:42:00 [main] INFO  c.m.d.config.KafkaProducerConfigData - Kafka config data has initialized with next properties: keySerializerClass: null
+valueSerializerClass: null
+compressionType: null
+acks : null
+batchSize : null
+batchSizeBoostFactor : null
+lingerMs : null
+requestTimeoutMs : null
+retryCount : null
+2025-08-06 16:42:01 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 66d9c5d9-20b5-4bcb-b995-b099eba9f839
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-06 16:42:01 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-08-06 16:42:02 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:42:03 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:42:03 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8183"]
+2025-08-06 16:42:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8183 (http) with context path '/'
+2025-08-06 16:42:05 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:42:06 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:42:06 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - Started ReactiveElasticQueryServiceApplication in 13.595 seconds (process running for 15.605)
+2025-08-06 16:42:07 [http-nio-8183-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-06 16:42:07 [http-nio-8183-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-06 16:42:07 [http-nio-8183-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2025-08-06 16:42:08 [http-nio-8183-exec-2] WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [118] milliseconds.
+2025-08-06 16:43:28 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-06 16:43:29 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-06 16:43:29 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of close method failed on bean with name 'reactiveElasticsearchClient': java.lang.NoSuchMethodError: 'void co.elastic.clients.ApiClient.close()'
+2025-08-06 16:43:55 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-08-06 16:43:55 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - Starting ReactiveElasticQueryServiceApplication using Java 17.0.12 with PID 15608 (D:\Projects\JavaProjects\cloud_ex\microsorvices-demo\reactive-elastic-query-service\target\classes started by Admin in D:\Projects\JavaProjects\cloud_ex\microsorvices-demo)
+2025-08-06 16:43:55 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - The following 1 profile is active: "dev"
+2025-08-06 16:43:56 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8886
+2025-08-06 16:43:56 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=reactive-elastic-query-service, profiles=[dev], label=null, version=a6f219ed5d315c3663811b37fbc37206ee917bbf, state=
+2025-08-06 16:43:57 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2025-08-06 16:43:58 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 364 ms. Found 0 Elasticsearch repository interfaces.
+2025-08-06 16:43:58 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2025-08-06 16:43:58 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 1 Reactive Elasticsearch repository interface.
+2025-08-06 16:43:58 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=9ddddb62-e65f-3873-b63e-acf9fd062ef6
+2025-08-06 16:44:00 [main] INFO  c.m.demo.config.KafkaConfigData - Kafka config data has initialized with next properties: bootstrapServers: localhost:19092, localhost:29092, localhost:39092
+schemaRegistryUrlKey: schema.registry.url
+schemaRegistryUrl: http://localhost:8081
+topicName : mastodon-topic
+topicNamesToCreate : [mastodon-topic]
+numberOfPartitions : 3
+replicationFactor : 3
+2025-08-06 16:44:00 [main] INFO  c.m.d.config.KafkaProducerConfigData - Kafka config data has initialized with next properties: keySerializerClass: null
+valueSerializerClass: null
+compressionType: null
+acks : null
+batchSize : null
+batchSizeBoostFactor : null
+lingerMs : null
+requestTimeoutMs : null
+retryCount : null
+2025-08-06 16:44:00 [main] INFO  o.s.b.a.s.r.ReactiveUserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 50003ea5-e385-40c1-8e74-eec2142ef11a
+
+2025-08-06 16:44:02 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:44:03 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:44:03 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8183 (http)
+2025-08-06 16:44:04 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:44:06 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2025-08-06 16:44:06 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - Started ReactiveElasticQueryServiceApplication in 13.725 seconds (process running for 15.623)
+2025-08-06 16:44:10 [reactor-http-nio-3] INFO  reactor.Flux.Map.1 - onSubscribe(FluxMap.MapSubscriber)
+2025-08-06 16:44:10 [reactor-http-nio-3] INFO  reactor.Flux.Map.1 - request(1)
+2025-08-06 16:44:11 [elasticsearch-rest-client-0-thread-2] WARN  reactor.core.Exceptions - throwIfFatal detected a jvm fatal exception, which is thrown and logged below:
+java.lang.NoSuchMethodError: 'co.elastic.clients.elasticsearch._types.FieldValue co.elastic.clients.elasticsearch._types.FieldValue.of(java.lang.Object)'
+	at org.springframework.data.elasticsearch.client.elc.TypeUtils.toFieldValue(TypeUtils.java:194)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.prepareSearchRequest(RequestConverter.java:1533)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.searchRequest(RequestConverter.java:1227)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.searchRequest(RequestConverter.java:1215)
+	at org.springframework.data.elasticsearch.client.elc.ReactiveElasticsearchTemplate.lambda$doFindUnbounded$35(ReactiveElasticsearchTemplate.java:420)
+	at reactor.core.publisher.FluxExpand$ExpandBreathSubscriber.onNext(FluxExpand.java:122)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:121)
+	at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:67)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at co.elastic.clients.transport.ElasticsearchTransportBase.lambda$performRequestAsync$0(ElasticsearchTransportBase.java:158)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at co.elastic.clients.transport.rest_client.RestClientHttpClient$1.onSuccess(RestClientHttpClient.java:115)
+	at org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:680)
+	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:403)
+	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:397)
+	at org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122)
+	at org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:182)
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448)
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338)
+	at org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:87)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:40)
+	at org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:114)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-08-06 16:44:11 [elasticsearch-rest-client-0-thread-2] ERROR reactor.core.publisher.Operators - Operator called default onErrorDropped
+java.lang.NoSuchMethodError: 'co.elastic.clients.elasticsearch._types.FieldValue co.elastic.clients.elasticsearch._types.FieldValue.of(java.lang.Object)'
+	at org.springframework.data.elasticsearch.client.elc.TypeUtils.toFieldValue(TypeUtils.java:194)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.prepareSearchRequest(RequestConverter.java:1533)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.searchRequest(RequestConverter.java:1227)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.searchRequest(RequestConverter.java:1215)
+	at org.springframework.data.elasticsearch.client.elc.ReactiveElasticsearchTemplate.lambda$doFindUnbounded$35(ReactiveElasticsearchTemplate.java:420)
+	at reactor.core.publisher.FluxExpand$ExpandBreathSubscriber.onNext(FluxExpand.java:122)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:121)
+	at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:67)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at co.elastic.clients.transport.ElasticsearchTransportBase.lambda$performRequestAsync$0(ElasticsearchTransportBase.java:158)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at co.elastic.clients.transport.rest_client.RestClientHttpClient$1.onSuccess(RestClientHttpClient.java:115)
+	at org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:680)
+	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:403)
+	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:397)
+	at org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122)
+	at org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:182)
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448)
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338)
+	at org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:87)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:40)
+	at org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:114)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-08-06 16:44:11 [elasticsearch-rest-client-0-thread-2] WARN  reactor.core.Exceptions - throwIfFatal detected a jvm fatal exception, which is thrown and logged below:
+java.lang.NoSuchMethodError: 'co.elastic.clients.elasticsearch._types.FieldValue co.elastic.clients.elasticsearch._types.FieldValue.of(java.lang.Object)'
+	at org.springframework.data.elasticsearch.client.elc.TypeUtils.toFieldValue(TypeUtils.java:194)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.prepareSearchRequest(RequestConverter.java:1533)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.searchRequest(RequestConverter.java:1227)
+	at org.springframework.data.elasticsearch.client.elc.RequestConverter.searchRequest(RequestConverter.java:1215)
+	at org.springframework.data.elasticsearch.client.elc.ReactiveElasticsearchTemplate.lambda$doFindUnbounded$35(ReactiveElasticsearchTemplate.java:420)
+	at reactor.core.publisher.FluxExpand$ExpandBreathSubscriber.onNext(FluxExpand.java:122)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:121)
+	at reactor.core.publisher.MonoCompletionStage$MonoCompletionStageSubscription.apply(MonoCompletionStage.java:67)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at co.elastic.clients.transport.ElasticsearchTransportBase.lambda$performRequestAsync$0(ElasticsearchTransportBase.java:158)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at co.elastic.clients.transport.rest_client.RestClientHttpClient$1.onSuccess(RestClientHttpClient.java:115)
+	at org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onSuccess(RestClient.java:680)
+	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:403)
+	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:397)
+	at org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122)
+	at org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:182)
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:448)
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:338)
+	at org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:87)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:40)
+	at org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:114)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-08-06 16:44:11 [parallel-2] INFO  reactor.Flux.Map.1 - onNext(ElasticQueryServiceResponseModel(id=114975312973594966, username=tonline, text=<p>Die Niederlande sagen der Ukraine erste Patriot-Systeme zu – ein Teil des Ultimatums, das Trump Moskau für eine Waffenruhe gesetzt hat. Auch Deutschland sagt weitere Militärhilfe zu. <a href="https://www.t-online.de/nachrichten/ukraine/id_100853722/ukraine-niederlande-starten-mit-patriot-lieferung-neue-hilfe-fuer-kiew.html?utm_source=dlvr.it&amp;utm_medium=mastodon" target="_blank" rel="nofollow noopener" translate="no"><span class="invisible">https://www.</span><span class="ellipsis">t-online.de/nachrichten/ukrain</span><span class="invisible">e/id_100853722/ukraine-niederlande-starten-mit-patriot-lieferung-neue-hilfe-fuer-kiew.html?utm_source=dlvr.it&amp;utm_medium=mastodon</span></a></p>, createdAt=2025-08-05T08:54:08.062Z))
+2025-08-06 16:44:12 [reactor-http-nio-3] INFO  reactor.Flux.Map.1 - request(31)
+2025-08-06 16:44:12 [parallel-3] INFO  reactor.Flux.Map.1 - onNext(ElasticQueryServiceResponseModel(id=114975316580465375, username=Le_M_Poireau, text=<p>Le ministre néerlandais de la Défense, Ruben Brekelmans, a fait savoir, lundi, que les Pays-Bas allaient livrer à l’Ukraine 500 millions d’euros d’équipements militaires achetés aux États-Unis. <a href="https://www.leparisien.fr/international/ukraine/les-pays-bas-premiers-pays-de-lotan-a-livrer-des-armes-a-lukraine-via-laccord-avec-donald-trump-05-08-2025-FJC7T5ZVGVBW3AXUP4CQIC2PHY.php" target="_blank" rel="nofollow noopener" translate="no"><span class="invisible">https://www.</span><span class="ellipsis">leparisien.fr/international/uk</span><span class="invisible">raine/les-pays-bas-premiers-pays-de-lotan-a-livrer-des-armes-a-lukraine-via-laccord-avec-donald-trump-05-08-2025-FJC7T5ZVGVBW3AXUP4CQIC2PHY.php</span></a></p>, createdAt=2025-08-05T08:55:03.101Z))
+2025-08-06 16:44:13 [parallel-4] INFO  reactor.Flux.Map.1 - onNext(ElasticQueryServiceResponseModel(id=114981017648673925, username=AltEvil, text=<p>You must comply.</p><p><a href="https://thegodlessliberal.blogspot.com/2025/08/trump-to-deny-federal.html" target="_blank" rel="nofollow noopener" translate="no"><span class="invisible">https://</span><span class="ellipsis">thegodlessliberal.blogspot.com</span><span class="invisible">/2025/08/trump-to-deny-federal.html</span></a></p>, createdAt=2025-08-06T09:04:54.507Z))
+2025-08-06 16:44:13 [parallel-5] INFO  reactor.Flux.Map.1 - onNext(ElasticQueryServiceResponseModel(id=114975312943789242, username=DJ_2280, text=<p><span class="h-card" translate="no"><a href="https://mastodon.xyz/@Trump" class="u-url mention">@<span>Trump</span></a></span> <br />Trump administration issues new warning to states</p><p>ORANGE-FACED SOAB THINKS HE&#39;S OUR KING. KISS MY ASS JUICY FRUIT</p><p><a href="https://www.msn.com/en-us/news/us/trump-administration-issues-new-warning-to-states/ar-AA1JT5hb?ocid=socialshare" target="_blank" rel="nofollow noopener" translate="no"><span class="invisible">https://www.</span><span class="ellipsis">msn.com/en-us/news/us/trump-ad</span><span class="invisible">ministration-issues-new-warning-to-states/ar-AA1JT5hb?ocid=socialshare</span></a></p>, createdAt=2025-08-05T08:54:07.611Z))
+2025-08-06 16:44:14 [parallel-6] INFO  reactor.Flux.Map.1 - onNext(ElasticQueryServiceResponseModel(id=114981008509843898, username=automotivas, text=<p>Trump detona Jaguar por campanha “woke” e culpa rebranding fracassado pela saída do CEO <a href="https://www.noticiasautomotivas.com.br/trump-detona-jaguar-por-campanha-woke-e-culpa-rebranding-fracassado-pela-saida-do-ceo/" target="_blank" rel="nofollow noopener" translate="no"><span class="invisible">https://www.</span><span class="ellipsis">noticiasautomotivas.com.br/tru</span><span class="invisible">mp-detona-jaguar-por-campanha-woke-e-culpa-rebranding-fracassado-pela-saida-do-ceo/</span></a> <a href="https://mastodon.social/tags/Jaguar" class="mention hashtag" rel="tag">#<span>Jaguar</span></a></p>, createdAt=2025-08-06T09:02:35.059Z))
+2025-08-06 16:44:14 [parallel-7] INFO  reactor.Flux.Map.1 - onNext(ElasticQueryServiceResponseModel(id=114981026344557220, username=ezeromt, text=<p>when it comes to policy debates:<br />- we saw how people received the cnn debate; oddly, they claimed biden lost because he didn&#39;t answer fast enough -- not that trump won because he made logically convincing and accurate arguments<br />- people simply want someone that will lie to their face</p>, createdAt=2025-08-06T09:07:07.187Z))
+2025-08-06 16:44:15 [parallel-8] INFO  reactor.Flux.Map.1 - onNext(ElasticQueryServiceResponseModel(id=114981029192877467, username=theurbanherald, text=<p>Trump envoy Steve Witkoff arrives in Moscow ahead of critical talks with Russian leaders as a ceasefire deadline looms in the Ukraine conflict. This visit marks a key moment in White House efforts to end the war that began in 2022, with sanctions threats still on the table. 🌍🕊️</p>, createdAt=2025-08-06T09:07:50.646Z))
+2025-08-06 16:44:15 [parallel-1] INFO  reactor.Flux.Map.1 - onNext(ElasticQueryServiceResponseModel(id=114981030008962760, username=naim144__qw, text=<p>Justice Department releases list of sanctuary jurisdictions</p><p>The Department of Justice published a new list Tuesday of “sanctuary” jurisdictions that it claims have policies, laws or regulations that obstruct enforcement of federal immigration laws. Although the list includes the Trump administration’s typical targets — the city of Los Angeles and the state of California — it is much shorter than a previous list issued by the Department of Homeland Security.</p><p><a href="https://news24.allforu24.com/justice-department-releases-list-of-sanctuary-jurisdictions/?utm_source=mastodon&amp;utm_medium=jetpack_social" target="_blank" rel="nofollow noopener" translate="no"><span class="invisible">https://</span><span class="ellipsis">news24.allforu24.com/justice-d</span><span class="invisible">epartment-releases-list-of-sanctuary-jurisdictions/?utm_source=mastodon&amp;utm_medium=jetpack_social</span></a></p>, createdAt=2025-08-06T09:08:03.098Z))
+2025-08-06 16:44:15 [reactor-http-nio-3] INFO  reactor.Flux.Map.1 - cancel()
+2025-08-06 16:44:15 [reactor-http-nio-3] WARN  o.s.d.e.c.e.ReactiveElasticsearchTemplate - pit/search_after was cancelled
+2025-08-06 16:44:19 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-06 16:44:19 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete
+2025-08-06 16:44:21 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of close method failed on bean with name 'reactiveElasticsearchClient': java.lang.NoSuchMethodError: 'void co.elastic.clients.ApiClient.close()'

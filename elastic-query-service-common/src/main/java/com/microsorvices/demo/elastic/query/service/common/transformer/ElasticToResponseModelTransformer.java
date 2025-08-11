@@ -1,7 +1,7 @@
-package com.microsorvices.demo.elastic.query.service.transformer;
+package com.microsorvices.demo.elastic.query.service.common.transformer;
 
 import com.microsorvices.demo.elastic.model.index.impl.MastodonIndexModel;
-import com.microsorvices.demo.elastic.query.service.body.ElasticQueryServiceResponseModel;
+import com.microsorvices.demo.elastic.query.service.common.body.ElasticQueryServiceResponseModel;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

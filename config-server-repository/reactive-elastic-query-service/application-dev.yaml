@@ -1,0 +1,14 @@
+server:
+  port: 8183
+
+spring:
+  webflux:
+    base-path: /reactive
+  http:
+    codecs:
+      max-in-memory-size: 25MB
+  data:
+    elasticsearch:
+
+elastic-query-service:
+  backPressure-delay-ms: 500

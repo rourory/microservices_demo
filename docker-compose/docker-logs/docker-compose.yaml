@@ -1,0 +1,17 @@
+services:
+  keycloak-authorization-server:
+    image: quay.io/keycloak/keycloak:${KEYCLOAK_VERSION}
+    hostname: keycloak-server
+    ports:
+      - "8086:8086"
+    environment:
+      - "KC_BOOTSTRAP_ADMIN_USERNAME=admin"
+      - "KC_BOOTSTRAP_ADMIN_PASSWORD=admin"
+      - "HTTP_PORT=8086"
+      - "KC_DB=POSTGRES"
+      - "KC_DB_URL=jdbc:postgresql://host.docker.internal/keycloak"
+      - "HTTP_HOST=host.docker.internal"
+      - "KC_DB_URL_DATABASE=keycloak"
+      - "KC_DB_USERNAME=keycloak"
+      - "KC_DB_SCHEMA=keycloak"
+      - "KC_DB_PASSWORD=keycloak"

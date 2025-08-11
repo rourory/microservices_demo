@@ -1,0 +1,25 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: reactive-elastic-query-service
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:8886
+      profile: dev
+      name: reactive-elastic-query-service
+      username: spring_cloud_user
+      password: springCloud_Pwd!
+  config:
+    import: 'configserver:'
+
+  webflux:
+    base-path: /reactive
+  http:
+    codecs:
+      max-in-memory-size: 25MB
+  data:
+    elasticsearch:
+

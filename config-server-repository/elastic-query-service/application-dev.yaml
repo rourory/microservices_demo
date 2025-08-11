@@ -3,9 +3,31 @@ server:
 
 elastic-query-service:
   version: v1
+  custom-audience: elastic-query-service
 
 springdoc:
   api-docs:
     path: /api-docs
   swagger-ui:
     path: /swagger-ui.html
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8086/realms/microservices_realm
+          jwk-set-uri: http://localhost:8086/realms/microservices_realm/protocol/openid-connect/certs
+  jpa:
+    open-in-view: false
+    show-sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=public&binaryTransfer=true&reWriteBatchedInserts=true
+    username: postgres
+    password: 357951
+    driver-class-name: org.postgresql.Driver
+  sql:
+    init:
+      data-locations: classpath:init-data.sql
+      schema-locations: classpath:init-schema.sql
+      mode: always

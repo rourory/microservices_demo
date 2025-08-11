@@ -1,0 +1,22 @@
+services:
+  keycloak-authorization-server:
+#    depends_on:
+#      - config-server
+    image: quay.io/keycloak/keycloak:${KEYCLOAK_VERSION}
+    hostname: keycloak-server
+    command: start
+    ports:
+      - "8086:8080"
+    environment:
+      - KC_HOSTNAME=localhost
+      - KC_HTTP_ENABLED=true
+      - KC_DB=postgres
+      - KC_DB_URL_HOST=host.docker.internal
+      - KC_DB_URL_DATABASE=keycloak
+      - KC_DB_SCHEMA=keycloak
+      - KC_DB_USERNAME=keycloak
+      - KC_DB_PASSWORD=keycloak
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+    networks:
+      - ${GLOBAL_NETWORK:-authserver}

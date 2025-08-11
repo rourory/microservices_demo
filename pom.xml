@@ -22,6 +22,9 @@
         <module>kafka-to-elastic-service</module>
         <module>elastic</module>
         <module>elastic-query-service</module>
+        <module>web-client-service</module>
+        <module>elastic-query-service-common</module>
+        <module>reactive-elastic-query-service</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -69,6 +72,7 @@
         <elasticsearch.version>8.9.0</elasticsearch.version>
         <swagger.version>1.8.0</swagger.version>
         <springdoc.version>2.8.9</springdoc.version>
+        <postgresql.version>42.2.14</postgresql.version>
     </properties>
 
     <dependencyManagement>
@@ -110,6 +114,12 @@
             </dependency>
 
             <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-config-server</artifactId>
                 <version>${spring-cloud-config-server.version}</version>
@@ -119,6 +129,18 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-config</artifactId>
                 <version>${spring-cloud-config-server.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-jpa</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${postgresql.version}</version>
             </dependency>
 
             <dependency>
@@ -179,6 +201,12 @@
             <dependency>
                 <groupId>com.microsorvices.demo</groupId>
                 <artifactId>elastic-client-index</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.microsorvices.demo</groupId>
+                <artifactId>elastic-query-service-common</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

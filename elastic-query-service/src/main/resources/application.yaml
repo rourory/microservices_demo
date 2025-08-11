@@ -5,7 +5,7 @@ spring:
     active: dev
   cloud:
     config:
-      uri: http://localhost:8886
+      uri: http://localhost:8888
       profile: dev
       name: elastic-query-service
       username: spring_cloud_user
@@ -13,8 +13,9 @@ spring:
   config:
     import: 'configserver:'
 
-springdoc:
-  api-docs:
-    path: /api-docs
-  swagger-ui:
-    path: /swagger-ui.html
+
+
+
+
+
+

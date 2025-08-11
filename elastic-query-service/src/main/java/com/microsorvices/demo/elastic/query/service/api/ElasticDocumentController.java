@@ -1,8 +1,8 @@
 package com.microsorvices.demo.elastic.query.service.api;
 
-import com.microsorvices.demo.elastic.query.service.body.ElasticQueryServiceResponseModel;
+import com.microsorvices.demo.elastic.query.service.common.body.ElasticQueryServiceResponseModel;
+import com.microsorvices.demo.elastic.query.service.common.body.ElasticServiceSearchRequestBody;
 import com.microsorvices.demo.elastic.query.service.service.impl.MastodonElasticIndexService;
-import com.microsorvices.demo.elastic.query.service.body.ElasticServiceSearchRequestBody;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -12,10 +12,13 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PostAuthorize;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@PreAuthorize("isAuthenticated()")
 @RestController
 @RequestMapping(value = "/documents", produces = "application/vnd.api.v1+json")
 @Slf4j
@@ -27,6 +30,7 @@ public class ElasticDocumentController {
         this.service = service;
     }
 
+    @PostAuthorize("hasPermission(returnObject, 'READ')")
     @Operation(summary = "Get all the documents from elasticsearch DB")
     @ApiResponses({
             @ApiResponse(responseCode = "200",
@@ -44,6 +48,7 @@ public class ElasticDocumentController {
         return ResponseEntity.ok(service.findAll());
     }
 
+    @PreAuthorize("hasPermission(#id, 'ElasticQueryServiceResponseModel', 'READ')")
     @Operation(summary = "Get document from Elasticsearch DB by document's ID")
     @ApiResponses({
             @ApiResponse(responseCode = "200",
@@ -71,6 +76,8 @@ public class ElasticDocumentController {
             @ApiResponse(responseCode = "400", description = "Not found"),
             @ApiResponse(responseCode = "500", description = "Internal server error"),
     })
+    @PreAuthorize("hasRole('ROLE_APP_SUPERUSER_ROLE') || hasRole('ROLE_APP_ADMIN_ROLE')")
+    @PostAuthorize("hasPermission(returnObject, 'READ')")
     @PostMapping("/search-by-text")
     public ResponseEntity<List<ElasticQueryServiceResponseModel>> getByText(@Valid @RequestBody ElasticServiceSearchRequestBody body) {
         return ResponseEntity.ok(service.findByTextContaining(body.getText()));

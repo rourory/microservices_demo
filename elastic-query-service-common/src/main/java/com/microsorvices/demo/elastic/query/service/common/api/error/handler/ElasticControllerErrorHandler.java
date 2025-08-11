@@ -1,4 +1,4 @@
-package com.microsorvices.demo.elastic.query.service.api.error.handler;
+package com.microsorvices.demo.elastic.query.service.common.api.error.handler;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -7,7 +7,6 @@ import org.springframework.security.access.AccessDeniedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-
 
 import java.util.HashMap;
 import java.util.Map;

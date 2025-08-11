@@ -1,4 +1,4 @@
-package com.microsorvices.demo.elastic.query.service.body;
+package com.microsorvices.demo.elastic.query.service.common.body;
 
 
 import jakarta.validation.constraints.NotEmpty;
