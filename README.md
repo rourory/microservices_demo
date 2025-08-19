@@ -2,7 +2,7 @@
 
 **JUST FOR DEMO PURPOSES**
 
-System that:
+System that:y
 1. Receives public posts from Mastodon social network;
 2. Put into Elasticsearch through Kafka broker;
 3. Allows you to search what people talk among saved posts.

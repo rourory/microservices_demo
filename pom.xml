@@ -25,6 +25,7 @@
         <module>web-client-service</module>
         <module>elastic-query-service-common</module>
         <module>reactive-elastic-query-service</module>
+        <module>kafka-streams-service</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -73,6 +74,9 @@
         <swagger.version>1.8.0</swagger.version>
         <springdoc.version>2.8.9</springdoc.version>
         <postgresql.version>42.2.14</postgresql.version>
+        <kafka-streams.version>3.3.2</kafka-streams.version>
+        <kafka-clients.version>3.3.2</kafka-clients.version>
+        <kafka-streams-avro-serde.version>8.0.0</kafka-streams-avro-serde.version>
     </properties>
 
     <dependencyManagement>
@@ -261,6 +265,24 @@
             </dependency>
 
             <dependency>
+                <groupId>org.apache.kafka</groupId>
+                <artifactId>kafka-streams</artifactId>
+                <version>${kafka-streams.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.kafka</groupId>
+                <artifactId>kafka-clients</artifactId>
+                <version>${kafka-clients.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.confluent</groupId>
+                <artifactId>kafka-streams-avro-serde</artifactId>
+                <version>${kafka-streams-avro-serde.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>io.confluent</groupId>
                 <artifactId>kafka-avro-serializer</artifactId>
                 <version>${avro-serializer.version}</version>
@@ -298,13 +320,6 @@
                 <version>${spring-cloud-config-server.version}</version>
             </dependency>
 
-<!--            <dependency>-->
-<!--                <groupId>org.springdoc</groupId>-->
-<!--                <artifactId>springdoc-openapi-ui</artifactId>-->
-<!--                <version>${swagger.version}</version>-->
-<!--            </dependency>-->
-
-            <!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui -->
             <dependency>
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
