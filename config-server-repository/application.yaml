@@ -32,6 +32,7 @@ kafka-config:
   replication-factor: 3
   topic-names-to-create:
     - mastodon-topic
+    - mastodon-analytics-topic
 
 elastic-config:
   index-name: mastodon-index

@@ -5,7 +5,6 @@
  */
 package com.microservices.demo.kafka.avro.model;
 
-import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
 import org.apache.avro.util.Utf8;
 import org.apache.avro.message.BinaryMessageEncoder;
@@ -15,16 +14,18 @@ import org.apache.avro.message.SchemaStore;
 @org.apache.avro.specific.AvroGenerated
 public class MastodonTootAvroModel extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
   private static final long serialVersionUID = 7705298672117622339L;
+
+
   public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"MastodonTootAvroModel\",\"namespace\":\"com.microservices.demo.kafka.avro.model\",\"fields\":[{\"name\":\"id\",\"type\":\"long\"},{\"name\":\"content\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}]},{\"name\":\"username\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}]},{\"name\":\"createdAt\",\"type\":[\"null\",\"long\"],\"logicalType\":[\"null\",\"date\"]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
-  private static SpecificData MODEL$ = new SpecificData();
+  private static final SpecificData MODEL$ = new SpecificData();
 
   private static final BinaryMessageEncoder<MastodonTootAvroModel> ENCODER =
-      new BinaryMessageEncoder<MastodonTootAvroModel>(MODEL$, SCHEMA$);
+      new BinaryMessageEncoder<>(MODEL$, SCHEMA$);
 
   private static final BinaryMessageDecoder<MastodonTootAvroModel> DECODER =
-      new BinaryMessageDecoder<MastodonTootAvroModel>(MODEL$, SCHEMA$);
+      new BinaryMessageDecoder<>(MODEL$, SCHEMA$);
 
   /**
    * Return the BinaryMessageEncoder instance used by this class.
@@ -48,7 +49,7 @@ public class MastodonTootAvroModel extends org.apache.avro.specific.SpecificReco
    * @return a BinaryMessageDecoder instance for this class backed by the given SchemaStore
    */
   public static BinaryMessageDecoder<MastodonTootAvroModel> createDecoder(SchemaStore resolver) {
-    return new BinaryMessageDecoder<MastodonTootAvroModel>(MODEL$, SCHEMA$, resolver);
+    return new BinaryMessageDecoder<>(MODEL$, SCHEMA$, resolver);
   }
 
   /**
@@ -71,10 +72,10 @@ public class MastodonTootAvroModel extends org.apache.avro.specific.SpecificReco
     return DECODER.decode(b);
   }
 
-   private long id;
-   private java.lang.String content;
-   private java.lang.String username;
-   private java.lang.Long createdAt;
+  private long id;
+  private java.lang.String content;
+  private java.lang.String username;
+  private java.lang.Long createdAt;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -97,9 +98,14 @@ public class MastodonTootAvroModel extends org.apache.avro.specific.SpecificReco
     this.createdAt = createdAt;
   }
 
+  @Override
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
+
+  @Override
   public org.apache.avro.Schema getSchema() { return SCHEMA$; }
+
   // Used by DatumWriter.  Applications should not call.
+  @Override
   public java.lang.Object get(int field$) {
     switch (field$) {
     case 0: return id;
@@ -111,6 +117,7 @@ public class MastodonTootAvroModel extends org.apache.avro.specific.SpecificReco
   }
 
   // Used by DatumReader.  Applications should not call.
+  @Override
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
@@ -238,7 +245,7 @@ public class MastodonTootAvroModel extends org.apache.avro.specific.SpecificReco
 
     /** Creates a new Builder */
     private Builder() {
-      super(SCHEMA$);
+      super(SCHEMA$, MODEL$);
     }
 
     /**
@@ -270,7 +277,7 @@ public class MastodonTootAvroModel extends org.apache.avro.specific.SpecificReco
      * @param other The existing instance to copy.
      */
     private Builder(com.microservices.demo.kafka.avro.model.MastodonTootAvroModel other) {
-      super(SCHEMA$);
+      super(SCHEMA$, MODEL$);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
         fieldSetFlags()[0] = true;
